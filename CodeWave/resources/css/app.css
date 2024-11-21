@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.stroke-transition {
+    transition: stroke 0.3s ease; 
+}
+
+.button-e3fuiH:hover .stroke-transition {
+    stroke:  #6b46c1;
+}
+
+.searchbar::placeholder {
+    font-size: 12px;
+}
