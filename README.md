@@ -1,2 +1,1 @@
-Kevin Sukohardjo
-Lah kok nama gua anjirr
+<a>Platform Belajar Coding Yang Menyenangkan dan Interaktif!</a>
