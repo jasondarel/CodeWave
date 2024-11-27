@@ -6,4 +6,9 @@ Route::get('/', function () {
     return view('welcomepage');
 });
 
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
+
+
 
