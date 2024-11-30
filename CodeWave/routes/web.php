@@ -10,5 +10,7 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-
+Route::get('/login', function () {
+    return view('loginpage');
+});
 
