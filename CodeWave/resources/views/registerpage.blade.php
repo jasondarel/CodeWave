@@ -9,28 +9,33 @@
 <body class="bg-body-secondary">
     <div class="position-relatives">
         <div class="position-absolute shadow top-50 start-50 translate-middle d-flex flex-row bg-light rounded-2">
-            <form class=" p-5 d-flex flex-column" style="width:27vw;">
-                <h3>Login</h3>
+            <img src="{{asset('img/LoginImg.png')}}" class="shadow rounded-start" alt="...">
+            <form class=" p-5 d-flex flex-column" style="width:30vw;">
+                <h3>Register</h3>
                 <div class="mb-3 mt-4">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    
                 </div>
+
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    <label class="form-check-label" for="exampleCheck1">I Agree bla bla bla</label>
                 </div>
-                <button type="submit" class="btn btn-outline-dark" href="homepage">Submit</button>
+                <button type="submit" class="btn btn-outline-dark">Submit</button>
                 <div class="fs-6 mt-1">
-                Dont have an account? <a href="register">Register Here</a>
+                Already have an account? <a href="login">Login Here</a>
                 </div>
             </form>
-            <img src="{{asset('img/LoginImg.png')}}" class="shadow rounded-end" alt="...">
-            
         </div>
         
     </div>
