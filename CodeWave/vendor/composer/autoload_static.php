@@ -334,8 +334,8 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -509,12 +509,15 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
     );
 
     public static $classMap = array (
+        'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
-        'App\\Models\\Language' => __DIR__ . '/../..' . '/app/Models/Language.php',
+        'App\\Models\\Enrollment' => __DIR__ . '/../..' . '/app/Models/Enrollment.php',
+        'App\\Models\\Lesson' => __DIR__ . '/../..' . '/app/Models/Lesson.php',
+        'App\\Models\\Rank' => __DIR__ . '/../..' . '/app/Models/Rank.php',
+        'App\\Models\\StudentLesson' => __DIR__ . '/../..' . '/app/Models/StudentLesson.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
-        'App\\Models\\Video' => __DIR__ . '/../..' . '/app/Models/Video.php',
+        'App\\Models\\UserPerk' => __DIR__ . '/../..' . '/app/Models/UserPerk.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',

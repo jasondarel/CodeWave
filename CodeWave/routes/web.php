@@ -33,6 +33,11 @@ Route::post('/login/submit', [AuthController::class, 'submitLogin'])->name('subm
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
+Route::get('/tes', function () {
+    return view('tes');
+});
+
+
 
 
 // Route::middleware('auth')->group(function (){
