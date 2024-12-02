@@ -6,41 +6,40 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('course', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("description");
-            $table->integer("total_time");
-            $table->integer("lesson_amount");
+            $table->string('name');
+            $table->string('description');
+            $table->integer('total_time');
+            $table->integer('lessonamount');
+            $table->timestamps();
         });
 
-        Schema::create('lesson', function (Blueprint $table) {
+        Schema::create('lessons', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->foreign("course_id")->references("id")->on("course");
+            $table->string('name');
+            $table->unsignedBigInteger('course_id');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->timestamps();
         });
 
-        Schema::create('enrollment', function (Blueprint $table) {
+        Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
-            $table->foreign("user_id")->references('id')->on('users');
-            $table->foreign("course_id")->references('id')->on('course');
-            $table->date("enrollment_date");
-          
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('course_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->date('enrollmentdate');
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('course_tables');
-        Schema::dropIfExists('lesson');
-
+        Schema::dropIfExists('enrollments');
+        Schema::dropIfExists('lessons');
+        Schema::dropIfExists('courses');
     }
 };

@@ -6,31 +6,29 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-
         Schema::create('ranks', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->integer("minimum_points");
-
+            $table->string('name');
+            $table->integer('minimum_points');
+            $table->timestamps();
         });
+
         Schema::create('user_perks', function (Blueprint $table) {
             $table->id();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('rank_id')->nullable();
             $table->integer('points');
-            $table->foreign('rank_id')->references('id')->on('ranks');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('rank_id')->references('id')->on('ranks')->onDelete('set null');
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('perks_tables');
+        Schema::dropIfExists('user_perks');
+        Schema::dropIfExists('ranks');
     }
 };

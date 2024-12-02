@@ -3,20 +3,21 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Course extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'category_id', 'language_id', 'thumbnail'];
+    protected $fillable = ['name', 'description', 'total_time', 'lesson_amount'];
 
-    public function category()
+    public function lessons()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Lesson::class);
     }
 
-    public function videos()
+    public function enrollments()
     {
-        return $this->hasMany(Video::class);
+        return $this->hasMany(Enrollment::class);
     }
 }
