@@ -931,9 +931,12 @@
 
                     </div>
 
-                    <div class="text-[16px]">
-                        Inbox
-                    </div>
+                    <a href="{{ route('inbox.index') }}">
+                        <div class="text-[16px]">
+                            Inbox
+                        </div>
+                    </a>
+
                 </div>
             </button>
 

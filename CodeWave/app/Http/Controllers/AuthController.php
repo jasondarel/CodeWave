@@ -9,11 +9,13 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function register(){
+    public function register()
+    {
         return view('registerpage');
     }
 
-    public function submitRegistration(Request $request){
+    public function submitRegistration(Request $request)
+    {
         $validatedData = $request->validate([
             'name' => 'required|max:200',
             'email' => 'required|email|unique:users,email',
@@ -29,27 +31,30 @@ class AuthController extends Controller
         return redirect()->route('login')->with('success', 'Registration Successful!');
     }
 
-    public function login(){
+    public function login()
+    {
         return view('loginpage');
     }
 
-    public function submitLogin(Request $request){
+    public function submitLogin(Request $request)
+    {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:8'
         ]);
 
-        $data = $request->only('email' , 'password');
+        $data = $request->only('email', 'password');
 
-        if(Auth::attempt($data)){
+        if (Auth::attempt($data)) {
             $request->session()->regenerate();
             return redirect()->route('index')->with('success', 'Login successful!');
-        }else{
+        } else {
             return redirect()->back()->with('fail', 'Email or Password wrong!');
         }
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
         return redirect()->route('login');
     }
