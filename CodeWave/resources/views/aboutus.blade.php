@@ -11,6 +11,8 @@
 <body>
     @extends('layout')
 
+    @section('content')
+
     <div class=" text-center d-flex flex-column mb-3 justify-content-between">
         <h1>About CodeWave</h1>
         <p class="lead w-75 align-self-center">At CodeWave, we believe that technology has the power to transform lives. Our mission is to build innovative solutions that inspire creativity, drive progress, and connect people across the globe.
@@ -21,7 +23,7 @@
         </footer>
     </div>
 
-
+    @endsection
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

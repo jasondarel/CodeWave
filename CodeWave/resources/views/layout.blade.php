@@ -949,7 +949,7 @@
                     </div>
 
                     <div class="text-[16px]">
-                        Materials
+                        Courses
                     </div>
                 </div>
             </button>
@@ -971,6 +971,10 @@
             </button>
 
         </div>
+    </div>
+
+    <div class="container mt-5">
+        @yield('content')
     </div>
 </body>
 
