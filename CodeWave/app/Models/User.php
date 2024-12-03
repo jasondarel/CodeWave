@@ -46,6 +46,7 @@ class User extends Authenticatable
         ];
     }
 
+    
     // Relasi dengan Enrollment
     public function enrollments()
     {
