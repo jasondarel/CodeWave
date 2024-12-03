@@ -899,8 +899,8 @@
     @endif
 </head>
 
-<body>
-    <div class="absolute p-5 top-0 flex flex-col gap-12">
+<body class="flex">
+    <div class="sticky top-0 left-0 w-full p-5 flex flex-col gap-12 bg-white z-10">
 
         <div>LOGO CODEWAVE DISINI</div>
         <div class="flex flex-col  gap-6">
@@ -916,9 +916,7 @@
                         </svg>
                     </div>
 
-                    <div class="text-[16px]">
-                        Dashboard
-                    </div>
+                    <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
                 </div>
             </button>
 
