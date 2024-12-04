@@ -931,11 +931,12 @@
 
                     </div>
 
-                    <a href="{{ route('inbox.index') }}">
+                    <a href="/inbox">
                         <div class="text-[16px]">
                             Inbox
                         </div>
                     </a>
+
 
                 </div>
             </button>

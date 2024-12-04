@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\InboxController;
 use Illuminate\Support\Facades\Route;
 
 // Public routes
@@ -24,26 +23,29 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // Dashboard route
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
-// Inbox routes
-Route::get('/inbox', [InboxController::class, 'index'])->name('inbox.index');
-Route::get('/inbox/read/{id}', [InboxController::class, 'markAsRead'])->name('inbox.markAsRead');
+// Inbox static view route
+
+Route::get('/inbox', function () {
+    return response()->view('inbox', [
+        'notifications' => [
+            [
+                'title' => 'Successfully Enrolled',
+                'message' => 'You have successfully enrolled in the "Intro to JavaScript" course.',
+                'date' => 'December 4, 2024, 10:30 AM',
+            ],
+            [
+                'title' => 'Course Completed',
+                'message' => 'You have completed the "Advanced Python Programming" course.',
+                'date' => 'December 3, 2024, 2:15 PM',
+            ],
+            [
+                'title' => 'New Lesson Available',
+                'message' => 'A new lesson on "React State Management" is available in your course.',
+                'date' => 'December 2, 2024, 8:00 PM',
+            ],
+        ]
+    ]);
+});
+
 
 // Test notification route (for testing only)
-Route::get('/create-test-notification', function () {
-    // Example: Create multiple dummy notifications for user with ID 1
-    App\Models\Notification::create([
-        'user_id' => 1,  // Change this to an existing user ID
-        'title' => 'Test Notification 1',
-        'content' => 'This is the first test notification to check the inbox.',
-        'is_read' => false,  // Mark as unread
-    ]);
-
-    App\Models\Notification::create([
-        'user_id' => 1,  // Change this to an existing user ID
-        'title' => 'Test Notification 2',
-        'content' => 'This is the second test notification to check the inbox.',
-        'is_read' => false,  // Mark as unread
-    ]);
-
-    return "Test notifications created!";
-});
