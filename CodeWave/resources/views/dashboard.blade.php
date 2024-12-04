@@ -5,6 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .dashboard-container {
+            padding: 20px;
+        }
+
+        .user-info p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .news-section {
+            margin-top: 50px;
+        }
+
+        .announcements-section {
+            margin-top: 100px;
+        }
+
+        .news-item,
+        .announcement-item {
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 15px;
+        }
+
+        .news-item h3,
+        .announcement-item h3 {
+            margin-bottom: 10px;
+        }
+
+        .news-item p,
+        .announcement-item p {
+            margin-bottom: 5px;
+        }
+
+        .news-item .image,
+        .announcement-item .image {
+            background-color: #d1d1d1;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+        }
+
+        /* Style the images */
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* For announcements to be vertical */
+        .announcement-item {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-header {
+            font-size: xx-large;
+            margin-bottom: 10px;
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,52 +85,95 @@
 
     <!-- Dashboard Content -->
     <div class="dashboard-container">
-        <h1>Dashboard</h1>
+        <h1 class="welcome-header">Welcome Back, Kevin!</h3>
 
-        <!-- Courses Enrolled and Lessons Completed -->
-        <div class="user-info">
-            <p>Courses Enrolled: {{ $coursesEnrolled }}</p>
-            <p>Lessons Completed: {{ $lessonsCompleted }}</p>
-            <p>Rank: {{ $rank }}</p>
-        </div>
-
-        <!-- News Section -->
-        <div class="news-section">
-            <h2>Latest Coding News</h2>
-
-            <!-- Displaying news -->
-            @foreach ($news as $item)
-            <div class="news-item">
-                <h3>{{ $item->title }}</h3>
-                <p>{{ $item->description }}</p>
-                <small>Published on: {{ $item->created_at->format('F j, Y') }}</small>
+            <!-- Courses Enrolled and Lessons Completed -->
+            <div class="user-info">
+                <p>Courses Enrolled: 5</p>
+                <p>Lessons Completed: 20</p>
+                <p>Rank: Intermediate</p>
             </div>
-            @endforeach
 
-            <!-- Pagination for news -->
-            <div class="pagination">
-                {{ $news->links() }}
+            <!-- News Section -->
+            <div class="news-section">
+                <h2>Latest News</h2>
+
+                <div class="row">
+                    <!-- Displaying news in a single row, 3 items per row -->
+                    <div class="col-md-4">
+                        <div class="news-item">
+                            <h3><strong>Understanding AI in Modern Development</strong></h3>
+                            <!-- Replace with actual image URL -->
+                            <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Development">
+                            <p>Discover how artificial intelligence is shaping the future of software development.</p>
+                            <small>Published on: December 1, 2024</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news-item">
+                            <h3><strong>Top 10 Programming Languages for 2024</strong></h3>
+                            <!-- Replace with actual image URL -->
+                            <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top 10 Languages">
+                            <p>Explore the most in-demand programming languages in the tech industry today.</p>
+                            <small>Published on: November 30, 2024</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news-item">
+                            <h3><strong>Introduction to Quantum Computing</strong></h3>
+                            <!-- Replace with actual image URL -->
+                            <img src="https://www.ncsa.illinois.edu/wp-content/uploads/2024/08/Quantum-computing.jpg" alt="Quantum Computing">
+                            <p>Learn the basics of quantum computing and why it matters for future developers.</p>
+                            <small>Published on: November 28, 2024</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination for news -->
+                <div class="pagination">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
 
-        <!-- Announcements Section -->
-        <div class="announcements-section">
-            <h2>Announcements</h2>
+            <!-- Announcements Section -->
+            <div class="announcements-section">
+                <h2>Announcements</h2>
 
-            <!-- Displaying announcements -->
-            @foreach ($announcements as $announcement)
-            <div class="announcement-item">
-                <h3>{{ $announcement->title }}</h3>
-                <p>{{ $announcement->content }}</p>
-                <small>Created on: {{ $announcement->created_at->format('F j, Y') }}</small>
+                <div class="announcement-item">
+                    <h3>New Course: <strong>Advanced Python</strong></h3>
+                    <p>We have launched a new course on Advanced Python. Enroll now to deepen your skills!</p>
+                    <small>Created on: November 25, 2024</small>
+                </div>
+                <div class="announcement-item">
+                    <h3>Maintenance Scheduled</h3>
+                    <p>Our platform will undergo maintenance on December 10, 2024. Expect downtime from 1 AM to 3 AM.</p>
+                    <small>Created on: November 20, 2024</small>
+                </div>
+                <div class="announcement-item">
+                    <h3>Congratulations to Top Performers</h3>
+                    <p>Congratulations to our top performers for the month of November! Keep up the great work.</p>
+                    <small>Created on: November 15, 2024</small>
+                </div>
+
+                <!-- Pagination for announcements -->
+                <div class="pagination">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            @endforeach
-
-            <!-- Pagination for announcements -->
-            <div class="pagination">
-                {{ $announcements->links() }}
-            </div>
-        </div>
     </div>
 
     @endsection

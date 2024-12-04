@@ -26,6 +26,8 @@
             width: 100%;
             border-radius: 8px;
             margin-bottom: 20px;
+            object-fit: cover;
+            /* Ensures the image fills the container properly */
         }
 
         .progress-bar {
@@ -46,17 +48,17 @@
         <div class="row">
             <!-- Simulated in-progress courses -->
             @foreach ([
-            ['title' => 'Introduction to Python', 'description' => 'Learn the basics of Python, including syntax, data types, and simple programming concepts.', 'progress' => 45],
-            ['title' => 'Basic Web Development', 'description' => 'Master the fundamentals of HTML, CSS, and JavaScript to create responsive websites.', 'progress' => 70],
-            ['title' => 'JavaScript Essentials', 'description' => 'Understand JavaScript fundamentals, DOM manipulation, and event handling.', 'progress' => 30],
-            ['title' => 'React for Beginners', 'description' => 'Start building dynamic user interfaces with React and learn the basics of component-based design.', 'progress' => 55],
-            ['title' => 'Laravel Basics', 'description' => 'Dive into Laravel framework essentials and learn how to build scalable web applications.', 'progress' => 25],
-            ['title' => 'Database Management with MySQL', 'description' => 'Learn how to design, query, and manage databases using MySQL.', 'progress' => 80],
+            ['title' => 'Introduction to Python', 'description' => 'Learn the basics of Python, including syntax, data types, and simple programming concepts.', 'progress' => 45, 'image' => 'https://1000logos.net/wp-content/uploads/2020/08/Python-Logo.jpg'],
+            ['title' => 'Basic Web Development', 'description' => 'Master the fundamentals of HTML, CSS, and JavaScript to create responsive websites.', 'progress' => 70, 'image' => 'https://plus.unsplash.com/premium_photo-1723849222657-e1e48a0a306e?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],
+            ['title' => 'JavaScript Essentials', 'description' => 'Understand JavaScript fundamentals, DOM manipulation, and event handling.', 'progress' => 30, 'image' => 'https://img-c.udemycdn.com/course/750x422/1468694_d595_2.jpg'],
+            ['title' => 'React for Beginners', 'description' => 'Start building dynamic user interfaces with React and learn the basics of component-based design.', 'progress' => 55, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8p4M-RWLBXSxhSBGVnEugAmeznB8U2jBADg&s'],
+            ['title' => 'Laravel Basics', 'description' => 'Dive into Laravel framework essentials and learn how to build scalable web applications.', 'progress' => 25, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfBz081b3NyUYlOhYItosdQrFccxx_bY_k6A&s'],
+            ['title' => 'Database Management with MySQL', 'description' => 'Learn how to design, query, and manage databases using MySQL.', 'progress' => 80, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQZCnRrKXTQ1ClbVQXUNulFHHFyQ1FGe7AgzPn-H-zcJjukQS9ZLeL6EX7YYzMTYDkJJs&usqp=CAU'],
             ] as $course)
             <div class="col-md-4">
                 <div class="course-item">
-                    <h5>{{ $course['title'] }}</h5>
-                    <div class="course-image"></div>
+                    <h5><strong>{{ $course['title'] }}</strong></h5>
+                    <img src="{{ $course['image'] }}" alt="{{ $course['title'] }}" class="course-image">
                     <p>{{ $course['description'] }}</p>
                     <div class="progress mb-2">
                         <div class="progress-bar" style="width: {{ $course['progress'] }}%"></div>
@@ -72,14 +74,14 @@
         <div class="row">
             <!-- Simulated completed courses -->
             @foreach ([
-            ['title' => 'Advanced CSS Techniques', 'description' => 'Take your CSS skills to the next level with animations, transitions, and modern layout techniques.'],
-            ['title' => 'Intro to Machine Learning', 'description' => 'Learn the basics of machine learning and build simple models to predict data trends.'],
-            ['title' => 'Version Control with Git', 'description' => 'Master the fundamentals of Git for version control and collaboration.'],
+            ['title' => 'Advanced CSS Techniques', 'description' => 'Take your CSS skills to the next level with animations, transitions, and modern layout techniques.', 'image' => 'https://www.htmlecsspro.com/uploads/images/2018/03/aplicando-estilos-css-1521410533.png'],
+            ['title' => 'Intro to Machine Learning', 'description' => 'Learn the basics of machine learning and build simple models to predict data trends.', 'image' => 'https://image.web.id/images/Machine-Learning.jpg'],
+            ['title' => 'Version Control with Git', 'description' => 'Master the fundamentals of Git for version control and collaboration.', 'image' => 'https://ositcom.com/static/images/images/git-blog-header_1.png'],
             ] as $course)
             <div class="col-md-4">
                 <div class="course-item completed">
-                    <h5>{{ $course['title'] }}</h5>
-                    <div class="course-image"></div>
+                    <h5><strong>{{ $course['title'] }}</strong></h5>
+                    <img src="{{ $course['image'] }}" alt="{{ $course['title'] }}" class="course-image">
                     <p>{{ $course['description'] }}</p>
                 </div>
             </div>
