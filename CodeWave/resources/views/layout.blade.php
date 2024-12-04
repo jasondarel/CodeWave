@@ -957,7 +957,7 @@
                 </div>
             </a>
 
-            <a href="" class="transition-all hover:text-black hover:border-2 p-2 hover:bg-white duration-50 rounded-lg flex-grow-0 self-start w-100">
+            <a href="/my-courses" class="transition-all hover:text-black hover:border-2 p-2 hover:bg-white duration-50 rounded-lg flex-grow-0 self-start w-100">
                 <div class="flex flex-row gap-3 items-end">
 
                     <div class="">
@@ -968,7 +968,7 @@
                     </div>
 
                     <div class="text-[16px]">
-                        Task
+                        My Courses
                     </div>
                 </div>
             </a>

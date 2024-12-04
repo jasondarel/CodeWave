@@ -47,6 +47,8 @@ Route::get('/inbox', function () {
     ]);
 });
 
+Route::view('/my-courses', 'my-courses')->name('my-courses');
+
 //profile route
 Route::get('/profile', function () {
     return view('profile');
