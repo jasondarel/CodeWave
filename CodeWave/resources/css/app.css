@@ -14,3 +14,7 @@
 .searchbar::placeholder {
     font-size: 12px;
 }
+
+.notification-item.read {
+    opacity: 0.6; /* Optional: To make it look more faded */
+}
