@@ -47,5 +47,9 @@ Route::get('/inbox', function () {
     ]);
 });
 
+//profile route
+Route::get('/profile', function () {
+    return view('profile');
+});
 
 // Test notification route (for testing only)

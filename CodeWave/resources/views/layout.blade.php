@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
@@ -899,15 +900,15 @@
     @endif
 </head>
 
-<body class="flex ">
-    <div class="sticky top-0 left-0 w-80 p-5 flex flex-col gap-12 bg-white z-10">
+<body class="flex">
+    <div class="sticky top-0 left-0 w-80 p-4 flex flex-col gap-12 z-10 border-end border-black bg-secondary text-light" style="height:100vh;">
 
         <div>LOGO CODEWAVE DISINI</div>
-        <div class="flex flex-col  gap-6">
+        <div class="flex flex-col  gap-2">
 
-            <div class="font-lexend font-light text-slate-500 text-[12px]">OVERVIEW</div>
+            <div class="font-lexend font-light text-slate-500 text-[12px] text-white">OVERVIEW</div>
 
-            <button class="transition-all hover:text-purple-600 duration-300 rounded-lg button-e3fuiH flex-grow-0 self-start">
+            <a href="{{ route('dashboard') }}" class="transition-all hover:text-black hover:border-2 p-2 hover:bg-white duration-50 rounded-lg flex-grow-0 self-start w-100">
                 <div class="flex flex-row gap-3 items-end ">
 
                     <div class="">
@@ -916,12 +917,12 @@
                         </svg>
                     </div>
 
-                    <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
+                    <div class="nav-link">Dashboard</div>
                 </div>
-            </button>
+            </a>
 
-            <button class="transition-all hover:text-purple-600 duration-300 rounded-lg button-e3fuiH flex-grow-0 self-start">
-                <div class="flex flex-row gap-3 items-end ">
+            <a href="/inbox" class="transition-all hover:text-black hover:border-2 p-2 hover:bg-white duration-50 rounded-lg flex-grow-0 self-start w-100">
+                <div class="flex flex-row gap-3 items-end">
 
                     <div class="">
 
@@ -931,18 +932,18 @@
 
                     </div>
 
-                    <a href="/inbox">
+                    <div>
                         <div class="text-[16px]">
                             Inbox
                         </div>
-                    </a>
+                    </div>
 
 
                 </div>
-            </button>
+            </a>
 
-            <button class="transition-all hover:text-purple-600 duration-300 rounded-lg button-e3fuiH flex-grow-0 self-start">
-                <div class="flex flex-row gap-3 items-end ">
+            <a href="" class="transition-all hover:text-black hover:border-2 p-2 hover:bg-white duration-50 rounded-lg flex-grow-0 self-start w-100">
+                <div class="flex flex-row gap-3 items-end">
 
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-transition">
@@ -954,10 +955,10 @@
                         Courses
                     </div>
                 </div>
-            </button>
+            </a>
 
-            <button class="transition-all hover:text-purple-600 duration-300 rounded-lg button-e3fuiH flex-grow-0 self-start">
-                <div class="flex flex-row gap-3 items-end ">
+            <a href="" class="transition-all hover:text-black hover:border-2 p-2 hover:bg-white duration-50 rounded-lg flex-grow-0 self-start w-100">
+                <div class="flex flex-row gap-3 items-end">
 
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-transition">
@@ -970,7 +971,7 @@
                         Task
                     </div>
                 </div>
-            </button>
+            </a>
 
         </div>
     </div>
