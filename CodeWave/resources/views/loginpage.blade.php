@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body class="bg-body-secondary">
+<body class="" style="background-color:#10375C;">
     <div class="position-relatives">
         <div class="position-absolute shadow top-50 start-50 translate-middle d-flex flex-row bg-light rounded-2">
             <form class=" p-5 d-flex flex-column" style="width:27vw;" action="{{ route('submitLogin') }}" method="post">
@@ -28,7 +28,7 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                 </div>
-                <button type="submit" class="btn btn-outline-dark" href="homepage">Submit</button>
+                <a type="submit" class="btn btn-outline-dark" href="homepage">Submit</a>
                 <div class="fs-6 mt-1">
                 Dont have an account? <a href="{{ route('register') }}">Register Here</a>
                 </div>

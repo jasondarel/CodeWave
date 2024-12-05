@@ -49,9 +49,15 @@ Route::get('/inbox', function () {
 
 Route::view('/my-courses', 'my-courses')->name('my-courses');
 
+
+
 //profile route
 Route::get('/profile', function () {
     return view('profile');
+});
+
+Route::get('/courses', function () {
+    return view('courses');
 });
 
 // Test notification route (for testing only)
