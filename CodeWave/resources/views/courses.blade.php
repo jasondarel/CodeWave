@@ -106,7 +106,7 @@
     <div class="allcontent">
         <div class="header-section">
             <h2 class="course-language font-bold">Python Courses</h2>
-            <a href="$">See More >></a>
+            <a href="/courses/python">See More >></a>
         </div>
         <div class="courses d-flex align-content-start flex-wrap gap-4">
             @foreach ([
@@ -129,7 +129,7 @@
 
         <div class="header-section mt-12">
             <h2 class="course-language font-bold">Java Courses</h2>
-            <a href="$">See More >></a>
+            <a href="/courses/java">See More >></a>
         </div>
         <div class="courses d-flex align-content-start flex-wrap gap-4">
             @foreach ([
@@ -150,8 +150,8 @@
             @endforeach
         </div>
         <div class="header-section mt-12">
-            <h2 class="course-language font-bold">Java Courses</h2>
-            <a href="$">See More >></a>
+            <h2 class="course-language font-bold">JavaScript Courses</h2>
+            <a href="/courses/javascript">See More >></a>
         </div>
         <div class="courses d-flex align-content-start flex-wrap gap-4 mb-5">
             @foreach ([

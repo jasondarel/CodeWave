@@ -83,27 +83,24 @@
 
     @section('content')
 
-    <!-- Dashboard Content -->
     <div class="dashboard-container">
         <h1 class="welcome-header">Welcome Back, Kevin!</h3>
 
-            <!-- Courses Enrolled and Lessons Completed -->
             <div class="user-info">
                 <p>Courses Enrolled: 5</p>
                 <p>Lessons Completed: 20</p>
                 <p>Rank: Intermediate</p>
             </div>
 
-            <!-- News Section -->
             <div class="news-section">
-                <h2>Latest News</h2>
+                <div class="titles font-bold mb-4 fs-3">
+                    <h1>Latest News</h1>
+                </div>
 
                 <div class="row">
-                    <!-- Displaying news in a single row, 3 items per row -->
                     <div class="col-md-4">
                         <div class="news-item">
                             <h3><strong>Understanding AI in Modern Development</strong></h3>
-                            <!-- Replace with actual image URL -->
                             <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Development">
                             <p>Discover how artificial intelligence is shaping the future of software development.</p>
                             <small>Published on: December 1, 2024</small>
@@ -112,7 +109,6 @@
                     <div class="col-md-4">
                         <div class="news-item">
                             <h3><strong>Top 10 Programming Languages for 2024</strong></h3>
-                            <!-- Replace with actual image URL -->
                             <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top 10 Languages">
                             <p>Explore the most in-demand programming languages in the tech industry today.</p>
                             <small>Published on: November 30, 2024</small>
@@ -121,7 +117,6 @@
                     <div class="col-md-4">
                         <div class="news-item">
                             <h3><strong>Introduction to Quantum Computing</strong></h3>
-                            <!-- Replace with actual image URL -->
                             <img src="https://www.ncsa.illinois.edu/wp-content/uploads/2024/08/Quantum-computing.jpg" alt="Quantum Computing">
                             <p>Learn the basics of quantum computing and why it matters for future developers.</p>
                             <small>Published on: November 28, 2024</small>
@@ -129,7 +124,6 @@
                     </div>
                 </div>
 
-                <!-- Pagination for news -->
                 <div class="pagination">
                     <nav>
                         <ul class="pagination">
@@ -142,9 +136,10 @@
                 </div>
             </div>
 
-            <!-- Announcements Section -->
             <div class="announcements-section">
-                <h2>Announcements</h2>
+                <div class="titles font-bold mb-4 fs-3">
+                    <h1>Announcements</h1>
+                </div>
 
                 <div class="announcement-item">
                     <h3>New Course: <strong>Advanced Python</strong></h3>

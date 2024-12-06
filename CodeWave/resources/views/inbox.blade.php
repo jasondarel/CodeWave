@@ -44,7 +44,9 @@
     @extends('layout')
     @section('content')
     <div class="container mt-4">
-        <h1>Inbox</h1>
+        <div class="titles font-bold mb-4 fs-3">
+            <h1>Inbox</h1>
+        </div>
 
         <!-- Notifications List -->
         <div class="card mt-3">

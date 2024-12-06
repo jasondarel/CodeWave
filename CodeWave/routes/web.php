@@ -4,26 +4,22 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-// Public routes
 Route::get('/', function () {
-    return view('welcomepage');
+    return view('dashboard');
 })->name('index');
 
 Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-// Authentication routes
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register/submit', [AuthController::class, 'submitRegistration'])->name('submitRegistration');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/submit', [AuthController::class, 'submitLogin'])->name('submitLogin');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Dashboard route
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
-// Inbox static view route
 
 Route::get('/inbox', function () {
     return response()->view('inbox', [
@@ -49,9 +45,10 @@ Route::get('/inbox', function () {
 
 Route::view('/my-courses', 'my-courses')->name('my-courses');
 
+Route::get('/courses/python', function () {
+    return view('courses.python');
+});
 
-
-//profile route
 Route::get('/profile', function () {
     return view('profile');
 });
@@ -59,5 +56,3 @@ Route::get('/profile', function () {
 Route::get('/courses', function () {
     return view('courses');
 });
-
-// Test notification route (for testing only)
