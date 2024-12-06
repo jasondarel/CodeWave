@@ -11,6 +11,8 @@ class UserPerk extends Model
 
     protected $fillable = ['user_id', 'rank_id', 'points'];
 
+    private $minimum_points_array = ["bronze" => ["points" => 0, "id" => 0], "silver" =>  ["points" => 200, "id" => 1], "gold" =>  ["points" => 500, "id" => 2]];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -19,5 +21,29 @@ class UserPerk extends Model
     public function rank()
     {
         return $this->belongsTo(Rank::class);
+    }
+
+    protected static function booted()
+    {
+        
+
+        static::updated(function ($user_perk) {
+          
+     
+            $curr_rank_id = $user_perk->rank_id;
+
+            array_walk($this->minimum_points_array, function ($stat, $rank) use($user_perk, &$curr_rank_id) {
+              
+                if($user_perk->points > $stat["points"]){
+                    $curr_rank_id = $stat["id"];
+                }
+            });
+
+            $user_perk->rank_id = $curr_rank_id;
+
+            $user_perk->save();
+
+
+        });
     }
 }

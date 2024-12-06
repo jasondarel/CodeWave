@@ -50,7 +50,23 @@ Route::get('/courses/python', function () {
     return view('courses.python');
 });
 
+Route::get('/news1', function () {
+    return view('news.news1');
+});
 
+Route::get('/announcements/announcement1', function () {
+    return view('announcement.announcement1');
+});
+
+Route::get('/inbox/1', function () {
+    return view('inbox.inboxmessage');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+// Route dari branch profile
 Route::get('/profile', [UserController::class, 'profile'])
     ->name('profile')
     ->middleware('auth');
