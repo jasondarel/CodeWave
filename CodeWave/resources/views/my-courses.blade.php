@@ -71,8 +71,35 @@
         .progress {
             height: 10px;
             margin-bottom: 10px;
-            /* Spacing under the bar */
         }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            margin-right: 37%;
+        }
+
+        .search-input {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
 
         @media (max-width: 1200px) {
             .card {
@@ -107,6 +134,11 @@
     <div class="container mt-4">
         <div class="titles font-bold mb-4 fs-3">
             <h1>My Courses</h1>
+        </div>
+
+        <div class="search-container mt-28">
+            <input type="text" id="search" class="search-input" placeholder="Search..." />
+            <button class="search-button" onclick="searchFunction()">Search</button>
         </div>
 
         <div class="mt-10">
@@ -158,6 +190,12 @@
             </div>
         </div>
         @endsection
+        <script>
+            function searchFunction() {
+                var query = document.getElementById('search').value;
+                console.log("Searching for:", query);
+            }
+        </script>
     </div>
 </body>
 
