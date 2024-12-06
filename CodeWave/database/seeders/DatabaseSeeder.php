@@ -3,11 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Rank;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\UserPerk;
 use Date;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Faker\Provider;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -21,9 +23,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Miftah',
             'email' => 'Miftah@gmail.com',
             'password' => "Miftah",
-            'date' => Provider::class()->today("GMT"),
+            'DOB' => now()->setTimezone('GMT')->toDateString(),
         ]);
 
-        
+       
+
+
     }
 }

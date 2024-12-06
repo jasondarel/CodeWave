@@ -44,13 +44,7 @@ Route::get('/inbox', function () {
     ]);
 });
 
-<<<<<<< HEAD
-
-
-// Route::middleware('auth')->group(function (){
-=======
 Route::view('/my-courses', 'my-courses')->name('my-courses');
->>>>>>> 98feeee79b4011b8d6ebba13822c3917abc1d0a6
 
 Route::get('/courses/python', function () {
     return view('courses.python');
