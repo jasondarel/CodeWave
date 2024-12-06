@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('ranks', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->integer('minimum_points');
             $table->timestamps();
         });

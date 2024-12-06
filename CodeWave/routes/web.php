@@ -5,9 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('dashboard');
-})->name('index');
+Route::get('/', [DashboardController::class, 'dashboard'])
+->name('index');
 
 Route::get('/aboutus', function () {
     return view('aboutus');

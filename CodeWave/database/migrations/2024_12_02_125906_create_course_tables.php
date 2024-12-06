@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('name');
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
-            $table->timestamps();
+
         });
 
         Schema::create('enrollments', function (Blueprint $table) {

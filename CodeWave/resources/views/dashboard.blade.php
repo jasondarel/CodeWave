@@ -87,7 +87,7 @@
             <div class="user-info">
                 <p>Courses Enrolled: 5</p>
                 <p>Lessons Completed: 20</p>
-                <p>Rank: {{$rank}}</p>
+                <p>Rank: {{ucfirst($rank)}}</p>
             </div>
 
             <div class="news-section">
