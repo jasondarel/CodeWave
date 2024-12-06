@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -52,6 +53,8 @@ Route::get('/courses/python', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+// Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 
 Route::get('/courses', function () {
     return view('courses');

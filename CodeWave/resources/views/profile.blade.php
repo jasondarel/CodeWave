@@ -23,7 +23,7 @@
     <div class="d-flex flex-column mb-4">
         <div class="w-75 mx-auto mt-4 contents d-flex gap-5 align-items-center">
             <img src="{{ asset('img/profilepic.png') }}" class="rounded" style="height:20vh;" alt="Profile Picture">
-            <div class="fs-2">Hi! //Nama User</div>
+            <div class="fs-2">Hi! {{ $user->name }}</div>
         </div>
 
         <form class="w-75 mx-auto mt-4 d-flex flex-column">
@@ -31,26 +31,25 @@
                 <legend>Here's Your Profile Information</legend>
                 <div class="mb-3">
                     <label for="nameInput" class="form-label">Name</label>
-                    <input type="text" id="nameInput" class="form-control" placeholder="User Name">
+                    <input type="text" id="nameInput" class="form-control" value="{{ $user->name }}">
                 </div>
                 <div class="mb-3">
                     <label for="emailInput" class="form-label">Email</label>
-                    <input type="email" id="emailInput" class="form-control" placeholder="User Email">
+                    <input type="email" id="emailInput" class="form-control" value="{{ $user->email }}">
                 </div>
                 <div class="mb-3">
                     <label for="passwordInput" class="form-label">Password</label>
-                    <input type="password" id="passwordInput" class="form-control" placeholder="******">
+                    <input type="password" id="passwordInput" class="form-control" value="{{ $user->password }}">
                 </div>
                 <div class="mb-3">
                     <label for="dobInput" class="form-label">Date Of Birth</label>
-                    <input type="date" id="dobInput" class="form-control" placeholder="User DOB">
+                    <input type="date" id="dobInput" class="form-control" value="{{ $user->DOB }}">
                 </div>
                 <div class="mb-3">
                     <label for="roleSelect" class="form-label">Role</label>
                     <select id="roleSelect" class="form-select">
-                        <option selected disabled>Your Role</option>
-                        <option>Admin</option>
-                        <option>User</option>
+                        <option {{ $user->role == 'Admin' ? 'selected' : '' }}>Admin</option>
+                        <option {{ $user->role == 'User' ? 'selected' : '' }}>User</option>
                     </select>
                 </div>
             </fieldset>

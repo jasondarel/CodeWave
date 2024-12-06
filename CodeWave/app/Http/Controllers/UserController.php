@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserPerk;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function profile(){
+        // mengirimkan data user ke view profile
+        $user = Auth::user();
+        return view('profile', compact('user'));
+    }
+    
     //
     public function getUserPerks()
     {
@@ -21,4 +27,6 @@ class UserController extends Controller
 
         return $user_perk->points;
     }
+
+
 }
