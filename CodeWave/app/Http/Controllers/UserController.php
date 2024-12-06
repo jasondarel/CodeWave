@@ -11,6 +11,9 @@ class UserController extends Controller
     public function profile(){
         // mengirimkan data user ke view profile
         $user = Auth::user();
+        if (!$user) {
+            return redirect()->route('login')->withErrors(['error' => 'You must be logged in to access the profile page.']);
+        }
         return view('profile', compact('user'));
     }
     
