@@ -48,13 +48,11 @@
             <h1>Inbox</h1>
         </div>
 
-        <!-- Notifications List -->
         <div class="card mt-3">
             <div class="card-header">
                 <h5>Recent Notifications</h5>
             </div>
             <div class="card-body scrollable-list">
-                <!-- Simulating notifications -->
                 @php
                 $notifications = [
                 ['id' => 1, 'title' => 'Course Enrollment Successful', 'message' => 'You have successfully enrolled in the "Introduction to Python" course. Happy learning!', 'date' => '2024-12-04'],
@@ -63,7 +61,6 @@
                 ];
                 @endphp
 
-                <!-- Loop through the notifications -->
                 @foreach ($notifications as $notification)
                 <a href="/inbox/{{ $notification['id'] }}" class="notification-item" id="notification-{{ $notification['id'] }}">
                     <div class="d-flex justify-content-between align-items-center">

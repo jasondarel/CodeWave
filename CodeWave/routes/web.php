@@ -66,11 +66,22 @@ Route::get('/inbox/1', function () {
     return view('inbox.inboxmessage');
 });
 
+Route::get('/my-courses/python-for-beginners', function () {
+    return view('my-courses.python-for-beginners');
+});
+
+Route::get('/my-courses/python-for-beginners/chapter-1', function () {
+    return view('my-courses.python-for-beginners.chapter-1');
+});
+
+Route::get('/my-courses/python-for-beginners/chapter-2', function () {
+    return view('my-courses.python-for-beginners.chapter-2');
+});
+
 Route::get('/profile', function () {
     return view('profile');
 });
 
-// Route dari branch profile
 Route::get('/profile', [UserController::class, 'profile'])
     ->name('profile')
     ->middleware('auth');

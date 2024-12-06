@@ -8,15 +8,7 @@
 </head>
 
 <body>
-    @extends('layout')
 
-    @section('content')
-    <div class="titles font-bold mb-4 fs-3">
-        <a href="/courses" class="back-link">
-            &#8592;
-        </a>
-    </div>
-    @endesection
 </body>
 
 </html>
