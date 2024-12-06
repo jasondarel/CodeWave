@@ -6,6 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+        .err ul li {
+            color: red;
+            list-style: none;
+        }   
+    </style>
 </head>
 <body class="" style="background-color:#10375C;">
     <div class="position-relatives">
@@ -32,9 +38,13 @@
                 <div class="fs-6 mt-1">
                 Dont have an account? <a href="{{ route('register') }}">Register Here</a>
                 </div>
-                @if(session('fail'))
-                    <div class="alert alert-danger">
-                        {{ session('fail') }}
+                @if ($errors->any())
+                    <div class="err">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>   
+                            @endforeach
+                        </ul>
                     </div>
                 @endif
             </form>

@@ -53,6 +53,10 @@ Route::get('/news1', function () {
     return view('news.news1');
 });
 
+Route::get('/courses/python/python-for-beginners', function () {
+    return view('courses.python.python-for-beginners');
+});
+
 Route::get('/announcements/announcement1', function () {
     return view('announcement.announcement1');
 });
@@ -65,7 +69,10 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-// Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+// Route dari branch profile
+Route::get('/profile', [UserController::class, 'profile'])
+    ->name('profile')
+    ->middleware('auth');
 
 Route::get('/courses', function () {
     return view('courses');

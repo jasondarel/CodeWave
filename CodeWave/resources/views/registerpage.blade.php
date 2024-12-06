@@ -6,11 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+        .err ul li {
+            color: red;
+            list-style: none;
+        }   
+    </style>
 </head>
 <body style="background-color:#10375C;">
     <div class="position-relatives">
         <div class="position-absolute shadow top-50 start-50 translate-middle d-flex flex-row bg-light rounded-2">
             <img src="{{asset('img/LoginImg.png')}}" class="shadow rounded-start" alt="...">
+
             <form class=" p-5 d-flex flex-column" style="width:30vw;" action="{{ route('submitRegistration') }}" method="post">
                 @csrf
 
@@ -37,6 +44,15 @@
                 <div class="fs-6 mt-1">
                 Already have an account? <a href="{{ route('login') }}">Login Here</a>
                 </div>
+                @if ($errors->any())
+                    <div class="err">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>   
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </form>
         </div>
         
