@@ -16,11 +16,16 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'DOB', // Tambahkan kolom DOB
-    ];
+        'name', 
+        'email', 
+        'password', 
+        'DOB', 
+        'role'
+    ];    
+
+    protected $attributes = [
+        'role' => 'User',
+    ];    
 
     /**
      * The attributes that should be hidden for serialization.

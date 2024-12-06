@@ -66,6 +66,8 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+// Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+
 Route::get('/courses', function () {
     return view('courses');
 });
