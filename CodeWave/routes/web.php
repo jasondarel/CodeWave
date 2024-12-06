@@ -66,7 +66,10 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-// Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+// Route dari branch profile
+Route::get('/profile', [UserController::class, 'profile'])
+    ->name('profile')
+    ->middleware('auth');
 
 Route::get('/courses', function () {
     return view('courses');
