@@ -19,13 +19,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Miftah',
-            'email' => 'Miftah@gmail.com',
-            'password' => "Miftah",
-            'DOB' => now()->setTimezone('GMT')->toDateString(),
-        ]);
+   
+       
 
+        // Insert UserPerk data
+        
+
+      
        
 
 
