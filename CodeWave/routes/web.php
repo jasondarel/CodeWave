@@ -54,6 +54,10 @@ Route::get('/news1', function () {
     return view('news.news1');
 });
 
+Route::get('/courses/python/python-for-beginners', function () {
+    return view('courses.python.python-for-beginners');
+});
+
 Route::get('/announcements/announcement1', function () {
     return view('announcement.announcement1');
 });

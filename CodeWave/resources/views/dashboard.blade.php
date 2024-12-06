@@ -82,12 +82,11 @@
     @section('content')
 
     <div class="dashboard-container">
-        <h1 class="welcome-header">Welcome Back, Kevin!</h3>
+        <h1 class="welcome-header">Welcome Back, (Nama User)!</h3>
 
             <div class="user-info">
                 <p>Courses Enrolled: 5</p>
                 <p>Lessons Completed: 20</p>
-                <p>Rank: {{$rank}}</p>
             </div>
 
             <div class="news-section">
