@@ -43,7 +43,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="dobInput" class="form-label">Date Of Birth</label>
-                    <input type="date" id="dobInput" class="form-control" value="{{ $user->DOB }}">
+                    <input type="date" id="dobInput" class="form-control" value="{{ $user->DOB ?? '2000-01-01' }}">
                 </div>
                 <div class="mb-3">
                     <label for="roleSelect" class="form-label">Role</label>
