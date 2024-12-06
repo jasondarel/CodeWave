@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,6 +40,8 @@ Route::get('/tes', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
+
 
 
 
