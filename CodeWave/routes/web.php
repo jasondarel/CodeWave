@@ -6,49 +6,72 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcomepage');
+    return view('dashboard');
 })->name('index');
 
 Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-
-
-// Route::get('/login', function () {
-//     return view('loginpage');
-// });
-
-// Route::get('/register', function () {
-//     return view('registerpage');
-// });
-
-
-// register
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register/submit', [AuthController::class, 'submitRegistration'])->name('submitRegistration');
-// login
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/submit', [AuthController::class, 'submitLogin'])->name('submitLogin');
-
-// logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-
-Route::get('/tes', function () {
-    return view('tes');
-});
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 
+Route::get('/inbox', function () {
+    return response()->view('inbox', [
+        'notifications' => [
+            [
+                'title' => 'Successfully Enrolled',
+                'message' => 'You have successfully enrolled in the "Intro to JavaScript" course.',
+                'date' => 'December 4, 2024, 10:30 AM',
+            ],
+            [
+                'title' => 'Course Completed',
+                'message' => 'You have completed the "Advanced Python Programming" course.',
+                'date' => 'December 3, 2024, 2:15 PM',
+            ],
+            [
+                'title' => 'New Lesson Available',
+                'message' => 'A new lesson on "React State Management" is available in your course.',
+                'date' => 'December 2, 2024, 8:00 PM',
+            ],
+        ]
+    ]);
+});
 
+<<<<<<< HEAD
 
 
 // Route::middleware('auth')->group(function (){
+=======
+Route::view('/my-courses', 'my-courses')->name('my-courses');
+>>>>>>> 98feeee79b4011b8d6ebba13822c3917abc1d0a6
 
-// });
+Route::get('/courses/python', function () {
+    return view('courses.python');
+});
 
-// Route::middleware('guest')->group(function (){
-    
-// });
+Route::get('/news1', function () {
+    return view('news.news1');
+});
+
+Route::get('/announcements/announcement1', function () {
+    return view('announcement.announcement1');
+});
+
+Route::get('/inbox/1', function () {
+    return view('inbox.inboxmessage');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/courses', function () {
+    return view('courses');
+});

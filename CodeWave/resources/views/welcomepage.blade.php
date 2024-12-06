@@ -12,7 +12,6 @@
     @extends('layout')
 
     @section('content')
-    <!-- <div class="font-lexend font-light">Whereas disregard and contempt for human rights have resulted </div> -->
     @if (session('success'))
     {{ session('success') }}
     @endif

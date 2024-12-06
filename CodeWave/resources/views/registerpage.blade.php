@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body class="bg-body-secondary">
+<body style="background-color:#10375C;">
     <div class="position-relatives">
         <div class="position-absolute shadow top-50 start-50 translate-middle d-flex flex-row bg-light rounded-2">
             <img src="{{asset('img/LoginImg.png')}}" class="shadow rounded-start" alt="...">
