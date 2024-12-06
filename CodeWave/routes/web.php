@@ -44,10 +44,28 @@ Route::get('/inbox', function () {
     ]);
 });
 
+<<<<<<< HEAD
+
+
+// Route::middleware('auth')->group(function (){
+=======
 Route::view('/my-courses', 'my-courses')->name('my-courses');
+>>>>>>> 98feeee79b4011b8d6ebba13822c3917abc1d0a6
 
 Route::get('/courses/python', function () {
     return view('courses.python');
+});
+
+Route::get('/news1', function () {
+    return view('news.news1');
+});
+
+Route::get('/announcements/announcement1', function () {
+    return view('announcement.announcement1');
+});
+
+Route::get('/inbox/1', function () {
+    return view('inbox.inboxmessage');
 });
 
 Route::get('/profile', function () {

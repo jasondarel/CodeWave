@@ -108,7 +108,7 @@
 
     @section('content')
     <div class="titles font-bold mb-4 fs-3">
-        <a href="javascript:history.back()" class="back-link">
+        <a href="/courses" class="back-link">
             &#8592;
         </a>
         <h1>Python Courses</h1>

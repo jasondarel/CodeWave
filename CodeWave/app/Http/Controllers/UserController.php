@@ -15,18 +15,23 @@ class UserController extends Controller
     }
     
     //
-    public function getUserPerks()
-    {
+
+    public function getUserPerks(){
         $user = Auth::user();
-        return UserPerk::where("user_id", $user->id)->get();
+        return UserPerk::where("user_id", $user->id);
     }
 
-    public function getUserPoints()
-    {
+    public function getUserPoints(){
+      
+        return  $this->getUserPerks()->get()->points;
+    }
+
+    public function updateUserPoints($points) {
         $user_perk = $this->getUserPerks();
-
-        return $user_perk->points;
+        $user_perk->update(["points"], $points);
     }
 
-
+    public function getUserRank(){
+        return $this->getUserPerks()->rank()->name;
+    }
 }
