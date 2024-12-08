@@ -70,6 +70,37 @@
             background-color: #0056b3;
         }
 
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            margin-right: 37%;
+        }
+
+        .search-input {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+
+
         @media (max-width: 1200px) {
             .card {
                 flex: 1 1 calc(25% - 20px);
@@ -99,8 +130,13 @@
 <body>
     @extends('layout')
     @section('content')
-    <div class="titles font-bold mb-4 fs-3">
+    <div class="titles font-bold mb-10 fs-3 mt-4">
         <h1>Courses List</h1>
+    </div>
+
+    <div class="search-container mt-28">
+        <input type="text" id="search" class="search-input" placeholder="Search..." />
+        <button class="search-button" onclick="searchFunction()">Search</button>
     </div>
 
     <div class="allcontent">
@@ -174,6 +210,12 @@
         </div>
     </div>
     @endsection
+    <script>
+        function searchFunction() {
+            var query = document.getElementById('search').value;
+            console.log("Searching for:", query);
+        }
+    </script>
 </body>
 
 </html>

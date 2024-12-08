@@ -59,6 +59,7 @@
             margin-top: 10px;
             width: 100%;
             text-align: center;
+            /* Center the text and bar */
         }
 
         .progress-bar-text {
@@ -71,6 +72,34 @@
             height: 10px;
             margin-bottom: 10px;
         }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            margin-right: 37%;
+        }
+
+        .search-input {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
 
         @media (max-width: 1200px) {
             .card {
@@ -107,14 +136,19 @@
             <h1>My Courses</h1>
         </div>
 
+        <div class="search-container mt-28">
+            <input type="text" id="search" class="search-input" placeholder="Search..." />
+            <button class="search-button" onclick="searchFunction()">Search</button>
+        </div>
+
         <div class="mt-10">
             <div class="header-section">
                 <h2 class="course-language font-bold">Courses in Progress</h2>
             </div>
             <div class="courses d-flex align-content-start flex-wrap gap-4">
                 @foreach ([
-                ['title' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'progress' => 40, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
                 ['title' => 'Python for Beginners', 'description' => 'Learn the fundamentals of Python programming, including syntax, data structures, and simple scripts.', 'progress' => 60, 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
+                ['title' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'progress' => 40, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
                 ['title' => 'Java for Mobile Development', 'description' => 'Learn to build mobile apps using Java and frameworks like Android SDK.', 'progress' => 20, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
                 ['title' => 'Spring Framework Basics', 'description' => 'Understand the fundamentals of Spring to build Java-based web applications.', 'progress' => 55, 'image' => 'https://download.logo.wine/logo/Spring_Framework/Spring_Framework-Logo.wine.png'],
                 ['title' => 'Java Web Development with Spring Boot', 'description' => 'Build scalable web apps using Java and Spring Boot, covering RESTful APIs, JPA, and Spring Security.', 'progress' => 35, 'image' => 'https://miro.medium.com/v2/resize:fit:1400/1*vFiGOTV1S8yz0RTIQteTjw.png']
@@ -156,6 +190,12 @@
             </div>
         </div>
         @endsection
+        <script>
+            function searchFunction() {
+                var query = document.getElementById('search').value;
+                console.log("Searching for:", query);
+            }
+        </script>
     </div>
 </body>
 

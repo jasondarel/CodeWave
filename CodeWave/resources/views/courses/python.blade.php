@@ -77,6 +77,32 @@
             color: #0056b3;
         }
 
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            margin-right: 37%;
+        }
+
+        .search-input {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
         @media (max-width: 1200px) {
             .card {
                 flex: 1 1 calc(25% - 20px);
@@ -108,13 +134,18 @@
 
     @section('content')
     <div class="titles font-bold mb-4 fs-3">
-        <a href="javascript:history.back()" class="back-link">
+        <a href="/courses" class="back-link">
             &#8592;
         </a>
         <h1>Python Courses</h1>
     </div>
 
-    <div class="allcontent">
+    <div class="search-container mt-28">
+        <input type="text" id="search" class="search-input" placeholder="Search..." />
+        <button class="search-button" onclick="searchFunction()">Search</button>
+    </div>
+
+    <div class="allcontent mt-10">
         <div class="courses d-flex align-content-start flex-wrap gap-4 mb-10">
             @foreach ([
             ['title' => 'Python for Beginners', 'description' => 'Learn the fundamentals of Python programming, including syntax, data structures, and simple scripts.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
@@ -172,6 +203,12 @@
         </div>
     </div>
     @endsection
+    <script>
+        function searchFunction() {
+            var query = document.getElementById('search').value;
+            console.log("Searching for:", query);
+        }
+    </script>
 </body>
 
 </html>

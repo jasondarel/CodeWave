@@ -51,7 +51,6 @@
             margin-bottom: 15px;
         }
 
-        /* Style the images */
         .news-item img {
             width: 100%;
             height: 200px;
@@ -59,7 +58,6 @@
             margin-bottom: 15px;
         }
 
-        /* For announcements to be vertical */
         .announcement-item {
             display: flex;
             flex-direction: column;
@@ -94,11 +92,11 @@
 
     <div class="dashboard-container">
         @auth
-        <h1 class="welcome-header">Welcome Back, Kevin!</h3>
+        <h1 class="welcome-header">Welcome Back, (Nama User)!</h3>
             <div class="user-info">
                 <p>Courses Enrolled: 5</p>
                 <p>Lessons Completed: 20</p>
-                <p>Rank: Intermediate</p>
+                <p>Rank: {{ucfirst($rank)}}</p>
                 <span class="spasi"></span>
             </div>           
         @endauth
@@ -110,12 +108,14 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="news-item">
-                            <h3><strong>Understanding AI in Modern Development</strong></h3>
-                            <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Development">
-                            <p>Discover how artificial intelligence is shaping the future of software development.</p>
-                            <small>Published on: December 1, 2024</small>
-                        </div>
+                        <a href="/news1">
+                            <div class="news-item">
+                                <h3><strong>Understanding AI in Modern Development</strong></h3>
+                                <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Development">
+                                <p>Discover how artificial intelligence is shaping the future of software development.</p>
+                                <small>Published on: December 1, 2024</small>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-4">
                         <div class="news-item">
