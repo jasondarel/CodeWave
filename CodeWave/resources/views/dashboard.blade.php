@@ -75,6 +75,15 @@
         .pagination {
             margin-top: 20px;
         }
+
+        /* gada margin jika guest blm login */
+        .no-margin {
+            margin-top: 0 !important;
+        }
+        .user-info .spasi {
+            margin-bottom: 50px;
+            display: block;
+        }
     </style>
 </head>
 
@@ -84,15 +93,17 @@
     @section('content')
 
     <div class="dashboard-container">
+        @auth
         <h1 class="welcome-header">Welcome Back, Kevin!</h3>
-
             <div class="user-info">
                 <p>Courses Enrolled: 5</p>
                 <p>Lessons Completed: 20</p>
                 <p>Rank: Intermediate</p>
-            </div>
-
-            <div class="news-section">
+                <span class="spasi"></span>
+            </div>           
+        @endauth
+        
+            <div class="news-section no-margin">
                 <div class="titles font-bold mb-4 fs-3">
                     <h1>Latest News</h1>
                 </div>

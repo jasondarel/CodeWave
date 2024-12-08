@@ -979,7 +979,7 @@
                 </div>
             </a>
 
-            <a href="/profile" class="group hover:text-black hover:font-bold p-2 hover:bg-[#F3C623] duration-50 rounded-lg flex-grow-0 self-start w-100">
+            <a href="{{ route('profile') }}" class="group hover:text-black hover:font-bold p-2 hover:bg-[#F3C623] duration-50 rounded-lg flex-grow-0 self-start w-100">
                 <div class="flex flex-row gap-3 items-end">
 
                     <div class="">
