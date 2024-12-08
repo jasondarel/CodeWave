@@ -19,26 +19,41 @@
             <form class=" p-5 d-flex flex-column" style="width:27vw;" action="{{ route('submitLogin') }}" method="post">
                 @csrf
 
-                <h3>Login</h3>
+                <h3>{{ __('loginForm.login') }}</h3>
                 <div class="mb-3 mt-4">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <label for="email" class="form-label">{{ __('loginForm.input.email') }}</label>
+                    <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">{{ __('loginForm.input.emailHelp') }}</div>
+                    @error('email')
+                          <div class="invalid-feedback">
+                              {{ $message }}
+                          </div>
+                    @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" name="password" id="password" value="{{ old('password') }}" class="form-control">
+                    <label for="password" class="form-label">{{ __('loginForm.input.password') }}</label>
+                    <input type="password" name="password" id="password" value="{{ old('password') }}" class="form-control @error('password') is-invalid @enderror">
+                    @error('password')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                    @enderror
+                    @if (session('fail'))
+                        <div class="mt-3 alert alert-danger">
+                            {{ session('fail') }}
+                        </div>
+                    @endif
                 </div>
                 {{-- Remember Me belum diimplementasi --}}
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    <label class="form-check-label" for="exampleCheck1">{{ __('loginForm.input.remember') }}</label>
                 </div>
-                <button type="submit" class="btn btn-outline-dark">Submit</button>
+                <button type="submit" class="btn btn-outline-dark">{{ __('loginForm.input.tombol') }}</button>
                 <div class="fs-6 mt-1">
-                Dont have an account? <a href="{{ route('register') }}">Register Here</a>
+                    {{ __('loginForm.input.akun') }} <a href="{{ route('register') }}">{{ __('loginForm.input.register') }}</a>
                 </div>
-                @if ($errors->any())
+                {{-- @if ($errors->any())
                     <div class="err">
                         <ul>
                             @foreach ($errors->all() as $error)
@@ -46,7 +61,7 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif
+                @endif --}}
             </form>
             <img src="{{asset('img/LoginImg.png')}}" class="shadow rounded-end" alt="...">
             
