@@ -47,7 +47,12 @@ Route::middleware('auth')->group(function () {
         return view('courses');
     })->name('courses');
 
+    Route::get('api/courses', [CourseController::class, 'enrollCourses']);
 
+    Route::get('api/lesson/finish', [CourseController::class, "finishLesson"]);
+
+    Route::get('api/lesson/percentage', [CourseController::class, "lessonFinishedPercentage"]);
+    
     Route::get('/news1', function () {
         return view('news.news1');
     })->name('news1');
