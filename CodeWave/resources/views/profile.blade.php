@@ -10,9 +10,17 @@
             const editButton = document.getElementById("editButton");
             const profileFieldset = document.getElementById("profileFieldset");
 
-            editButton.addEventListener("click", function () {
-                profileFieldset.disabled = !profileFieldset.disabled;
-                editButton.textContent = profileFieldset.disabled ? "Edit" : "Save";
+            editButton.addEventListener("click", function (event) {
+                // Cegah pengiriman form
+                event.preventDefault();
+
+                // Toggle antara edit dan save
+                if (profileFieldset.disabled) {
+                    profileFieldset.disabled = false; // Aktifkan fieldset
+                    editButton.textContent = "Save"; // Ubah tombol ke Save
+                } else {
+                    document.getElementById("profileForm").submit(); // Kirim form secara manual
+                }
             });
         });
     </script>
@@ -26,30 +34,30 @@
             <div class="fs-2">Hi! {{ $user->name ?? 'Guest' }}</div>
         </div>
 
-        <form class="w-75 mx-auto mt-4 d-flex flex-column">
+        <form id="profileForm" class="w-75 mx-auto mt-4 d-flex flex-column" action="{{ route('updateProfile', $user->id) }}" method="post">
+            @csrf
+            @method('PUT')
+        
             <fieldset disabled class="d-flex flex-column" id="profileFieldset">
-                <legend>Here's Your Profile Information</legend>
+                <legend>{{ __('profile.profileInfo') }}</legend>
                 <div class="mb-3">
                     <label for="nameInput" class="form-label">Name</label>
-                    <input type="text" id="nameInput" class="form-control" value="{{ $user->name }}">
+                    <input type="text" id="nameInput" name="name" class="form-control" value="{{ $user->name }}">
                 </div>
                 <div class="mb-3">
                     <label for="emailInput" class="form-label">Email</label>
-                    <input type="email" id="emailInput" class="form-control" value="{{ $user->email }}">
-                </div>
-                <div class="mb-3">
-                    <label for="passwordInput" class="form-label">Password</label>
-                    <input type="password" id="passwordInput" class="form-control" value="{{ $user->password }}">
+                    <input type="email" id="emailInput" name="email" class="form-control" value="{{ $user->email }}">
                 </div>
                 <div class="mb-3">
                     <label for="dobInput" class="form-label">Date Of Birth</label>
-                    <input type="date" id="dobInput" class="form-control" value="{{ $user->DOB ?? '2000-01-01' }}">
+                    <input type="date" id="dobInput" name="DOB" class="form-control" value="{{ $user->DOB ? $user->DOB->format('Y-m-d') : '2000-01-01' }}">
+
                 </div>
                 <div class="mb-3">
                     <label for="roleSelect" class="form-label">Role</label>
-                    <select id="roleSelect" class="form-select">
-                        <option {{ $user->role == 'Admin' ? 'selected' : '' }}>Admin</option>
-                        <option {{ $user->role == 'User' ? 'selected' : '' }}>User</option>
+                    <select id="roleSelect" name="role" class="form-select">
+                        <option value="Admin" {{ $user->role == 'Admin' ? 'selected' : '' }}>Admin</option>
+                        <option value="User" {{ $user->role == 'User' ? 'selected' : '' }}>User</option>
                     </select>
                 </div>
             </fieldset>
