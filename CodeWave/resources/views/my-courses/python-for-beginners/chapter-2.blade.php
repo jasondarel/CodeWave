@@ -155,7 +155,7 @@
             <h2>1. Introduction</h2>
 
             <div class="next-chapter">
-                <a href="/my-courses/python-for-beginners/chapter-3" class="next-chapter-button">Next Chapter</a>
+                <a href="/my-courses/python-for-beginners?id=PFB03" class="next-chapter-button">Next Chapter</a>
             </div>
         </div>
     </div>

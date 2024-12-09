@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/test-api', [CourseController::class, 'lessonFinishedPercentage']);
 Route::get('/', [DashboardController::class, 'dashboard'])
 ->name('index');
 
@@ -94,11 +96,11 @@ Route::get('/my-courses/python-for-beginners', function () {
     return view('my-courses.python-for-beginners');
 });
 
-Route::get('/my-courses/python-for-beginners/chapter-1', function () {
+Route::get('/my-courses/python-for-beginners?id=PFB01', function () {
     return view('my-courses.python-for-beginners.chapter-1');
-});
+})->name("python_course_1");
 
-Route::get('/my-courses/python-for-beginners/chapter-2', function () {
+Route::get('/my-courses/python-for-beginners?id=PFB02', function () {
     return view('my-courses.python-for-beginners.chapter-2');
 });
 
@@ -110,6 +112,7 @@ Route::get('/profile', [UserController::class, 'profile'])
     ->name('profile')
     ->middleware('auth');
 
-Route::get('/courses', function () {
-    return view('courses');
-});
+Route::get('/courses', [CourseController::class, 'coursePage'])->name("courses");
+
+
+Route::get('/api/courses/', [CourseController::class, 'enrollCourse']);

@@ -9,7 +9,8 @@ class Course extends Model
 {
     use HasFactory;
 
-    protected $table = 'course';
+    protected $fillable = ['id','name','description','total_time','lessonamount'];
+ 
     public function enrollments()
     {
         return $this->hasMany(Enrollment::class, 'course_id', 'id');
