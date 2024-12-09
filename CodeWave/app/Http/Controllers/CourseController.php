@@ -66,6 +66,10 @@ class CourseController extends Controller
     
     }
 
+    public function getAllUserCourses(){
+        return Enrollment::all()->toArray();
+    }
+
     public function getUserEnrollment(){
         // $user = Auth::user();
         // return Enrollment::where("user_id", $user->id);

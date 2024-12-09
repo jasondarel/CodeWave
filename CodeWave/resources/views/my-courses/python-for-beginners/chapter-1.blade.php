@@ -219,6 +219,32 @@
             <div class="next-chapter">
                 <a href="/my-courses/python-for-beginners?id=PFB02" class="next-chapter-button">Next Chapter</a>
             </div>
+            <script>
+                document.querySelector('.next-chapter-button').addEventListener('click', function (event) {
+                    event.preventDefault(); 
+                    const apiUrl = 'api/lesson/finish?id=PFB01'; 
+
+                    fetch(apiUrl, {
+                        method: 'GET', 
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('API response:', data);
+                        window.location.href = event.target.href;
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+                });
+            </script>
         </div>
     </div>
     @endsection
