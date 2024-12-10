@@ -388,6 +388,9 @@ Route::get('/my-courses/dawp/dawp05', function () {
     return view('my-courses.dawp.dawp05');
 })->name('my-courses.dawp.dawp05');
 
+
+
+
 //dvwp
 Route::get('/my-courses/dvwp/dvwp01', function () {
     return view('my-courses.dvwp.dvwp01');
@@ -408,6 +411,30 @@ Route::get('/my-courses/dvwp/dvwp04', function () {
 Route::get('/my-courses/dvwp/dvwp05', function () {
     return view('my-courses.dvwp.dvwp05');
 })->name('my-courses.dvwp.dvwp05');
+
+
+
+//itf
+Route::get('/my-courses/itf/itf01', function () {
+    return view('my-courses.itf.itf01');
+})->name('my-courses.itf.itf01');
+
+Route::get('/my-courses/itf/itf02', function () {
+    return view('my-courses.itf.itf02');
+})->name('my-courses.itf.itf02');
+
+Route::get('/my-courses/itf/itf03', function () {
+    return view('my-courses.itf.itf03');
+})->name('my-courses.itf.itf03');
+
+Route::get('/my-courses/itf/itf04', function () {
+    return view('my-courses.itf.itf04');
+})->name('my-courses.itf.itf04');
+
+Route::get('/my-courses/itf/itf05', function () {
+    return view('my-courses.itf.itf05');
+})->name('my-courses.itf.itf05');
+
 
 
 //javascript
