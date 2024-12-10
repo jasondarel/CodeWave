@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 2: Understanding Variables, Data Types, and Operators</title>
+    <title>Chapter 4: Defining and Using Functions</title>
     <style>
         html,
         body {
@@ -82,7 +82,7 @@
         .main-content h2 {
             font-size: 24px;
             color: #555;
-            margin-top: 70px;
+            margin-top: 50px;
         }
 
         .main-content p {
@@ -90,6 +90,20 @@
             color: #666;
             line-height: 1.6;
             margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .code-snippet {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            font-family: Consolas, "Courier New", monospace;
         }
 
         .next-chapter {
@@ -112,11 +126,6 @@
         .next-chapter-button:hover {
             background-color: #e0a800;
         }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
     </style>
 </head>
 
@@ -127,126 +136,91 @@
     @section('content')
     <div class="container">
 
+        <!-- Sidebar -->
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
                 <li><a href="/my-courses/python-for-beginners/pfb01">Chapter 1: Introduction to Python and setting up your environment</a></li>
-                <li class="active"><a href="/my-courses/python-for-beginners/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
+                <li><a href="/my-courses/python-for-beginners/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb03">Chapter 3: Working with loops and conditionals</a></li>
-                <li><a href="/my-courses/python-for-beginners/pfb04">Chapter 4: Defining and using functions</a></li>
+                <li class="active"><a href="/my-courses/python-for-beginners/pfb04">Chapter 4: Defining and using functions</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb05">Chapter 5: Creating and managing Python modules</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb06">Chapter 6: Building a final project</a></li>
             </ul>
         </div>
 
+        <!-- Main Content -->
         <div class="main-content">
-            <h1>Chapter 2: Understanding Variables, Data Types, and Operators</h1>
+            <h1>Chapter 4: Defining and Using Functions</h1>
 
+            <!-- Learning Objectives -->
             <h2>Learning Objectives</h2>
-            <ul style="list-style-type: disc; margin-left: 20px;">
-                <li>Understand what variables are and how they store data in Python</li>
-                <li>Learn about different data types in Python, including strings, integers, floats, and booleans</li>
-                <li>Understand the concept of type conversion and how to use it</li>
-                <li>Learn about basic operators in Python such as arithmetic, comparison, and logical operators</li>
-                <li>Practice working with variables and operators in Python to perform simple calculations</li>
+            <ul>
+                <li>Understand the syntax for defining functions in Python.</li>
+                <li>Learn to use parameters and arguments effectively.</li>
+                <li>Explore the use of return statements in functions.</li>
+                <li>Understand the difference between built-in and user-defined functions.</li>
+                <li>Learn about recursion and lambda functions.</li>
             </ul>
 
+            <!-- Content -->
             <h2>1. Introduction</h2>
-            <p>
-                Variables, data types, and operators are fundamental concepts in programming. In this chapter, we’ll dive into how Python stores and manages data, and explore the tools you can use to manipulate and work with that data.
-            </p>
+            <p>Functions are an essential part of programming that allow you to reuse blocks of code and structure your program in an organized way. In this chapter, we will cover how to define, use, and understand functions.</p>
 
-            <h2>2. Variables</h2>
-            <p>
-                A variable is a named storage location for data in a program. In Python, you can create a variable by simply assigning a value to it using the equals sign (<code>=</code>).
-            </p>
-            <pre>
-# Example
-name = "Alice"
-age = 25
-height = 5.6
-print(name, age, height)
-    </pre>
+            <h2>2. Defining a Function</h2>
+            <p>To define a function in Python, you use the <code>def</code> keyword followed by the function name and parentheses. Here's an example:</p>
+            <div class="code-snippet">
+                <pre>
+def greet(name):
+    print(f"Hello, {name}!")
 
-            <h2>3. Data Types</h2>
-            <p>
-                Python supports various data types. Here are some common ones:
-            </p>
-            <ul>
-                <li><strong>String:</strong> Text enclosed in quotes. Example: <code>"Hello, World!"</code></li>
-                <li><strong>Integer:</strong> Whole numbers. Example: <code>42</code></li>
-                <li><strong>Float:</strong> Numbers with decimals. Example: <code>3.14</code></li>
-                <li><strong>Boolean:</strong> True or False values. Example: <code>True</code></li>
-            </ul>
-            <pre>
-# Example
-greeting = "Hello"
-is_sunny = True
-temp = 23.5
-print(greeting, is_sunny, temp)
-    </pre>
-
-            <h2>4. Type Conversion</h2>
-            <p>
-                Python allows you to convert one data type to another using built-in functions:
-            </p>
-            <ul>
-                <li><code>int()</code>: Converts to an integer</li>
-                <li><code>float()</code>: Converts to a float</li>
-                <li><code>str()</code>: Converts to a string</li>
-            </ul>
-            <pre>
-# Example
-age = "25"
-age_in_int = int(age)
-print(age_in_int + 5)  # Outputs: 30
-    </pre>
-
-            <h2>5. Operators</h2>
-            <p>
-                Operators are symbols that perform operations on variables and values. Here are some basic types:
-            </p>
-            <ul>
-                <li><strong>Arithmetic Operators:</strong> +, -, *, /, %, **</li>
-                <li><strong>Comparison Operators:</strong> ==, !=, >, <,>=, <=< /li>
-                <li><strong>Logical Operators:</strong> and, or, not</li>
-            </ul>
-            <pre>
-# Example
-x = 10
-y = 20
-
-# Arithmetic
-print(x + y)  # Outputs: 30
-
-# Comparison
-print(x < y)  # Outputs: True
-
-# Logical
-print(x > 5 and y < 25)  # Outputs: True
-    </pre>
-
-            <h2>6. Practice: Working with Variables and Operators</h2>
-            <p>
-                Try creating variables of different data types, perform operations on them, and print the results. Here's a simple exercise:
-            </p>
-            <pre>
-# Exercise
-name = "John"
-score = 95
-bonus = 5
-total_score = score + bonus
-print(f"{name}'s total score is {total_score}")
-    </pre>
-
-            <div class="next-chapter">
-                <a href="/my-courses/python-for-beginners?id=PFB03" class="next-chapter-button">Next Chapter</a>
+greet("Alice")  # Output: Hello, Alice!
+                </pre>
             </div>
 
+            <h2>3. Function Parameters</h2>
+            <p>Parameters are variables that you define in the function's parentheses. You can use these variables within the function. For example:</p>
+            <div class="code-snippet">
+                <pre>
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 3)
+print(result)  # Output: 8
+                </pre>
+            </div>
+
+            <h2>4. Return Statement</h2>
+            <p>The <code>return</code> statement allows you to send a value back to the caller of the function:</p>
+            <div class="code-snippet">
+                <pre>
+def square(num):
+    return num * num
+
+result = square(4)
+print(result)  # Output: 16
+                </pre>
+            </div>
+
+            <h2>5. Lambda Functions</h2>
+            <p>Lambda functions are small, anonymous functions defined using the <code>lambda</code> keyword. Example:</p>
+            <div class="code-snippet">
+                <pre>
+square = lambda x: x * x
+print(square(5))  # Output: 25
+                </pre>
+            </div>
+
+            <!-- Next Chapter -->
+            <div class="next-chapter">
+                <a href="/my-courses/python-for-beginners/pfb05" class="next-chapter-button">Next Chapter</a>
+            </div>
+
+            <!-- Script -->
             <script>
                 document.querySelector('.next-chapter-button').addEventListener('click', function(event) {
                     event.preventDefault();
-                    const apiUrl = 'api/lesson/finish?id=PFB02';
+                    const apiUrl = 'api/lesson/finish?id=PFB04';
 
                     fetch(apiUrl, {
                             method: 'GET',
@@ -270,7 +244,6 @@ print(f"{name}'s total score is {total_score}")
                 });
             </script>
         </div>
-
     </div>
     @endsection
 </body>

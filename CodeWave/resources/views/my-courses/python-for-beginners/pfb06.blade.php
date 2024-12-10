@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 2: Understanding Variables, Data Types, and Operators</title>
+    <title>Chapter 6: Building a Final Project</title>
     <style>
         html,
         body {
@@ -131,122 +131,58 @@
             <h3>CHAPTERS</h3>
             <ul>
                 <li><a href="/my-courses/python-for-beginners/pfb01">Chapter 1: Introduction to Python and setting up your environment</a></li>
-                <li class="active"><a href="/my-courses/python-for-beginners/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
+                <li><a href="/my-courses/python-for-beginners/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb03">Chapter 3: Working with loops and conditionals</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb04">Chapter 4: Defining and using functions</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb05">Chapter 5: Creating and managing Python modules</a></li>
-                <li><a href="/my-courses/python-for-beginners/pfb06">Chapter 6: Building a final project</a></li>
+                <li class="active"><a href="/my-courses/python-for-beginners/pfb06">Chapter 6: Building a final project</a></li>
             </ul>
         </div>
 
         <div class="main-content">
-            <h1>Chapter 2: Understanding Variables, Data Types, and Operators</h1>
+            <h1>Chapter 6: Building a Final Project</h1>
 
             <h2>Learning Objectives</h2>
-            <ul style="list-style-type: disc; margin-left: 20px;">
-                <li>Understand what variables are and how they store data in Python</li>
-                <li>Learn about different data types in Python, including strings, integers, floats, and booleans</li>
-                <li>Understand the concept of type conversion and how to use it</li>
-                <li>Learn about basic operators in Python such as arithmetic, comparison, and logical operators</li>
-                <li>Practice working with variables and operators in Python to perform simple calculations</li>
+            <ul>
+                <li>Understand how to combine all the concepts learned in previous chapters.</li>
+                <li>Plan and design a small Python project.</li>
+                <li>Write clean and efficient code to implement the project.</li>
+                <li>Debug and test your final project for errors and functionality.</li>
             </ul>
 
             <h2>1. Introduction</h2>
-            <p>
-                Variables, data types, and operators are fundamental concepts in programming. In this chapter, we’ll dive into how Python stores and manages data, and explore the tools you can use to manipulate and work with that data.
-            </p>
+            <p>In this chapter, you will create a final project that ties together all the concepts you've learned so far. You will practice designing, coding, and testing a Python application.</p>
 
-            <h2>2. Variables</h2>
-            <p>
-                A variable is a named storage location for data in a program. In Python, you can create a variable by simply assigning a value to it using the equals sign (<code>=</code>).
-            </p>
-            <pre>
-# Example
-name = "Alice"
-age = 25
-height = 5.6
-print(name, age, height)
-    </pre>
-
-            <h2>3. Data Types</h2>
-            <p>
-                Python supports various data types. Here are some common ones:
-            </p>
+            <h2>2. Project Overview</h2>
+            <p>Your project should demonstrate proficiency in:</p>
             <ul>
-                <li><strong>String:</strong> Text enclosed in quotes. Example: <code>"Hello, World!"</code></li>
-                <li><strong>Integer:</strong> Whole numbers. Example: <code>42</code></li>
-                <li><strong>Float:</strong> Numbers with decimals. Example: <code>3.14</code></li>
-                <li><strong>Boolean:</strong> True or False values. Example: <code>True</code></li>
+                <li>Using variables, data types, and operators.</li>
+                <li>Implementing loops and conditionals.</li>
+                <li>Defining and using functions effectively.</li>
+                <li>Organizing code into reusable modules.</li>
             </ul>
-            <pre>
-# Example
-greeting = "Hello"
-is_sunny = True
-temp = 23.5
-print(greeting, is_sunny, temp)
-    </pre>
 
-            <h2>4. Type Conversion</h2>
-            <p>
-                Python allows you to convert one data type to another using built-in functions:
-            </p>
-            <ul>
-                <li><code>int()</code>: Converts to an integer</li>
-                <li><code>float()</code>: Converts to a float</li>
-                <li><code>str()</code>: Converts to a string</li>
-            </ul>
-            <pre>
-# Example
-age = "25"
-age_in_int = int(age)
-print(age_in_int + 5)  # Outputs: 30
-    </pre>
+            <h2>3. Steps to Build Your Project</h2>
+            <p>Follow these steps:</p>
+            <ol>
+                <li>Define the goal and scope of your project.</li>
+                <li>Plan the structure of your code.</li>
+                <li>Write the code for your project.</li>
+                <li>Test and debug your project.</li>
+                <li>Document your work with comments and a README file.</li>
+            </ol>
 
-            <h2>5. Operators</h2>
-            <p>
-                Operators are symbols that perform operations on variables and values. Here are some basic types:
-            </p>
-            <ul>
-                <li><strong>Arithmetic Operators:</strong> +, -, *, /, %, **</li>
-                <li><strong>Comparison Operators:</strong> ==, !=, >, <,>=, <=< /li>
-                <li><strong>Logical Operators:</strong> and, or, not</li>
-            </ul>
-            <pre>
-# Example
-x = 10
-y = 20
-
-# Arithmetic
-print(x + y)  # Outputs: 30
-
-# Comparison
-print(x < y)  # Outputs: True
-
-# Logical
-print(x > 5 and y < 25)  # Outputs: True
-    </pre>
-
-            <h2>6. Practice: Working with Variables and Operators</h2>
-            <p>
-                Try creating variables of different data types, perform operations on them, and print the results. Here's a simple exercise:
-            </p>
-            <pre>
-# Exercise
-name = "John"
-score = 95
-bonus = 5
-total_score = score + bonus
-print(f"{name}'s total score is {total_score}")
-    </pre>
+            <h2>4. Submission Guidelines</h2>
+            <p>Once your project is complete, submit your code along with a brief explanation of its functionality and features.</p>
 
             <div class="next-chapter">
-                <a href="/my-courses/python-for-beginners?id=PFB03" class="next-chapter-button">Next Chapter</a>
+                <a href="/my-courses/python-for-beginners" class="next-chapter-button">Return to Course Overview</a>
             </div>
 
             <script>
                 document.querySelector('.next-chapter-button').addEventListener('click', function(event) {
                     event.preventDefault();
-                    const apiUrl = 'api/lesson/finish?id=PFB02';
+                    const apiUrl = 'api/lesson/finish?id=PFB06';
 
                     fetch(apiUrl, {
                             method: 'GET',
@@ -270,7 +206,6 @@ print(f"{name}'s total score is {total_score}")
                 });
             </script>
         </div>
-
     </div>
     @endsection
 </body>

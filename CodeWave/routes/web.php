@@ -141,3 +141,27 @@ Route::get('/courses/javascript', function () {
 Route::get('/courses/java', function () {
     return view('courses.java');
 })->name('courses.java');
+
+Route::get('/my-courses/python-for-beginners/pfb01', function () {
+    return view('my-courses.python-for-beginners.pfb02');
+})->name('my-courses.python-beginner.pfb02');
+
+Route::get('/my-courses/python-for-beginners/pfb02', function () {
+    return view('my-courses.python-for-beginners.pfb02');
+})->name('my-courses.python-beginner.pfb02');
+
+Route::get('/my-courses/python-for-beginners/pfb03', function () {
+    return view('my-courses.python-for-beginners.pfb03');
+})->name('my-courses.python-beginner.pfb03');
+
+Route::get('/my-courses/python-for-beginners/pfb04', function () {
+    return view('my-courses.python-for-beginners.pfb04');
+})->name('my-courses.python-beginner.pfb04');
+
+Route::get('/my-courses/python-for-beginners/pfb05', function () {
+    return view('my-courses.python-for-beginners.pfb05');
+})->name('my-courses.python-beginner.pfb05');
+
+Route::get('/my-courses/python-for-beginners/pfb06', function () {
+    return view('my-courses.python-for-beginners.pfb06');
+})->name('my-courses.python-beginner.pfb06');

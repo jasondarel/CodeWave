@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 2: Understanding Variables, Data Types, and Operators</title>
+    <title>Chapter 5: Creating and Managing Python Modules</title>
     <style>
         html,
         body {
@@ -117,6 +117,15 @@
             list-style-type: disc;
             margin-left: 20px;
         }
+
+        .code-snippet {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            font-family: Consolas, "Courier New", monospace;
+        }
     </style>
 </head>
 
@@ -131,122 +140,84 @@
             <h3>CHAPTERS</h3>
             <ul>
                 <li><a href="/my-courses/python-for-beginners/pfb01">Chapter 1: Introduction to Python and setting up your environment</a></li>
-                <li class="active"><a href="/my-courses/python-for-beginners/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
+                <li><a href="/my-courses/python-for-beginners/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb03">Chapter 3: Working with loops and conditionals</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb04">Chapter 4: Defining and using functions</a></li>
-                <li><a href="/my-courses/python-for-beginners/pfb05">Chapter 5: Creating and managing Python modules</a></li>
+                <li class="active"><a href="/my-courses/python-for-beginners/pfb05">Chapter 5: Creating and managing Python modules</a></li>
                 <li><a href="/my-courses/python-for-beginners/pfb06">Chapter 6: Building a final project</a></li>
             </ul>
         </div>
 
         <div class="main-content">
-            <h1>Chapter 2: Understanding Variables, Data Types, and Operators</h1>
+            <h1>Chapter 5: Creating and Managing Python Modules</h1>
 
             <h2>Learning Objectives</h2>
-            <ul style="list-style-type: disc; margin-left: 20px;">
-                <li>Understand what variables are and how they store data in Python</li>
-                <li>Learn about different data types in Python, including strings, integers, floats, and booleans</li>
-                <li>Understand the concept of type conversion and how to use it</li>
-                <li>Learn about basic operators in Python such as arithmetic, comparison, and logical operators</li>
-                <li>Practice working with variables and operators in Python to perform simple calculations</li>
+            <ul>
+                <li>Understand the purpose of modules in Python programming.</li>
+                <li>Learn how to create, import, and use Python modules.</li>
+                <li>Explore the concept of built-in modules.</li>
+                <li>Understand the structure of Python packages and their significance.</li>
+                <li>Learn how to organize your code using modules and packages.</li>
             </ul>
 
             <h2>1. Introduction</h2>
-            <p>
-                Variables, data types, and operators are fundamental concepts in programming. In this chapter, we’ll dive into how Python stores and manages data, and explore the tools you can use to manipulate and work with that data.
-            </p>
+            <p>Modules in Python allow you to structure your code into smaller, reusable components. By organizing code into modules, you can make it more readable, maintainable, and scalable.</p>
 
-            <h2>2. Variables</h2>
-            <p>
-                A variable is a named storage location for data in a program. In Python, you can create a variable by simply assigning a value to it using the equals sign (<code>=</code>).
-            </p>
-            <pre>
-# Example
-name = "Alice"
-age = 25
-height = 5.6
-print(name, age, height)
-    </pre>
+            <h2>2. Creating Your First Module</h2>
+            <p>To create a module, simply save your Python code in a file with a <code>.py</code> extension. For example:</p>
+            <div class="code-snippet">
+                <pre>
+# my_module.py
+def greet(name):
+    return f"Hello, {name}!"
+                </pre>
+            </div>
 
-            <h2>3. Data Types</h2>
-            <p>
-                Python supports various data types. Here are some common ones:
-            </p>
-            <ul>
-                <li><strong>String:</strong> Text enclosed in quotes. Example: <code>"Hello, World!"</code></li>
-                <li><strong>Integer:</strong> Whole numbers. Example: <code>42</code></li>
-                <li><strong>Float:</strong> Numbers with decimals. Example: <code>3.14</code></li>
-                <li><strong>Boolean:</strong> True or False values. Example: <code>True</code></li>
-            </ul>
-            <pre>
-# Example
-greeting = "Hello"
-is_sunny = True
-temp = 23.5
-print(greeting, is_sunny, temp)
-    </pre>
+            <h2>3. Importing and Using Modules</h2>
+            <p>You can import and use modules in other Python files using the <code>import</code> keyword:</p>
+            <div class="code-snippet">
+                <pre>
+import my_module
 
-            <h2>4. Type Conversion</h2>
-            <p>
-                Python allows you to convert one data type to another using built-in functions:
-            </p>
-            <ul>
-                <li><code>int()</code>: Converts to an integer</li>
-                <li><code>float()</code>: Converts to a float</li>
-                <li><code>str()</code>: Converts to a string</li>
-            </ul>
-            <pre>
-# Example
-age = "25"
-age_in_int = int(age)
-print(age_in_int + 5)  # Outputs: 30
-    </pre>
+print(my_module.greet("Alice"))  # Output: Hello, Alice!
+                </pre>
+            </div>
 
-            <h2>5. Operators</h2>
-            <p>
-                Operators are symbols that perform operations on variables and values. Here are some basic types:
-            </p>
-            <ul>
-                <li><strong>Arithmetic Operators:</strong> +, -, *, /, %, **</li>
-                <li><strong>Comparison Operators:</strong> ==, !=, >, <,>=, <=< /li>
-                <li><strong>Logical Operators:</strong> and, or, not</li>
-            </ul>
-            <pre>
-# Example
-x = 10
-y = 20
+            <h2>4. Built-in Modules</h2>
+            <p>Python comes with many built-in modules like <code>math</code>, <code>os</code>, and <code>random</code>. For example:</p>
+            <div class="code-snippet">
+                <pre>
+import math
 
-# Arithmetic
-print(x + y)  # Outputs: 30
+print(math.sqrt(16))  # Output: 4.0
+                </pre>
+            </div>
 
-# Comparison
-print(x < y)  # Outputs: True
-
-# Logical
-print(x > 5 and y < 25)  # Outputs: True
-    </pre>
-
-            <h2>6. Practice: Working with Variables and Operators</h2>
-            <p>
-                Try creating variables of different data types, perform operations on them, and print the results. Here's a simple exercise:
-            </p>
-            <pre>
-# Exercise
-name = "John"
-score = 95
-bonus = 5
-total_score = score + bonus
-print(f"{name}'s total score is {total_score}")
-    </pre>
+            <h2>5. Packages and Directory Structure</h2>
+            <p>A package is a collection of modules grouped in a directory with an <code>__init__.py</code> file. Example structure:</p>
+            <div class="code-snippet">
+                <pre>
+my_package/
+    __init__.py
+    module1.py
+    module2.py
+                </pre>
+            </div>
+            <p>You can import from packages using:</p>
+            <div class="code-snippet">
+                <pre>
+from my_package import module1
+                </pre>
+            </div>
 
             <div class="next-chapter">
-                <a href="/my-courses/python-for-beginners?id=PFB03" class="next-chapter-button">Next Chapter</a>
+                <a href="/my-courses/python-for-beginners/pfb06" class="next-chapter-button">Next Chapter</a>
             </div>
 
             <script>
                 document.querySelector('.next-chapter-button').addEventListener('click', function(event) {
                     event.preventDefault();
-                    const apiUrl = 'api/lesson/finish?id=PFB02';
+                    const apiUrl = 'api/lesson/finish?id=PFB05';
 
                     fetch(apiUrl, {
                             method: 'GET',
@@ -270,7 +241,6 @@ print(f"{name}'s total score is {total_score}")
                 });
             </script>
         </div>
-
     </div>
     @endsection
 </body>
