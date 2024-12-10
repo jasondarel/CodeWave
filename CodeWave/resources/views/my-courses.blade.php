@@ -164,6 +164,7 @@
                             </div>
                             <span class="progress-bar-text">{{ $course['progress'] }}%</span>
                         </div>
+                        <a href="#" class="btn btn-primary">View</a>
                     </div>
                 </div>
                 @endforeach
@@ -185,6 +186,7 @@
                         <h5 class="card-title">{{ $course['title'] }}</h5>
                         <p class="card-text">{{ $course['description'] }}</p>
                     </div>
+                    <a href="#" class="btn btn-primary">View</a>
                 </div>
                 @endforeach
             </div>
