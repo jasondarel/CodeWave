@@ -580,3 +580,26 @@ Route::get('/courses/javascript/nfbd', function () {
 Route::get('/courses/javascript/fsdwn', function () {
     return view('courses.javascript.fsdwn');
 })->name('courses.javascript.fsdwn');
+
+
+
+//fdwr
+Route::get('/my-courses/fdwr/fdwr01', function () {
+    return view('my-courses.fdwr.fdwr01');
+})->name('my-courses.fdwr.fdwr01');
+
+Route::get('/my-courses/fdwr/fdwr02', function () {
+    return view('my-courses.fdwr.fdwr02');
+})->name('my-courses.fdwr.fdwr02');
+
+Route::get('/my-courses/fdwr/fdwr03', function () {
+    return view('my-courses.fdwr.fdwr03');
+})->name('my-courses.fdwr.fdwr03');
+
+Route::get('/my-courses/fdwr/fdwr04', function () {
+    return view('my-courses.fdwr.fdwr04');
+})->name('my-courses.fdwr.fdwr04');
+
+Route::get('/my-courses/fdwr/fdwr05', function () {
+    return view('my-courses.fdwr.fdwr05');
+})->name('my-courses.fdwr.fdwr05');
