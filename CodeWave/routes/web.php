@@ -31,10 +31,6 @@ Route::middleware('auth')->group(function () {
 
     Route::view('/my-courses', 'my-courses')->name('my-courses');
 
-    Route::get('/courses/python', function () {
-        return view('courses.python');
-    })->name('courses.python');
-
     Route::get('/profile/{locale?}', [UserController::class, 'profile'])->name('profile');
     Route::put('/profile/update/{id}', [UserController::class, 'updateProfile'])->name('updateProfile');
 
@@ -62,9 +58,6 @@ Route::middleware('auth')->group(function () {
 
     // 
 
-    Route::get('/courses/python/python-for-beginners', function () {
-        return view('courses.python.python-for-beginners');
-    })->name('courses.python.beginner');
 
     Route::get('/announcements/announcement1', function () {
         return view('announcement.announcement1');
@@ -145,9 +138,16 @@ Route::get('/courses/javascript', function () {
     return view('courses.javascript');
 })->name('courses.javascript');
 
-Route::get('/courses/java', function () {
-    return view('courses.java');
-})->name('courses.java');
+//python
+
+Route::get('/courses/python', function () {
+    return view('courses.python');
+})->name('courses.python');
+
+Route::get('/courses/python/python-for-beginners', function () {
+    return view('courses.python.python-for-beginners');
+})->name('courses.python.beginner');
+
 
 Route::get('/my-courses/python-for-beginners/pfb01', function () {
     return view('my-courses.python-for-beginners.pfb02');
@@ -208,3 +208,30 @@ Route::get('/courses/python/pfc', function () {
 Route::get('/courses/python/dvwp', function () {
     return view('courses.python.dvwp');
 })->name('courses.python.dvwp');
+
+
+//java
+
+Route::get('/courses/java', function () {
+    return view('courses.java');
+})->name('courses.java');
+
+Route::get('/courses/java/jffb', function () {
+    return view('courses.java.jffb');
+})->name('courses.java.jffb');
+
+Route::get('/courses/java/oopij', function () {
+    return view('courses.java.oopij');
+})->name('courses.java.oopij');
+
+Route::get('/courses/java/jfmd', function () {
+    return view('courses.java.jfmd');
+})->name('courses.java.jfmd');
+
+Route::get('/courses/java/sfb', function () {
+    return view('courses.java.sfb');
+})->name('courses.java.sfb');
+
+Route::get('/courses/java/jwdwsb', function () {
+    return view('courses.java.jwdwsb');
+})->name('courses.java.jwdwsb');
