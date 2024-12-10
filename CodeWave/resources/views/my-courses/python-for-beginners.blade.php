@@ -121,9 +121,9 @@
     <div class="progress-container">
         <h2>Course Progress</h2>
         <div class="progress-bar">
-            <div class="progress-bar-inner" style="width: 50%;"></div>
+            <div class="progress-bar-inner" style="width: {{$percentage}}%;"></div>
         </div>
-        <p>50% completed</p>
+        <p>{{$percentage}}% completed</p>
 
         <h2 class="mt-20"><strong>Chapters</strong></h2>
         <ul class="chapter-list">

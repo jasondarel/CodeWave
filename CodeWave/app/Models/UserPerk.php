@@ -11,7 +11,7 @@ class UserPerk extends Model
 
     protected $fillable = ['user_id', 'rank_id', 'points'];
 
-    private $minimum_points_array = ["bronze" => ["points" => 0, "id" => 0], "silver" =>  ["points" => 200, "id" => 1], "gold" =>  ["points" => 500, "id" => 2]];
+    private $minimum_points_array = ["bronze" => ["points" => 0, "id" => 1], "silver" =>  ["points" => 200, "id" => 2], "gold" =>  ["points" => 500, "id" => 3]];
 
     public function user()
     {

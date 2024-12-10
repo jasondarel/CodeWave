@@ -68,7 +68,7 @@ class CourseController extends Controller
     }
 
     public function getAllUserCourses(){
-        return Enrollment::all()->toArray();
+        return Enrollment::where("user_id", Auth::user()->id)->get()->toArray();
     }
 
     public function getUserEnrollment(){
@@ -90,17 +90,21 @@ class CourseController extends Controller
  
         $lesson_amount = Lesson::where('course_id', $course_id)->count();
         $counter = 0;
-        $lessons = Lesson::whereHas('StudentLesson', function ($query) {
+        $lessons = Lesson::whereHas('student_lessons', function ($query) {
             $query->where('user_id', Auth::user()->id);
         })->get();
       
         foreach($lessons as $lesson){
-            if($lesson->course->id === $course_id->id){
+            if($lesson->course->id === $course_id){
                 $counter += 1;
             }
         }
 
-        return ( $counter / $lesson_amount ) * 100;
+        if($counter === 0 || $lesson_amount === 0){
+            return 0;
+        }
+
+        return number_format(( $counter / $lesson_amount ) * 100 , 2, '.', '');
         
         
     }
@@ -125,13 +129,27 @@ class CourseController extends Controller
 
     public function courseMainPage($slug){
 
-        $course_id = Course::where("name", Str::title(str_replace('-', ' ', $slug)))->first(["id"]);
+        $course_id = Course::where("name", Str::title(str_replace('-', ' ', $slug)))->first(["id"])->id;
 
-        dd($course_id);
+    
         $finishedPercentage = $this->lessonFinishedPercentage($course_id);
 
-        return dd("URAA");
-        // return view('my-courses.' . $slug, ["percentage" => $finishedPercentage]);
+        return view('my-courses.' . $slug, ["percentage" => $finishedPercentage]);
+    }
+
+    public function myCoursesView(){
+
+        $getPercentages = function($id) {
+            return $this->lessonFinishedPercentage($id);
+        };
+
+        $userCourses = Course::whereHas('enrollments', function ($query) {
+            $query->where('user_id', Auth::user()->id);
+        })->get();
+
+
+   
+        return view('my-courses', ["userCourses" => $userCourses, "percentage" => $getPercentages]);
     }
 
   

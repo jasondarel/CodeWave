@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     })->name('inbox');
 
     // Halaman My Courses
-    Route::view('/my-courses', 'my-courses')->name('my-courses');
+    Route::get('/my-courses', [CourseController::class, 'myCoursesView'])->name('my-courses');
 
     // Detail Python Course
     Route::get('/courses/python', function () {
@@ -47,9 +47,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('api/courses', [CourseController::class, 'enrollCourse']);
 
-    Route::get('api/lesson/finish', [CourseController::class, "finishLesson"]);
 
-    Route::get('api/lesson/percentage', [CourseController::class, "lessonFinishedPercentage"]);
     
     Route::get('/news1', function () {
         return view('news.news1');

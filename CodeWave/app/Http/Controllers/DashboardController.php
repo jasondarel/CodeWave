@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserPerk;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Enrollment;
 use App\Models\StudentLesson;
 use App\Models\Rank;
 use App\Models\Announcement;
-
+use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function dashboard()
@@ -21,8 +22,8 @@ class DashboardController extends Controller
         $lessonsCompleted = StudentLesson::where('user_id', auth()->id())->count();
 
         // Fetch the user's rank
-        $rank = Rank::where('user_id', auth()->id())->first()->name ?? 'No Rank';
-
+        // $rank = UserPerk::where('user_id', Auth::user()->id)->get()->rank->name;
+        $rank = null;
         // Paginate announcements
         $announcements = Announcement::latest()->paginate(5); // Change pagination number if needed
 

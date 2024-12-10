@@ -128,6 +128,15 @@
 </head>
 
 <body>
+    <?php 
+        $course_data_info = [
+            1 => ['image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
+            2 => ['image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
+            3 => ['image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
+            4 => ['image' => 'https://download.logo.wine/logo/Spring_Framework/Spring_Framework-Logo.wine.png'],
+            5 => ['image' => 'https://miro.medium.com/v2/resize:fit:1400/1*vFiGOTV1S8yz0RTIQteTjw.png']
+        ]
+    ?>
     @extends('layout')
 
     @section('content')
@@ -146,26 +155,24 @@
                 <h2 class="course-language font-bold">Courses in Progress</h2>
             </div>
             <div class="courses d-flex align-content-start flex-wrap gap-4 ">
-                @foreach ([
-                ['title' => 'Python for Beginners', 'description' => 'Learn the fundamentals of Python programming, including syntax, data structures, and simple scripts.', 'progress' => 60, 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
-                ['title' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'progress' => 40, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
-                ['title' => 'Java for Mobile Development', 'description' => 'Learn to build mobile apps using Java and frameworks like Android SDK.', 'progress' => 20, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
-                ['title' => 'Spring Framework Basics', 'description' => 'Understand the fundamentals of Spring to build Java-based web applications.', 'progress' => 55, 'image' => 'https://download.logo.wine/logo/Spring_Framework/Spring_Framework-Logo.wine.png'],
-                ['title' => 'Java Web Development with Spring Boot', 'description' => 'Build scalable web apps using Java and Spring Boot, covering RESTful APIs, JPA, and Spring Security.', 'progress' => 35, 'image' => 'https://miro.medium.com/v2/resize:fit:1400/1*vFiGOTV1S8yz0RTIQteTjw.png']
-                ] as $course)
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['title'] }}">
+                @foreach ($userCourses as $course)
+                    @if ($percentage($course->id) !== 100)
+
+                    <div class="card" style="width: 18rem;">
+                    <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
                     <div class="card-body d-flex flex-column justify-content-between gap-3">
-                        <h5 class="card-title">{{ $course['title'] }}</h5>
-                        <p class="card-text">{{ $course['description'] }}</p>
+                        <h5 class="card-title">{{ $course->name }}</h5>
+                        <p class="card-text">{{ $course->description }}</p>
                         <div class="progress-bar-container">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: {{ $course['progress'] }}%;" aria-valuenow="{{ $course['progress'] }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" style="width: {{ $percentage($course->id) }}%;" aria-valuenow="{{$percentage($course->id)}}" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <span class="progress-bar-text">{{ $course['progress'] }}%</span>
+                            <span class="progress-bar-text">{{ $percentage($course->id) }}%</span>
                         </div>
                     </div>
                 </div>
+                    @endif
+               
                 @endforeach
             </div>
         </div>
@@ -175,17 +182,18 @@
                 <h2 class="course-language font-bold mt-20">Completed Courses</h2>
             </div>
             <div class="completed-courses d-flex align-content-start flex-wrap gap-4">
-                @foreach ([
-                ['title' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
-                ['title' => 'Object-Oriented Programming in Java', 'description' => 'Dive deep into OOP principles with Java, including classes, inheritance, and polymorphism.', 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],
-                ] as $course)
+                @foreach ($userCourses as $course)
+                @if ($percentage($course->id) === 100)
+                
+              
                 <div class="card" style="width: 18rem;">
                     <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['title'] }}">
                     <div class="card-body d-flex flex-column justify-content-between gap-3">
-                        <h5 class="card-title">{{ $course['title'] }}</h5>
-                        <p class="card-text">{{ $course['description'] }}</p>
+                        <h5 class="card-title">{{ $course->name }}</h5>
+                        <p class="card-text">{{ $course->description }}</p>
                     </div>
-                </div>
+                </div>  
+                @endif
                 @endforeach
             </div>
         </div>

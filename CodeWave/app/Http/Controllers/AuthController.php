@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserPerk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -41,6 +42,13 @@ class AuthController extends Controller
             'email' => $validatedData['email'],
             // 'password' => $validatedData['password']
             'password' => Hash::make($validatedData['password'])
+        ]);
+
+
+        UserPerk::create([
+            'user_id' => User::where('email', $validatedData['email'] )->first()->id,
+            'rank_id' => 1,
+            'points' => 0
         ]);
 
         return redirect()->route('login')->with('success', 'Registration Successful!');

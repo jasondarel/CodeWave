@@ -19,7 +19,7 @@ class Lesson extends Model
         return $this->belongsTo(Course::class, 'course_id');
     }
 
-    public function students()
+    public function student_lessons()
     {
         return $this->belongsToMany(User::class, 'student_lessons')->withPivot('completed_date')->withTimestamps();
     }

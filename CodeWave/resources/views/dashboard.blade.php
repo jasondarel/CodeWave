@@ -94,8 +94,8 @@
         @auth
         <h1 class="welcome-header">Welcome Back, {{Auth::user()->name}}!</h3>
             <div class="user-info">
-                <p>Courses Enrolled: 5</p>
-                <p>Lessons Completed: 20</p>
+                <p>Courses Enrolled: {{$coursesEnrolled}}</p>
+                <p>Lessons Completed: {{$lessonsCompleted}}</p>
                 <p>Rank: {{ucfirst($rank)}}</p>
                 <span class="spasi"></span>
             </div>           
