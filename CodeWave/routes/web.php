@@ -6,7 +6,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-// Middleware untuk user yang sudah login
 Route::middleware('auth')->group(function () {
     Route::get('/inbox', function () {
         return response()->view('inbox', [
@@ -30,19 +29,15 @@ Route::middleware('auth')->group(function () {
         ]);
     })->name('inbox');
 
-    // Halaman My Courses
     Route::view('/my-courses', 'my-courses')->name('my-courses');
 
-    // Detail Python Course
     Route::get('/courses/python', function () {
         return view('courses.python');
     })->name('courses.python');
 
-    // Profile dengan locale opsional
     Route::get('/profile/{locale?}', [UserController::class, 'profile'])->name('profile');
     Route::put('/profile/update/{id}', [UserController::class, 'updateProfile'])->name('updateProfile');
 
-    // Halaman daftar courses
     Route::get('/courses', [CourseController::class, 'courseListPage'])->name('courses');
 
     Route::get('api/courses', [CourseController::class, 'enrollCourse']);
@@ -50,6 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::get('api/lesson/finish', [CourseController::class, "finishLesson"]);
 
     Route::get('api/lesson/percentage', [CourseController::class, "lessonFinishedPercentage"]);
+
+    // News
 
     Route::get('/news1', function () {
         return view('news.news1');
@@ -62,6 +59,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/news3', function () {
         return view('news.news3');
     })->name('news3');
+
+    // 
 
     Route::get('/courses/python/python-for-beginners', function () {
         return view('courses.python.python-for-beginners');
@@ -173,3 +172,39 @@ Route::get('/my-courses/python-for-beginners/pfb05', function () {
 Route::get('/my-courses/python-for-beginners/pfb06', function () {
     return view('my-courses.python-for-beginners.pfb06');
 })->name('my-courses.python-beginner.pfb06');
+
+Route::get('/courses/python/dawp', function () {
+    return view('courses.python.dawp');
+})->name('courses.python.dawp');
+
+Route::get('/courses/python/pfml', function () {
+    return view('courses.python.pfml');
+})->name('courses.python.pfml');
+
+Route::get('/courses/python/app', function () {
+    return view('courses.python.app');
+})->name('courses.python.app');
+
+Route::get('/courses/python/wdwd', function () {
+    return view('courses.python.wdwd');
+})->name('courses.python.wdwd');
+
+Route::get('/courses/python/pfa', function () {
+    return view('courses.python.pfa');
+})->name('courses.python.pfa');
+
+Route::get('/courses/python/pfgd', function () {
+    return view('courses.python.pfgd');
+})->name('courses.python.pfgd');
+
+Route::get('/courses/python/itf', function () {
+    return view('courses.python.itf');
+})->name('courses.python.itf    ');
+
+Route::get('/courses/python/pfc', function () {
+    return view('courses.python.pfc');
+})->name('courses.python.pfc');
+
+Route::get('/courses/python/dvwp', function () {
+    return view('courses.python.dvwp');
+})->name('courses.python.dvwp');

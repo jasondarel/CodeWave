@@ -168,29 +168,10 @@
             @foreach ([
             ['title' => 'Python for Automation', 'description' => 'Automate repetitive tasks like file management and web scraping with Python.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
             ['title' => 'Python for Game Development', 'description' => 'Create games with Python using PyGame and learn core game mechanics.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
-            ['title' => 'AI with Python', 'description' => 'Build AI projects like chatbots and image recognition using Python libraries.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
+            ['title' => 'Introduction to Flask', 'description' => 'Build lightweight web apps with Python and the Flask framework.', 'image' => 'https://blog.appseed.us/content/images/2021/08/icons-flask-x500w.png'],
             ['title' => 'Python for Cybersecurity', 'description' => 'Learn to write scripts for network scanning, penetration testing, and data encryption.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
             ['title' => 'Data Visualization with Python', 'description' => 'Master visualization tools like Matplotlib, Seaborn, and Plotly.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg']
             ] as $course)
-            <div class="card" style="width: 18rem;">
-                <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['title'] }}">
-                <div class="card-body d-flex flex-column justify-content-between gap-3">
-                    <h5 class="card-title">{{ $course['title'] }}</h5>
-                    <p class="card-text">{{ $course['description'] }}</p>
-                    <a href="#" class="btn btn-primary">Enroll</a>
-                </div>
-            </div>
-            @endforeach
-        </div>
-        <div class="courses d-flex align-content-start flex-wrap gap-4">
-            @foreach ([
-            ['title' => 'Python for Finance', 'description' => 'Analyze financial data and build models with Python libraries.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
-            ['title' => 'Python Scripting for DevOps', 'description' => 'Use Python to manage servers, automate deployments, and handle CI/CD tasks.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
-            ['title' => 'Introduction to Flask', 'description' => 'Build lightweight web apps with Python and the Flask framework.', 'image' => 'https://blog.appseed.us/content/images/2021/08/icons-flask-x500w.png'],
-            ['title' => 'Python for IoT Projects', 'description' => 'Control hardware devices and process IoT data using Python.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
-            ['title' => 'Python Debugging and Testing', 'description' => 'Learn debugging tools and write efficient tests with Python.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg']
-            ] as $course)
-
             <div class="card" style="width: 18rem;">
                 <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['title'] }}">
                 <div class="card-body d-flex flex-column justify-content-between gap-3">
