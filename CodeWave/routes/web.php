@@ -603,3 +603,54 @@ Route::get('/my-courses/fdwr/fdwr04', function () {
 Route::get('/my-courses/fdwr/fdwr05', function () {
     return view('my-courses.fdwr.fdwr05');
 })->name('my-courses.fdwr.fdwr05');
+
+
+
+
+//fsdwn
+Route::get('/my-courses/fsdwn/fsdwn01', function () {
+    return view('my-courses.fsdwn.fsdwn01');
+})->name('my-courses.fsdwn.fsdwn01');
+
+Route::get('/my-courses/fsdwn/fsdwn02', function () {
+    return view('my-courses.fsdwn.fsdwn02');
+})->name('my-courses.fsdwn.fsdwn02');
+
+Route::get('/my-courses/fsdwn/fsdwn03', function () {
+    return view('my-courses.fsdwn.fsdwn03');
+})->name('my-courses.fsdwn.fsdwn03');
+
+Route::get('/my-courses/fsdwn/fsdwn04', function () {
+    return view('my-courses.fsdwn.fsdwn04');
+})->name('my-courses.fsdwn.fsdwn04');
+
+Route::get('/my-courses/fsdwn/fsdwn05', function () {
+    return view('my-courses.fsdwn.fsdwn05');
+})->name('my-courses.fsdwn.fsdwn05');
+
+Route::get('/my-courses/fsdwn/fsdwn06', function () {
+    return view('my-courses.fsdwn.fsdwn06');
+})->name('my-courses.fsdwn.fsdwn06');
+
+
+
+//je
+Route::get('/my-courses/je/je01', function () {
+    return view('my-courses.je.je01');
+})->name('my-courses.je.je01');
+
+Route::get('/my-courses/je/je02', function () {
+    return view('my-courses.je.je02');
+})->name('my-courses.je.je02');
+
+Route::get('/my-courses/je/je03', function () {
+    return view('my-courses.je.je03');
+})->name('my-courses.je.je03');
+
+Route::get('/my-courses/je/je04', function () {
+    return view('my-courses.je.je04');
+})->name('my-courses.je.je04');
+
+Route::get('/my-courses/je/je05', function () {
+    return view('my-courses.je.je05');
+})->name('my-courses.je.je05');
