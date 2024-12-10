@@ -324,6 +324,28 @@ Route::get('/my-courses/oopij/oopij05', function () {
     return view('my-courses.oopij.oopij05');
 })->name('my-courses.oopij.oopij05');
 
+//sfb
+Route::get('/my-courses/sfb/sfb01', function () {
+    return view('my-courses.sfb.sfb01');
+})->name('my-courses.sfb.sfb01');
+
+Route::get('/my-courses/sfb/sfb02', function () {
+    return view('my-courses.sfb.sfb02');
+})->name('my-courses.sfb.sfb02');
+
+Route::get('/my-courses/sfb/sfb03', function () {
+    return view('my-courses.sfb.sfb03');
+})->name('my-courses.sfb.sfb03');
+
+Route::get('/my-courses/sfb/sfb04', function () {
+    return view('my-courses.sfb.sfb04');
+})->name('my-courses.sfb.sfb04');
+
+Route::get('/my-courses/sfb/sfb05', function () {
+    return view('my-courses.sfb.sfb05');
+})->name('my-courses.sfb.sfb05');
+
+
 //javascript
 
 Route::get('/courses/javascript', function () {

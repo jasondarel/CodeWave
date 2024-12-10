@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java for Mobile Development</title>
+    <title>Spring Framework Basics</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -131,29 +131,29 @@
     </a>
 
     <div class="course-header">
-        <div class="course-title">Java for Mobile Development</div>
+        <div class="course-title">Spring Framework Basics</div>
     </div>
 
     <div class="course-content">
         <div class="course-section">
             <h2><strong>Course Overview</strong></h2>
             <p>
-                This course is designed for Java developers looking to build mobile applications using Java. You'll learn how to develop apps for Android, using Java's features and frameworks that are essential for mobile app development. The course is structured into 5 chapters to guide you from the basics to advanced techniques in mobile development.
+                This course is designed for developers looking to master the Spring Framework. You'll learn how to use Spring to build powerful, flexible, and maintainable applications. The course is structured into 5 chapters that will guide you through Spring's core features and help you get started with building Java-based applications.
             </p>
         </div>
 
         <div class="course-section mt-20">
             <h2><strong>What You'll Learn</strong></h2>
             <ul class="styled-list">
-                <li>Introduction to Android and mobile app development</li>
-                <li>Setting up Android Studio and creating your first app</li>
-                <li>Designing user interfaces with XML and Java</li>
-                <li>Handling user input and storing app data</li>
-                <li>Publishing your Android app on the Google Play Store</li>
+                <li>Introduction to the Spring Framework and its features</li>
+                <li>Setting up a Spring Boot application</li>
+                <li>Working with Spring Dependency Injection (DI)</li>
+                <li>Creating RESTful APIs with Spring Web</li>
+                <li>Testing and deploying Spring applications</li>
             </ul>
         </div>
 
-        <a href="/enroll/java-for-mobile-development" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/spring-framework-basics" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection
