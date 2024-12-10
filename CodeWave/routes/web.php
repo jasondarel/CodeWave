@@ -235,3 +235,28 @@ Route::get('/courses/java/sfb', function () {
 Route::get('/courses/java/jwdwsb', function () {
     return view('courses.java.jwdwsb');
 })->name('courses.java.jwdwsb');
+
+
+//
+
+//javascript
+
+Route::get('/courses/javascript/je', function () {
+    return view('courses.javascript.je');
+})->name('courses.javascript.je');
+
+Route::get('/courses/javascript/jfwd', function () {
+    return view('courses.javascript.jfwd');
+})->name('courses.javascript.jfwd');
+
+Route::get('/courses/javascript/fdwr', function () {
+    return view('courses.javascript.fdwr');
+})->name('courses.javascript.fdwr');
+
+Route::get('/courses/javascript/nfbd', function () {
+    return view('courses.javascript.nfbd');
+})->name('courses.javascript.nfbd');
+
+Route::get('/courses/javascript/fsdwn', function () {
+    return view('courses.javascript.fsdwn');
+})->name('courses.javascript.fsdwn');
