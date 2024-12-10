@@ -55,9 +55,8 @@
             <div class="card-body scrollable-list">
                 @php
                 $notifications = [
-                ['id' => 1, 'title' => 'Course Enrollment Successful', 'message' => 'You have successfully enrolled in the "Introduction to Python" course. Happy learning!', 'date' => '2024-12-04'],
-                ['id' => 2, 'title' => 'Course Completion', 'message' => 'Congratulations! You have completed the "Basic Web Development" course. Keep up the great work!', 'date' => '2024-12-04'],
-                ['id' => 3, 'title' => 'New Course Available', 'message' => 'A new course, "Advanced JavaScript" is now available. Check it out and level up your skills!', 'date' => '2024-12-04'],
+                ['id' => 1, 'title' => 'Course Enrollment Successful', 'message' => 'You have successfully enrolled in the "Python for Beginners" course. Happy learning!', 'date' => '2024-12-04'],
+                ['id' => 2, 'title' => 'Course Completion', 'message' => 'Congratulations! You have completed the "Java Fundamentals for Beginners" course. Keep up the great work!', 'date' => '2024-12-04'],
                 ];
                 @endphp
 

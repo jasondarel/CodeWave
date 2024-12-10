@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 2: Understanding Variables, Data Types, and Operators</title>
+    <title>Chapter 3: Working with Loops and Conditionals</title>
     <style>
         html,
         body {
@@ -130,60 +130,56 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/python-for-beginners/chapter-1">Chapter 1: Introduction to Python and setting up your environment</a></li>
-                <li class="active"><a href="/my-courses/python-for-beginners/chapter-2">Chapter 2: Understanding variables, data types, and operators</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-3">Chapter 3: Working with loops and conditionals</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-4">Chapter 4: Defining and using functions</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-5">Chapter 5: Creating and managing Python modules</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-6">Chapter 6: Building a final project</a></li>
+                <li><a href="/lessons/pfb/pfb01">Chapter 1: Introduction to Python and setting up your environment</a></li>
+                <li ><a href="/lessons/pfb/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
+                <li class="active"><a href="/lessons/pfb/pfb03">Chapter 3: Working with loops and conditionals</a></li>
+                <li><a href="/lessons/pfb/pfb04">Chapter 4: Defining and using functions</a></li>
+                <li><a href="/lessons/pfb/pfb05">Chapter 5: Creating and managing Python modules</a></li>
+                <li><a href="/lessons/pfb/pfb06">Chapter 6: Building a final project</a></li>
             </ul>
         </div>
 
         <div class="main-content">
-            <h1>Chapter 2: Understanding Variables, Data Types, and Operators</h1>
+            <h1>Chapter 3: Working with Loops and Conditionals</h1>
 
             <h2>Learning Objectives</h2>
             <ul style="list-style-type: disc; margin-left: 20px;">
-                <li>Understand what variables are and how they store data in Python</li>
-                <li>Learn about different data types in Python, including strings, integers, floats, and booleans</li>
-                <li>Understand the concept of type conversion and how to use it</li>
-                <li>Learn about basic operators in Python such as arithmetic, comparison, and logical operators</li>
-                <li>Practice working with variables and operators in Python to perform simple calculations</li>
+                <li>Understand the concept of loops and how they simplify repetitive tasks</li>
+                <li>Learn the difference between `for` loops and `while` loops</li>
+                <li>Understand how to use conditional statements (`if`, `elif`, `else`) to control program flow</li>
+                <li>Practice nesting loops and conditionals to solve complex problems</li>
+                <li>Use break, continue, and pass statements effectively in loops</li>
             </ul>
 
-
             <h2>1. Introduction</h2>
+            <p>Loops and conditionals are fundamental concepts in programming that allow developers to control the flow of their programs effectively. They enable us to automate repetitive tasks and make decisions based on specific conditions.</p>
+
+            <h2>2. Loops</h2>
+            <p>In Python, loops are used to iterate over sequences (like lists, dictionaries, or strings) or execute a block of code multiple times until a condition is met.</p>
+
+            <h3>a. `for` Loop</h3>
+            <p>The `for` loop is used to iterate over a sequence and execute a block of code for each element.</p>
+            <pre><code>for item in [1, 2, 3]:
+    print(item)</code></pre>
+
+            <h3>b. `while` Loop</h3>
+            <p>The `while` loop is used to execute a block of code repeatedly as long as a condition is true.</p>
+            <pre><code>i = 0
+while i < 5:
+    print(i)
+    i += 1</code></pre>
+
+            <h2>3. Conditionals</h2>
+            <p>Conditional statements allow you to execute code blocks based on certain conditions.</p>
+            <pre><code>if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")</code></pre>
 
             <div class="next-chapter">
-                <a href="/my-courses/python-for-beginners?id=PFB03" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
 
-            <script>
-                document.querySelector('.next-chapter-button').addEventListener('click', function (event) {
-                    event.preventDefault(); 
-                    const apiUrl = 'api/lesson/finish?id=PFB02'; 
-
-                    fetch(apiUrl, {
-                        method: 'GET', 
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok ' + response.statusText);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('API response:', data);
-                        window.location.href = event.target.href;
-                    })
-                    .catch(error => {
-                        console.error('There was a problem with the fetch operation:', error);
-                    });
-                });
-            </script>
         </div>
     </div>
     @endsection

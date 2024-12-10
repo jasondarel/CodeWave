@@ -49,7 +49,7 @@ class UserController extends Controller
 
     public function updateUserPoints($points) {
         $user_perk = $this->getUserPerks();
-        $user_perk->update(["points"], $points);
+        $user_perk->increment('points', $points);
     }
 
     public function getUserRank(){

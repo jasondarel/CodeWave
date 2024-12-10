@@ -12,10 +12,6 @@
             align-items: center;
         }
 
-        .course-language {
-            font-size: 20px;
-        }
-
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -70,6 +66,17 @@
             background-color: #0056b3;
         }
 
+        .back-link {
+            font-size: 24px;
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: -20px;
+        }
+
+        .back-link:hover {
+            color: #0056b3;
+        }
+
         .search-container {
             display: flex;
             align-items: center;
@@ -95,11 +102,6 @@
             font-size: 16px;
             cursor: pointer;
         }
-
-        .search-button:hover {
-            background-color: #0056b3;
-        }
-
 
         @media (max-width: 1200px) {
             .card {
@@ -130,8 +132,11 @@
 <body>
     @extends('layout')
     @section('content')
-    <div class="titles font-bold mb-10 fs-3 mt-4">
-        <h1>Courses List</h1>
+    <div class="titles font-bold mb-4 fs-3">
+        <a href="/courses" class="back-link">
+            &#8592;
+        </a>
+        <h1>Java Courses</h1>
     </div>
 
     <div class="search-container mt-28">
@@ -139,79 +144,8 @@
         <button class="search-button" onclick="searchFunction()">Search</button>
     </div>
 
-    <div class="allcontent">
-        <div class="header-section">
-            <h2 class="course-language font-bold">Python Courses</h2>
-            <a href="/courses/python">See More >></a>
-        </div>
-        <div class="courses d-flex align-content-start flex-wrap gap-4">
-            @foreach ([
-            ['title' => 'Python for Beginners', 'description' => 'Learn the fundamentals of Python programming, including syntax, data structures, and simple scripts.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg', 'id' => 1],
-            ['title' => 'Data Analysis with Python', 'description' => 'Use Python libraries like Pandas and NumPy to perform data analysis and visualization.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg', 'id' => 2],
-            ['title' => 'Python for Machine Learning', 'description' => 'Master machine learning basics using Python and frameworks like TensorFlow or Scikit-learn.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg', 'id' => 3],
-            ['title' => 'Advanced Python Programming', 'description' => 'Learn advanced Python concepts like decorators, generators, and performance optimization, along with the standard library.', 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg', 'id' => 4],
-            ['title' => 'Web Development with Django', 'description' => 'Build robust web applications using Python and the Django framework.', 'image' => 'https://imagedelivery.net/qc7VvyphMGWFiPVvTbB-ww/swapps.com/2016/02/simply-django-announcements.jpg/w=1024,h=576', 'id' => 5]
-            ] as $course)
-            <div class="card" style="width: 18rem;">
-                <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['title'] }}">
-                <div class="card-body d-flex flex-column justify-content-between gap-3">
-                    <h5 class="card-title">{{ $course['title'] }}</h5>
-                    <p class="card-text">{{ $course['description'] }}</p>
-                    @if (!$isAuthenticated)
-                    <a href="#" class="btn btn-primary">Enroll</a>
-
-                    @else
-       
-                    <a href="<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
-                        @if ($isEnrollmentExists($course['id']))
-                        View
-                        @else
-                        Enroll  
-                        @endif 
-                    </a>
-                   
-                    @endif
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-        <div class="header-section mt-12">
-            <h2 class="course-language font-bold">Java Courses</h2>
-            <a href="/courses/java">See More >></a>
-        </div>
-        <div class="courses d-flex align-content-start flex-wrap gap-4">
-            @foreach ([
-            ['title' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s' , 'id' => 6],
-            ['title' => 'Object-Oriented Programming in Java', 'description' => 'Dive deep into OOP principles with Java, including classes, inheritance, and polymorphism.', 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s' , 'id' => 7],
-            ['title' => 'Java for Mobile Development', 'description' => 'Learn to build mobile apps using Java and frameworks like Android SDK.', 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s' , 'id' => 8],
-            ['title' => 'Spring Framework Basics', 'description' => 'Understand the fundamentals of Spring to build Java-based web applications.', 'image' => 'https://download.logo.wine/logo/Spring_Framework/Spring_Framework-Logo.wine.png' , 'id' => 9],
-            ['title' => 'Java Web Development with Spring Boot', 'description' => 'Build scalable web apps using Java and Spring Boot, covering RESTful APIs, JPA, and Spring Security.', 'image' => 'https://miro.medium.com/v2/resize:fit:1400/1*vFiGOTV1S8yz0RTIQteTjw.png' , 'id' => 10]
-            ] as $course)
-            <div class="card" style="width: 18rem;">
-                <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['title'] }}">
-                <div class="card-body d-flex flex-column justify-content-between gap-3">
-                    <h5 class="card-title">{{ $course['title'] }}</h5>
-                    <p class="card-text">{{ $course['description'] }}</p>
-                    @if (!$isAuthenticated)
-                    <a href="#" class="btn btn-primary">Enroll</a>
-
-                    @else
-                    @if ($isEnrollmentExists($course['id']))
-                    <a href="#" class="btn btn-primary" style="pointer-events: none;">Enrolled</a>
-                    @else
-                    <a href="/api/courses?course_id=<?php echo $course['id']; ?>" class="btn btn-primary">Enroll</a>
-                    @endif
-                    @endif
-                </div>
-            </div>
-            @endforeach
-        </div>
-        <div class="header-section mt-12">
-            <h2 class="course-language font-bold">JavaScript Courses</h2>
-            <a href="/courses/javascript">See More >></a>
-        </div>
-        <div class="courses d-flex align-content-start flex-wrap gap-4 mb-5">
+    <div class="allcontent mt-10">
+        <div class="courses d-flex align-content-start flex-wrap gap-4 mb-10">
             @foreach ([
             ['title' => 'JavaScript Essentials', 'description' => 'Learn the fundamentals of JavaScript, including syntax, variables, and DOM manipulation.', 'image' => 'https://media.licdn.com/dms/image/D4D12AQG_8eaFpxIX8g/article-cover_image-shrink_600_2000/0/1685624189443?e=2147483647&v=beta&t=n2AxgBk8PQ5-5Vl761c3u-WUaSCebSD8LYds4yXZijg' , 'id' => 11],
             ['title' => 'JavaScript for Web Development', 'description' => 'Master JavaScript for creating modern, interactive web applications.', 'image' => 'https://media.licdn.com/dms/image/D4D12AQG_8eaFpxIX8g/article-cover_image-shrink_600_2000/0/1685624189443?e=2147483647&v=beta&t=n2AxgBk8PQ5-5Vl761c3u-WUaSCebSD8LYds4yXZijg' , 'id' => 12],
@@ -224,20 +158,9 @@
                 <div class="card-body d-flex flex-column justify-content-between gap-3">
                     <h5 class="card-title">{{ $course['title'] }}</h5>
                     <p class="card-text">{{ $course['description'] }}</p>
-                    @if (!$isAuthenticated)
                     <a href="#" class="btn btn-primary">Enroll</a>
-
-                    @else
-                    @if ($isEnrollmentExists($course['id']))
-                    <a href="" class="btn btn-primary" style="pointer-events: none;">Enrolled</a>
-                    @else
-                    <a href="/api/courses?course_id=<?php echo $course['id']; ?>" class="btn btn-primary">Enroll</a>
-                    @endif
-                    @endif
-
                 </div>
             </div>
-
             @endforeach
         </div>
     </div>

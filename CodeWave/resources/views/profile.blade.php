@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     @vite(['resources/sass/app.scss'])
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const editButton = document.getElementById("editButton");
             const profileFieldset = document.getElementById("profileFieldset");
 
-            editButton.addEventListener("click", function (event) {
+            editButton.addEventListener("click", function(event) {
                 // Cegah pengiriman form
                 event.preventDefault();
 
@@ -25,6 +26,7 @@
         });
     </script>
 </head>
+
 <body>
     @extends('layout')
     @section('content')
@@ -37,7 +39,7 @@
         <form id="profileForm" class="w-75 mx-auto mt-4 d-flex flex-column" action="{{ route('updateProfile', $user->id) }}" method="post">
             @csrf
             @method('PUT')
-        
+
             <fieldset disabled class="d-flex flex-column" id="profileFieldset">
                 <legend>{{ __('profile.profileInfo') }}</legend>
                 <div class="mb-3">
@@ -66,4 +68,5 @@
     </div>
     @endsection
 </body>
+
 </html>

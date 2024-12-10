@@ -125,12 +125,12 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li class="active"><a href="/my-courses/python-for-beginners/chapter-1">Chapter 1: Introduction to Python and setting up your environment</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-2">Chapter 2: Understanding variables, data types, and operators</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-3">Chapter 3: Working with loops and conditionals</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-4">Chapter 4: Defining and using functions</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-5">Chapter 5: Creating and managing Python modules</a></li>
-                <li><a href="/my-courses/python-for-beginners/chapter-6">Chapter 6: Building a final project</a></li>
+                <li class="active"><a href="/lessons/pfb/pfb01">Chapter 1: Introduction to Python and setting up your environment</a></li>
+                <li><a href="/lessons/pfb/pfb02">Chapter 2: Understanding variables, data types, and operators</a></li>
+                <li><a href="/lessons/pfb/pfb03">Chapter 3: Working with loops and conditionals</a></li>
+                <li><a href="/lessons/pfb/pfb04">Chapter 4: Defining and using functions</a></li>
+                <li><a href="/lessons/pfb/pfb05">Chapter 5: Creating and managing Python modules</a></li>
+                <li><a href="/lessons/pfb/pfb06">Chapter 6: Building a final project</a></li>
             </ul>
         </div>
 
@@ -217,34 +217,9 @@
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/python-for-beginners?id=PFB02" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
-            <script>
-                document.querySelector('.next-chapter-button').addEventListener('click', function (event) {
-                    event.preventDefault(); 
-                    const apiUrl = '/api/lesson/finish?id=PFB01'; 
-
-                    fetch(apiUrl, {
-                        method: 'GET', 
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok ' + response.statusText);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('API response:', data);
-                        window.location.href = event.target.href;
-                    })
-                    .catch(error => {
-                        console.error('There was a problem with the fetch operation:', error);
-                    });
-                });
-            </script>
+         
         </div>
     </div>
     @endsection

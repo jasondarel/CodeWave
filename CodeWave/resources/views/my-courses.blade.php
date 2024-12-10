@@ -169,6 +169,7 @@
                             </div>
                             <span class="progress-bar-text">{{ $percentage($course->id) }}%</span>
                         </div>
+                        <a href="{{$redirectTo($course->id)}}" class="btn btn-primary">View</a>
                     </div>
                 </div>
                     @endif

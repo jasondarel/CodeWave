@@ -15,8 +15,32 @@ class CourseController extends Controller
 {
     //
 
+    private $course_group = [
+        "python" => [1, 5],
+        "java" => [6, 10],
+        "javascript" => [11, 14]
+    ];
+
     public function isEnrollmentExists($enroll_list, $id){
         return $enroll_list->contains("course_id", $id);
+    }
+
+    public function redirectThroughCourse($id, $done){
+        $selected_course = $this->getCourseWithId($id);
+
+        if($done){
+              $acronym = $this->getCourseAcronym($selected_course->name);
+            return ('lessons/' .  $acronym . "/" . $acronym . "01");
+        }
+
+        foreach ($this->course_group as $key => $range) {
+            if ($selected_course->id >= $range[0] && $selected_course->id <= $range[1]) {
+                $course_group = $key;
+                break;
+            }
+        }
+     
+        return ("/courses/{$course_group}/" . $this->getCourseAcronym($selected_course->name));
     }
     public function courseListPage(){
 
@@ -30,43 +54,40 @@ class CourseController extends Controller
             return $this->isEnrollmentExists($enroll_list, $id);
         };
 
-      
-        
-        $goToSelectedCourse = function($id) {
-            return "my-courses/" . (str_replace(" ", "-", strtolower($this->getCourseWithId($id)->name)));
+        $redirectThrough = function($id, $done) {
+            return $this->redirectThroughCourse($id, $done);
         };
 
-        return view('courses', ["isAuthenticated" => true, "isEnrollmentExists" => $isEnrollmentExists, "enroll_list" => $enroll_list, "course_url" => $goToSelectedCourse]);
+        return view('courses', ["isAuthenticated" => true, "isEnrollmentExists" => $isEnrollmentExists, "enroll_list" => $enroll_list, 'redirectThrough' => $redirectThrough]);
     }
-    public function enrollCourse(Request $request){
-        $courseId = $request->query('course_id');
 
-        if(!$courseId){
-            return response(["message" => "incorrect query params"], 409);
-        }
-        $selected_course = $this->getCourseWithId($courseId);
+    public function enrollCourse($id){
+        
+    
+        $selected_course = $this->getCourseWithId($id);
+        
+        $acronym = $this->getCourseAcronym($selected_course->name);
+
 
         if($selected_course === null){
             return response(["message" => "course not found"], 404);
         }
 
-        // if($this->getUserCourseList()->where("course_name", $selected_course->name)->exists()){
-        //     return response(["message" => "you already enroll this course"], 409);
-        // }
+      
 
         Enrollment::create([
             "user_id" => 1,
-            "course_id" => $selected_course->id,
+            "course_id" => $id,
             "enrollmentdate" =>  now()->setTimezone('GMT')->toDateString()
         ]);
 
-        
-        $course_route = (str_replace(" ", "-", strtolower($selected_course->name)));
-        return redirect("my-courses/{$course_route}");
+        return redirect('lessons/' .  $acronym . "/" . $acronym . "01");
 
-    
     }
 
+    public function getCourseAcronym($name){
+        return strtolower(implode('', array_map(fn($word) => $word[0], explode(' ', $name))));
+    }
     public function getAllUserCourses(){
         return Enrollment::where("user_id", Auth::user()->id)->get()->toArray();
     }
@@ -127,15 +148,15 @@ class CourseController extends Controller
 
     }
 
-    public function courseMainPage($slug){
+    // public function courseMainPage($slug){
 
-        $course_id = Course::where("name", Str::title(str_replace('-', ' ', $slug)))->first(["id"])->id;
+    //     $course_id = Course::where("name", Str::title(str_replace('-', ' ', $slug)))->first(["id"])->id;
 
     
-        $finishedPercentage = $this->lessonFinishedPercentage($course_id);
+    //     $finishedPercentage = $this->lessonFinishedPercentage($course_id);
 
-        return view('my-courses.' . $slug, ["percentage" => $finishedPercentage]);
-    }
+    //     return view('my-courses.' . $slug, ["percentage" => $finishedPercentage]);
+    // }
 
     public function myCoursesView(){
 
@@ -147,9 +168,12 @@ class CourseController extends Controller
             $query->where('user_id', Auth::user()->id);
         })->get();
 
+        $redirectThrough = function($id) {
+            return $this->redirectThroughCourse($id, true);
+        };
 
    
-        return view('my-courses', ["userCourses" => $userCourses, "percentage" => $getPercentages]);
+        return view('my-courses', ["userCourses" => $userCourses, "percentage" => $getPercentages, "redirectTo" => $redirectThrough]);
     }
 
   

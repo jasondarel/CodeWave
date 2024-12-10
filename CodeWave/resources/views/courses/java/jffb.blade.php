@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python for Beginners</title>
+    <title>Java Fundamentals for Beginners</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@
         .course-header {
             width: 100%;
             height: 400px;
-            background-image: url('https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg');
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -129,35 +129,31 @@
     <a href="javascript:history.back()" class="back-link">
         &#8592;
     </a>
+
     <div class="course-header">
-        <div class="course-title">Python for Beginners</div>
+        <div class="course-title">Java Fundamentals for Beginners</div>
     </div>
 
     <div class="course-content">
         <div class="course-section">
             <h2><strong>Course Overview</strong></h2>
             <p>
-                This course is designed for complete beginners. You'll learn the fundamentals of Python programming,
-                including syntax, variables, data types, loops, and more. By the end of this course, you'll be able to
-                write your own Python programs and solve basic programming problems.
+                This course is designed for beginners who want to learn the basics of Java programming. You'll explore the fundamentals of Java syntax, data structures, object-oriented programming, and more. By the end of the course, you'll have a strong understanding of Java and be ready to build your own programs.
             </p>
         </div>
 
         <div class="course-section mt-20">
             <h2><i class="fas fa-list-ul"></i> <strong>What You'll Learn</strong></h2>
             <ul class="styled-list">
-                <li>Introduction to Python and setting up your environment</li>
-                <li>Understanding variables, data types, and operators</li>
-                <li>Working with loops and conditionals</li>
-                <li>Defining and using functions</li>
-                <li>Creating and managing Python modules</li>
-                <li>Building a final project</li>
+                <li>Understanding Java syntax and data types</li>
+                <li>Writing basic Java programs and functions</li>
+                <li>Control flow and decision-making in Java</li>
+                <li>Introduction to object-oriented programming concepts</li>
+                <li>Working with arrays, lists, and other data structures in Java</li>
             </ul>
         </div>
 
-
-
-        <a href="/enroll/python-for-beginners" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/1" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection

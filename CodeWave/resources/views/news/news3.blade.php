@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artificial Intelligence in Software Development</title>
+    <title>Introduction to Quantum Computing</title>
     <style>
         body,
         h1,
@@ -27,7 +27,7 @@
         .article-header {
             width: 100%;
             height: 400px;
-            background-image: url('https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-image: url('https://www.ncsa.illinois.edu/wp-content/uploads/2024/08/Quantum-computing.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -111,28 +111,27 @@
         &#8592;
     </a>
     <div class="article-header">
-        <div class="article-title">Artificial Intelligence in Software Development</div>
+        <div class="article-title">Introduction to Quantum Computing</div>
     </div>
 
     <div class="article-content">
         <div class="article-meta">
-            <span>By Pham Hanni</span> |
-            <span>December 1, 2024
-            </span>
+            <span>By Park Minju</span> |
+            <span>November 28, 2024</span>
         </div>
 
         <div class="article-body">
             <p>
-                Artificial Intelligence (AI) is transforming the software development landscape. With advancements in machine learning, natural language processing, and deep learning, AI is helping developers build smarter applications, automate tasks, and optimize processes like never before.
+                Quantum computing is an emerging field that promises to revolutionize computing by solving problems that classical computers cannot efficiently tackle. At its core, quantum computing leverages the principles of quantum mechanics to process information in fundamentally new ways. This technology has the potential to impact a wide range of industries, from cryptography to artificial intelligence and beyond.
             </p>
             <p>
-                In the past, software development was a manual process involving repetitive coding tasks. Today, AI tools can automatically generate code, detect bugs, and assist in testing, reducing the workload for developers and speeding up development cycles. AI is also enabling the creation of self-learning systems that can improve over time without human intervention.
+                Unlike classical computers, which use bits to represent data as either 0 or 1, quantum computers use quantum bits, or qubits. Qubits can exist in multiple states simultaneously, thanks to quantum superposition, allowing quantum computers to perform complex calculations at an unprecedented speed.
             </p>
             <p>
-                One of the most exciting aspects of AI in development is its ability to predict user behavior and enhance user experiences. With AI-powered analytics, developers can gain insights into user interactions and preferences, leading to more personalized software and better decision-making.
+                Another key concept in quantum computing is entanglement. When qubits become entangled, the state of one qubit is directly linked to the state of another, regardless of the distance between them. This unique property enables quantum computers to solve problems in parallel, exponentially increasing their computational power.
             </p>
             <p>
-                As AI continues to evolve, it is poised to shape the future of software development in ways we can only begin to imagine. The integration of AI into development workflows will streamline the process, enhance productivity, and ultimately lead to the creation of more intelligent and adaptable software solutions.
+                While quantum computing is still in its early stages, researchers are making significant progress in developing quantum algorithms and building quantum processors. In the near future, quantum computing could transform industries by solving problems that are currently intractable for classical computers, such as simulating molecular structures for drug development or optimizing complex supply chains.
             </p>
         </div>
     </div>
