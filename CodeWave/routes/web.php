@@ -134,9 +134,7 @@ Route::get('/', [DashboardController::class, 'dashboard'])->name('index');
 Route::get('/api/testt', [CourseController::class, "testAPI"]);
 
 
-Route::get('/courses/javascript', function () {
-    return view('courses.javascript');
-})->name('courses.javascript');
+
 
 //python
 
@@ -149,6 +147,8 @@ Route::get('/courses/python/python-for-beginners', function () {
 })->name('courses.python.beginner');
 
 
+
+//python for beginners
 Route::get('/my-courses/python-for-beginners/pfb01', function () {
     return view('my-courses.python-for-beginners.pfb02');
 })->name('my-courses.python-beginner.pfb02');
@@ -237,9 +237,35 @@ Route::get('/courses/java/jwdwsb', function () {
 })->name('courses.java.jwdwsb');
 
 
-//
+//jffb
+
+Route::get('/my-courses/jffb/jffb01', function () {
+    return view('my-courses.jffb.jffb01');
+})->name('my-courses.jffb.jffb01');
+
+Route::get('/my-courses/jffb/jffb02', function () {
+    return view('my-courses.jffb.jffb02');
+})->name('my-courses.jffb.jffb02');
+
+Route::get('/my-courses/jffb/jffb03', function () {
+    return view('my-courses.jffb.jffb03');
+})->name('my-courses.jffb.jffb03');
+
+Route::get('/my-courses/jffb/jffb04', function () {
+    return view('my-courses.jffb.jffb04');
+})->name('my-courses.jffb.jffb04');
+
+Route::get('/my-courses/jffb/jffb05', function () {
+    return view('my-courses.jffb.jffb05');
+})->name('my-courses.jffb.jffb05');
+
+
 
 //javascript
+
+Route::get('/courses/javascript', function () {
+    return view('courses.javascript');
+})->name('courses.javascript');
 
 Route::get('/courses/javascript/je', function () {
     return view('courses.javascript.je');
