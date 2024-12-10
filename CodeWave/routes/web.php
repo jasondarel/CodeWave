@@ -55,6 +55,14 @@ Route::middleware('auth')->group(function () {
         return view('news.news1');
     })->name('news1');
 
+    Route::get('/news2', function () {
+        return view('news.news2');
+    })->name('news2');
+
+    Route::get('/news3', function () {
+        return view('news.news3');
+    })->name('news3');
+
     Route::get('/courses/python/python-for-beginners', function () {
         return view('courses.python.python-for-beginners');
     })->name('courses.python.beginner');

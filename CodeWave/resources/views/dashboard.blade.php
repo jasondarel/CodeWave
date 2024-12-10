@@ -74,10 +74,10 @@
             margin-top: 20px;
         }
 
-        /* gada margin jika guest blm login */
         .no-margin {
             margin-top: 0 !important;
         }
+
         .user-info .spasi {
             margin-bottom: 50px;
             display: block;
@@ -98,9 +98,9 @@
                 <p>Lessons Completed: 20</p>
                 <p>Rank: {{ucfirst($rank)}}</p>
                 <span class="spasi"></span>
-            </div>           
-        @endauth
-        
+            </div>
+            @endauth
+
             <div class="news-section no-margin">
                 <div class="titles font-bold mb-4 fs-3">
                     <h1>Latest News</h1>
@@ -118,20 +118,24 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <div class="news-item">
-                            <h3><strong>Top 10 Programming Languages for 2024</strong></h3>
-                            <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top 10 Languages">
-                            <p>Explore the most in-demand programming languages in the tech industry today.</p>
-                            <small>Published on: November 30, 2024</small>
-                        </div>
+                        <a href="/news2">
+                            <div class="news-item">
+                                <h3><strong>Top 10 Programming Languages for 2024</strong></h3>
+                                <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top 10 Languages">
+                                <p>Explore the most in-demand programming languages in the tech industry today.</p>
+                                <small>Published on: November 30, 2024</small>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-4">
-                        <div class="news-item">
-                            <h3><strong>Introduction to Quantum Computing</strong></h3>
-                            <img src="https://www.ncsa.illinois.edu/wp-content/uploads/2024/08/Quantum-computing.jpg" alt="Quantum Computing">
-                            <p>Learn the basics of quantum computing and why it matters for future developers.</p>
-                            <small>Published on: November 28, 2024</small>
-                        </div>
+                        <a href="/news3">
+                            <div class="news-item">
+                                <h3><strong>Introduction to Quantum Computing</strong></h3>
+                                <img src="https://www.ncsa.illinois.edu/wp-content/uploads/2024/08/Quantum-computing.jpg" alt="Quantum Computing">
+                                <p>Learn the basics of quantum computing and why it matters for future developers.</p>
+                                <small>Published on: November 28, 2024</small>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
