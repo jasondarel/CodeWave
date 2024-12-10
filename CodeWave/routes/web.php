@@ -345,6 +345,28 @@ Route::get('/my-courses/sfb/sfb05', function () {
     return view('my-courses.sfb.sfb05');
 })->name('my-courses.sfb.sfb05');
 
+//app
+Route::get('/my-courses/app/app01', function () {
+    return view('my-courses.app.app01');
+})->name('my-courses.app.app01');
+
+Route::get('/my-courses/app/app02', function () {
+    return view('my-courses.app.app02');
+})->name('my-courses.app.app02');
+
+Route::get('/my-courses/app/app03', function () {
+    return view('my-courses.app.app03');
+})->name('my-courses.app.app03');
+
+Route::get('/my-courses/app/app04', function () {
+    return view('my-courses.app.app04');
+})->name('my-courses.app.app04');
+
+Route::get('/my-courses/app/app05', function () {
+    return view('my-courses.app.app05');
+})->name('my-courses.app.app05');
+
+
 
 //javascript
 
