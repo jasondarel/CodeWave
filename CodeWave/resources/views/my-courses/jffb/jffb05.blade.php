@@ -226,7 +226,7 @@ System.out.println(map.get("Banana"));  // Output: 2</code></pre>
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/python-for-beginners" class="next-chapter-button">Return to Course Overview</a>
+                <a href="/my-courses/jffb" class="next-chapter-button">Return to Course Overview</a>
             </div>
 
             <script>

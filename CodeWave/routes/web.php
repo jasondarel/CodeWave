@@ -260,6 +260,48 @@ Route::get('/my-courses/jffb/jffb05', function () {
 })->name('my-courses.jffb.jffb05');
 
 
+//jfmd
+
+Route::get('/my-courses/jfmd/jfmd01', function () {
+    return view('my-courses.jfmd.jfmd01');
+})->name('my-courses.jfmd.jfmd01');
+
+Route::get('/my-courses/jfmd/jfmd02', function () {
+    return view('my-courses.jfmd.jfmd02');
+})->name('my-courses.jfmd.jfmd02');
+
+Route::get('/my-courses/jfmd/jfmd03', function () {
+    return view('my-courses.jfmd.jfmd03');
+})->name('my-courses.jfmd.jfmd03');
+
+Route::get('/my-courses/jfmd/jfmd04', function () {
+    return view('my-courses.jfmd.jfmd04');
+})->name('my-courses.jfmd.jfmd04');
+
+Route::get('/my-courses/jfmd/jfmd05', function () {
+    return view('my-courses.jfmd.jfmd05');
+})->name('my-courses.jfmd.jfmd05');
+
+//jwdwsb
+Route::get('/my-courses/jwdwsb/jwdwsb01', function () {
+    return view('my-courses.jwdwsb.jwdwsb01');
+})->name('my-courses.jwdwsb.jwdwsb01');
+
+Route::get('/my-courses/jwdwsb/jwdwsb02', function () {
+    return view('my-courses.jwdwsb.jwdwsb02');
+})->name('my-courses.jwdwsb.jwdwsb02');
+
+Route::get('/my-courses/jwdwsb/jwdwsb03', function () {
+    return view('my-courses.jwdwsb.jwdwsb03');
+})->name('my-courses.jwdwsb.jwdwsb03');
+
+Route::get('/my-courses/jwdwsb/jwdwsb04', function () {
+    return view('my-courses.jwdwsb.jwdwsb04');
+})->name('my-courses.jwdwsb.jwdwsb04');
+
+Route::get('/my-courses/jwdwsb/jwdwsb05', function () {
+    return view('my-courses.jwdwsb.jwdwsb05');
+})->name('my-courses.jwdwsb.jwdwsb05');
 
 //javascript
 
