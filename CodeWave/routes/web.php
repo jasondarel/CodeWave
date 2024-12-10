@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::get('api/lesson/finish', [CourseController::class, "finishLesson"]);
 
     Route::get('api/lesson/percentage', [CourseController::class, "lessonFinishedPercentage"]);
-    
+
     Route::get('/news1', function () {
         return view('news.news1');
     })->name('news1');
@@ -132,3 +132,12 @@ Route::get('/', [DashboardController::class, 'dashboard'])->name('index');
 
 
 Route::get('/api/testt', [CourseController::class, "testAPI"]);
+
+
+Route::get('/courses/javascript', function () {
+    return view('courses.javascript');
+})->name('courses.javascript');
+
+Route::get('/courses/java', function () {
+    return view('courses.java');
+})->name('courses.java');
