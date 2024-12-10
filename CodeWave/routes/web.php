@@ -251,6 +251,300 @@ Route::get('/my-courses/jffb/jffb05', function () {
 })->name('my-courses.jffb.jffb05');
 
 
+//jfmd
+
+Route::get('/my-courses/jfmd/jfmd01', function () {
+    return view('my-courses.jfmd.jfmd01');
+})->name('my-courses.jfmd.jfmd01');
+
+Route::get('/my-courses/jfmd/jfmd02', function () {
+    return view('my-courses.jfmd.jfmd02');
+})->name('my-courses.jfmd.jfmd02');
+
+Route::get('/my-courses/jfmd/jfmd03', function () {
+    return view('my-courses.jfmd.jfmd03');
+})->name('my-courses.jfmd.jfmd03');
+
+Route::get('/my-courses/jfmd/jfmd04', function () {
+    return view('my-courses.jfmd.jfmd04');
+})->name('my-courses.jfmd.jfmd04');
+
+Route::get('/my-courses/jfmd/jfmd05', function () {
+    return view('my-courses.jfmd.jfmd05');
+})->name('my-courses.jfmd.jfmd05');
+
+//jwdwsb
+Route::get('/my-courses/jwdwsb/jwdwsb01', function () {
+    return view('my-courses.jwdwsb.jwdwsb01');
+})->name('my-courses.jwdwsb.jwdwsb01');
+
+Route::get('/my-courses/jwdwsb/jwdwsb02', function () {
+    return view('my-courses.jwdwsb.jwdwsb02');
+})->name('my-courses.jwdwsb.jwdwsb02');
+
+Route::get('/my-courses/jwdwsb/jwdwsb03', function () {
+    return view('my-courses.jwdwsb.jwdwsb03');
+})->name('my-courses.jwdwsb.jwdwsb03');
+
+Route::get('/my-courses/jwdwsb/jwdwsb04', function () {
+    return view('my-courses.jwdwsb.jwdwsb04');
+})->name('my-courses.jwdwsb.jwdwsb04');
+
+Route::get('/my-courses/jwdwsb/jwdwsb05', function () {
+    return view('my-courses.jwdwsb.jwdwsb05');
+})->name('my-courses.jwdwsb.jwdwsb05');
+
+//oopij
+Route::get('/my-courses/oopij/oopij01', function () {
+    return view('my-courses.oopij.oopij01');
+})->name('my-courses.oopij.oopij01');
+
+Route::get('/my-courses/oopij/oopij02', function () {
+    return view('my-courses.oopij.oopij02');
+})->name('my-courses.oopij.oopij02');
+
+Route::get('/my-courses/oopij/oopij03', function () {
+    return view('my-courses.oopij.oopij03');
+})->name('my-courses.oopij.oopij03');
+
+Route::get('/my-courses/oopij/oopij04', function () {
+    return view('my-courses.oopij.oopij04');
+})->name('my-courses.oopij.oopij04');
+
+Route::get('/my-courses/oopij/oopij05', function () {
+    return view('my-courses.oopij.oopij05');
+})->name('my-courses.oopij.oopij05');
+
+//sfb
+Route::get('/my-courses/sfb/sfb01', function () {
+    return view('my-courses.sfb.sfb01');
+})->name('my-courses.sfb.sfb01');
+
+Route::get('/my-courses/sfb/sfb02', function () {
+    return view('my-courses.sfb.sfb02');
+})->name('my-courses.sfb.sfb02');
+
+Route::get('/my-courses/sfb/sfb03', function () {
+    return view('my-courses.sfb.sfb03');
+})->name('my-courses.sfb.sfb03');
+
+Route::get('/my-courses/sfb/sfb04', function () {
+    return view('my-courses.sfb.sfb04');
+})->name('my-courses.sfb.sfb04');
+
+Route::get('/my-courses/sfb/sfb05', function () {
+    return view('my-courses.sfb.sfb05');
+})->name('my-courses.sfb.sfb05');
+
+//app
+Route::get('/my-courses/app/app01', function () {
+    return view('my-courses.app.app01');
+})->name('my-courses.app.app01');
+
+Route::get('/my-courses/app/app02', function () {
+    return view('my-courses.app.app02');
+})->name('my-courses.app.app02');
+
+Route::get('/my-courses/app/app03', function () {
+    return view('my-courses.app.app03');
+})->name('my-courses.app.app03');
+
+Route::get('/my-courses/app/app04', function () {
+    return view('my-courses.app.app04');
+})->name('my-courses.app.app04');
+
+Route::get('/my-courses/app/app05', function () {
+    return view('my-courses.app.app05');
+})->name('my-courses.app.app05');
+
+
+//dawp
+Route::get('/my-courses/dawp/dawp01', function () {
+    return view('my-courses.dawp.dawp01');
+})->name('my-courses.dawp.dawp01');
+
+Route::get('/my-courses/dawp/dawp02', function () {
+    return view('my-courses.dawp.dawp02');
+})->name('my-courses.dawp.dawp02');
+
+Route::get('/my-courses/dawp/dawp03', function () {
+    return view('my-courses.dawp.dawp03');
+})->name('my-courses.dawp.dawp03');
+
+Route::get('/my-courses/dawp/dawp04', function () {
+    return view('my-courses.dawp.dawp04');
+})->name('my-courses.dawp.dawp04');
+
+Route::get('/my-courses/dawp/dawp05', function () {
+    return view('my-courses.dawp.dawp05');
+})->name('my-courses.dawp.dawp05');
+
+
+
+
+//dvwp
+Route::get('/my-courses/dvwp/dvwp01', function () {
+    return view('my-courses.dvwp.dvwp01');
+})->name('my-courses.dvwp.dvwp01');
+
+Route::get('/my-courses/dvwp/dvwp02', function () {
+    return view('my-courses.dvwp.dvwp02');
+})->name('my-courses.dvwp.dvwp02');
+
+Route::get('/my-courses/dvwp/dvwp03', function () {
+    return view('my-courses.dvwp.dvwp03');
+})->name('my-courses.dvwp.dvwp03');
+
+Route::get('/my-courses/dvwp/dvwp04', function () {
+    return view('my-courses.dvwp.dvwp04');
+})->name('my-courses.dvwp.dvwp04');
+
+Route::get('/my-courses/dvwp/dvwp05', function () {
+    return view('my-courses.dvwp.dvwp05');
+})->name('my-courses.dvwp.dvwp05');
+
+
+
+//itf
+Route::get('/my-courses/itf/itf01', function () {
+    return view('my-courses.itf.itf01');
+})->name('my-courses.itf.itf01');
+
+Route::get('/my-courses/itf/itf02', function () {
+    return view('my-courses.itf.itf02');
+})->name('my-courses.itf.itf02');
+
+Route::get('/my-courses/itf/itf03', function () {
+    return view('my-courses.itf.itf03');
+})->name('my-courses.itf.itf03');
+
+Route::get('/my-courses/itf/itf04', function () {
+    return view('my-courses.itf.itf04');
+})->name('my-courses.itf.itf04');
+
+Route::get('/my-courses/itf/itf05', function () {
+    return view('my-courses.itf.itf05');
+})->name('my-courses.itf.itf05');
+
+
+
+//pfa
+Route::get('/my-courses/pfa/pfa01', function () {
+    return view('my-courses.pfa.pfa01');
+})->name('my-courses.pfa.pfa01');
+
+Route::get('/my-courses/pfa/pfa02', function () {
+    return view('my-courses.pfa.pfa02');
+})->name('my-courses.pfa.pfa02');
+
+Route::get('/my-courses/pfa/pfa03', function () {
+    return view('my-courses.pfa.pfa03');
+})->name('my-courses.pfa.pfa03');
+
+Route::get('/my-courses/pfa/pfa04', function () {
+    return view('my-courses.pfa.pfa04');
+})->name('my-courses.pfa.pfa04');
+
+Route::get('/my-courses/pfa/pfa05', function () {
+    return view('my-courses.pfa.pfa05');
+})->name('my-courses.pfa.pfa05');
+
+
+
+
+
+//pfc
+Route::get('/my-courses/pfc/pfc01', function () {
+    return view('my-courses.pfc.pfc01');
+})->name('my-courses.pfc.pfc01');
+
+Route::get('/my-courses/pfc/pfc02', function () {
+    return view('my-courses.pfc.pfc02');
+})->name('my-courses.pfc.pfc02');
+
+Route::get('/my-courses/pfc/pfc03', function () {
+    return view('my-courses.pfc.pfc03');
+})->name('my-courses.pfc.pfc03');
+
+Route::get('/my-courses/pfc/pfc04', function () {
+    return view('my-courses.pfc.pfc04');
+})->name('my-courses.pfc.pfc04');
+
+Route::get('/my-courses/pfc/pfc05', function () {
+    return view('my-courses.pfc.pfc05');
+})->name('my-courses.pfc.pfc05');
+
+
+
+
+//pfgd
+Route::get('/my-courses/pfgd/pfgd01', function () {
+    return view('my-courses.pfgd.pfgd01');
+})->name('my-courses.pfgd.pfgd01');
+
+Route::get('/my-courses/pfgd/pfgd02', function () {
+    return view('my-courses.pfgd.pfgd02');
+})->name('my-courses.pfgd.pfgd02');
+
+Route::get('/my-courses/pfgd/pfgd03', function () {
+    return view('my-courses.pfgd.pfgd03');
+})->name('my-courses.pfgd.pfgd03');
+
+Route::get('/my-courses/pfgd/pfgd04', function () {
+    return view('my-courses.pfgd.pfgd04');
+})->name('my-courses.pfgd.pfgd04');
+
+Route::get('/my-courses/pfgd/pfgd05', function () {
+    return view('my-courses.pfgd.pfgd05');
+})->name('my-courses.pfgd.pfgd05');
+
+
+
+//pfml
+Route::get('/my-courses/pfml/pfml01', function () {
+    return view('my-courses.pfml.pfml01');
+})->name('my-courses.pfml.pfml01');
+
+Route::get('/my-courses/pfml/pfml02', function () {
+    return view('my-courses.pfml.pfml02');
+})->name('my-courses.pfml.pfml02');
+
+Route::get('/my-courses/pfml/pfml03', function () {
+    return view('my-courses.pfml.pfml03');
+})->name('my-courses.pfml.pfml03');
+
+Route::get('/my-courses/pfml/pfml04', function () {
+    return view('my-courses.pfml.pfml04');
+})->name('my-courses.pfml.pfml04');
+
+Route::get('/my-courses/pfml/pfml05', function () {
+    return view('my-courses.pfml.pfml05');
+})->name('my-courses.pfml.pfml05');
+
+
+
+
+//wdwd
+Route::get('/my-courses/wdwd/wdwd01', function () {
+    return view('my-courses.wdwd.wdwd01');
+})->name('my-courses.wdwd.wdwd01');
+
+Route::get('/my-courses/wdwd/wdwd02', function () {
+    return view('my-courses.wdwd.wdwd02');
+})->name('my-courses.wdwd.wdwd02');
+
+Route::get('/my-courses/wdwd/wdwd03', function () {
+    return view('my-courses.wdwd.wdwd03');
+})->name('my-courses.wdwd.wdwd03');
+
+Route::get('/my-courses/wdwd/wdwd04', function () {
+    return view('my-courses.wdwd.wdwd04');
+})->name('my-courses.wdwd.wdwd04');
+
+Route::get('/my-courses/wdwd/wdwd05', function () {
+    return view('my-courses.wdwd.wdwd05');
+})->name('my-courses.wdwd.wdwd05');
+
 
 //javascript
 
@@ -277,3 +571,125 @@ Route::get('/courses/javascript/nfbd', function () {
 Route::get('/courses/javascript/fsdwn', function () {
     return view('courses.javascript.fsdwn');
 })->name('courses.javascript.fsdwn');
+
+
+
+//fdwr
+Route::get('/my-courses/fdwr/fdwr01', function () {
+    return view('my-courses.fdwr.fdwr01');
+})->name('my-courses.fdwr.fdwr01');
+
+Route::get('/my-courses/fdwr/fdwr02', function () {
+    return view('my-courses.fdwr.fdwr02');
+})->name('my-courses.fdwr.fdwr02');
+
+Route::get('/my-courses/fdwr/fdwr03', function () {
+    return view('my-courses.fdwr.fdwr03');
+})->name('my-courses.fdwr.fdwr03');
+
+Route::get('/my-courses/fdwr/fdwr04', function () {
+    return view('my-courses.fdwr.fdwr04');
+})->name('my-courses.fdwr.fdwr04');
+
+Route::get('/my-courses/fdwr/fdwr05', function () {
+    return view('my-courses.fdwr.fdwr05');
+})->name('my-courses.fdwr.fdwr05');
+
+
+
+
+//fsdwn
+Route::get('/my-courses/fsdwn/fsdwn01', function () {
+    return view('my-courses.fsdwn.fsdwn01');
+})->name('my-courses.fsdwn.fsdwn01');
+
+Route::get('/my-courses/fsdwn/fsdwn02', function () {
+    return view('my-courses.fsdwn.fsdwn02');
+})->name('my-courses.fsdwn.fsdwn02');
+
+Route::get('/my-courses/fsdwn/fsdwn03', function () {
+    return view('my-courses.fsdwn.fsdwn03');
+})->name('my-courses.fsdwn.fsdwn03');
+
+Route::get('/my-courses/fsdwn/fsdwn04', function () {
+    return view('my-courses.fsdwn.fsdwn04');
+})->name('my-courses.fsdwn.fsdwn04');
+
+Route::get('/my-courses/fsdwn/fsdwn05', function () {
+    return view('my-courses.fsdwn.fsdwn05');
+})->name('my-courses.fsdwn.fsdwn05');
+
+Route::get('/my-courses/fsdwn/fsdwn06', function () {
+    return view('my-courses.fsdwn.fsdwn06');
+})->name('my-courses.fsdwn.fsdwn06');
+
+
+
+//je
+Route::get('/my-courses/je/je01', function () {
+    return view('my-courses.je.je01');
+})->name('my-courses.je.je01');
+
+Route::get('/my-courses/je/je02', function () {
+    return view('my-courses.je.je02');
+})->name('my-courses.je.je02');
+
+Route::get('/my-courses/je/je03', function () {
+    return view('my-courses.je.je03');
+})->name('my-courses.je.je03');
+
+Route::get('/my-courses/je/je04', function () {
+    return view('my-courses.je.je04');
+})->name('my-courses.je.je04');
+
+Route::get('/my-courses/je/je05', function () {
+    return view('my-courses.je.je05');
+})->name('my-courses.je.je05');
+
+
+
+//jfwd
+Route::get('/my-courses/jfwd/jfwd01', function () {
+    return view('my-courses.jfwd.jfwd01');
+})->name('my-courses.jfwd.jfwd01');
+
+Route::get('/my-courses/jfwd/jfwd02', function () {
+    return view('my-courses.jfwd.jfwd02');
+})->name('my-courses.jfwd.jfwd02');
+
+Route::get('/my-courses/jfwd/jfwd03', function () {
+    return view('my-courses.jfwd.jfwd03');
+})->name('my-courses.jfwd.jfwd03');
+
+Route::get('/my-courses/jfwd/jfwd04', function () {
+    return view('my-courses.jfwd.jfwd04');
+})->name('my-courses.jfwd.jfwd04');
+
+Route::get('/my-courses/jfwd/jfwd05', function () {
+    return view('my-courses.jfwd.jfwd05');
+})->name('my-courses.jfwd.jfwd05');
+
+
+
+
+
+//nfbd
+Route::get('/my-courses/nfbd/nfbd01', function () {
+    return view('my-courses.nfbd.nfbd01');
+})->name('my-courses.nfbd.nfbd01');
+
+Route::get('/my-courses/nfbd/nfbd02', function () {
+    return view('my-courses.nfbd.nfbd02');
+})->name('my-courses.nfbd.nfbd02');
+
+Route::get('/my-courses/nfbd/nfbd03', function () {
+    return view('my-courses.nfbd.nfbd03');
+})->name('my-courses.nfbd.nfbd03');
+
+Route::get('/my-courses/nfbd/nfbd04', function () {
+    return view('my-courses.nfbd.nfbd04');
+})->name('my-courses.nfbd.nfbd04');
+
+Route::get('/my-courses/nfbd/nfbd05', function () {
+    return view('my-courses.nfbd.nfbd05');
+})->name('my-courses.nfbd.nfbd05');
