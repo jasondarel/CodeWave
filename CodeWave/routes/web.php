@@ -437,6 +437,28 @@ Route::get('/my-courses/itf/itf05', function () {
 
 
 
+//pfa
+Route::get('/my-courses/pfa/pfa01', function () {
+    return view('my-courses.pfa.pfa01');
+})->name('my-courses.pfa.pfa01');
+
+Route::get('/my-courses/pfa/pfa02', function () {
+    return view('my-courses.pfa.pfa02');
+})->name('my-courses.pfa.pfa02');
+
+Route::get('/my-courses/pfa/pfa03', function () {
+    return view('my-courses.pfa.pfa03');
+})->name('my-courses.pfa.pfa03');
+
+Route::get('/my-courses/pfa/pfa04', function () {
+    return view('my-courses.pfa.pfa04');
+})->name('my-courses.pfa.pfa04');
+
+Route::get('/my-courses/pfa/pfa05', function () {
+    return view('my-courses.pfa.pfa05');
+})->name('my-courses.pfa.pfa05');
+
+
 //javascript
 
 Route::get('/courses/javascript', function () {
