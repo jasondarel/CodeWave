@@ -92,7 +92,7 @@
 
     <div class="dashboard-container">
         @auth
-        <h1 class="welcome-header">Welcome Back, (Nama User)!</h3>
+        <h1 class="welcome-header">Welcome Back, {{Auth::user()->name}}!</h3>
             <div class="user-info">
                 <p>Courses Enrolled: 5</p>
                 <p>Lessons Completed: 20</p>

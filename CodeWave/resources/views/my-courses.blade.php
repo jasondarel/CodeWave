@@ -145,7 +145,7 @@
             <div class="header-section">
                 <h2 class="course-language font-bold">Courses in Progress</h2>
             </div>
-            <div class="courses d-flex align-content-start flex-wrap gap-4">
+            <div class="courses d-flex align-content-start flex-wrap gap-4 ">
                 @foreach ([
                 ['title' => 'Python for Beginners', 'description' => 'Learn the fundamentals of Python programming, including syntax, data structures, and simple scripts.', 'progress' => 60, 'image' => 'https://i.pinimg.com/originals/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg'],
                 ['title' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'progress' => 40, 'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI5B7-SHyi6qSn8CAY8k-1EjzKQsR6DpWN3A&s'],

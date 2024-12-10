@@ -222,7 +222,7 @@
             <script>
                 document.querySelector('.next-chapter-button').addEventListener('click', function (event) {
                     event.preventDefault(); 
-                    const apiUrl = 'api/lesson/finish?id=PFB01'; 
+                    const apiUrl = '/api/lesson/finish?id=PFB01'; 
 
                     fetch(apiUrl, {
                         method: 'GET', 

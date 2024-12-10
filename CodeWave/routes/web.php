@@ -43,11 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::put('/profile/update/{id}', [UserController::class, 'updateProfile'])->name('updateProfile');
 
     // Halaman daftar courses
-    Route::get('/courses', function () {
-        return view('courses');
-    })->name('courses');
+    Route::get('/courses', [CourseController::class, 'courseListPage'])->name('courses');
 
-    Route::get('api/courses', [CourseController::class, 'enrollCourses']);
+    Route::get('api/courses', [CourseController::class, 'enrollCourse']);
 
     Route::get('api/lesson/finish', [CourseController::class, "finishLesson"]);
 
@@ -93,17 +91,18 @@ Route::middleware('auth')->group(function () {
         ]);
     })->name('inbox.detail');
 
-    Route::get('/my-courses/python-for-beginners', function () {
-        return view('my-courses.python-for-beginners');
-    })->name('my-courses.python-beginner');
+    Route::get('/my-courses/{slug}', [CourseController::class, "courseMainPage"]);
+    // Route::get('/my-courses/python-for-beginners', function () {
+    //     return view('my-courses.python-for-beginners');
+    // })->name('my-courses.python-beginner');
 
-    Route::get('/my-courses/python-for-beginners/chapter-1', function () {
-        return view('my-courses.python-for-beginners.chapter-1');
-    })->name('my-courses.python-beginner.chapter-1');
+    // Route::get('/my-courses/python-for-beginners/chapter-1', function () {
+    //     return view('my-courses.python-for-beginners.chapter-1');
+    // })->name('my-courses.python-beginner.chapter-1');
 
-    Route::get('/my-courses/python-for-beginners/chapter-2', function () {
-        return view('my-courses.python-for-beginners.chapter-2');
-    })->name('my-courses.python-beginner.chapter-2');
+    // Route::get('/my-courses/python-for-beginners/chapter-2', function () {
+    //     return view('my-courses.python-for-beginners.chapter-2');
+    // })->name('my-courses.python-beginner.chapter-2');
 });
 
 // Middleware untuk guest (belum login)
@@ -132,3 +131,4 @@ Route::get('/', [DashboardController::class, 'dashboard'])->name('index');
 
 
 
+Route::get('/api/testt', [CourseController::class, "testAPI"]);

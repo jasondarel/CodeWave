@@ -9,6 +9,7 @@ use App\Models\StudentLesson;
 use Illuminate\Support\Facades\Auth;
 use Error;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CourseController extends Controller
 {
@@ -17,7 +18,7 @@ class CourseController extends Controller
     public function isEnrollmentExists($enroll_list, $id){
         return $enroll_list->contains("course_id", $id);
     }
-    public function coursePage(){
+    public function courseListPage(){
 
         // if(!Auth::user()){
         //     return view('courses', ["isAuthenticated" => false]);
@@ -61,7 +62,7 @@ class CourseController extends Controller
 
         
         $course_route = (str_replace(" ", "-", strtolower($selected_course->name)));
-        return redirect("my_courses/{$course_route}");
+        return redirect("my-courses/{$course_route}");
 
     
     }
@@ -71,10 +72,10 @@ class CourseController extends Controller
     }
 
     public function getUserEnrollment(){
-        // $user = Auth::user();
+        $user = Auth::user();
         // return Enrollment::where("user_id", $user->id);
 
-        return Enrollment::where("user_id", 1)->get(["course_id"]);
+        return Enrollment::where("user_id", $user->id)->get(["course_id"]);
     }
 
     public function getUserCourseList(){
@@ -85,26 +86,21 @@ class CourseController extends Controller
         return Course::where("id", $course_id)->first();
     }
 
-    public function lessonFinishedPercentage(){
+    public function lessonFinishedPercentage($course_id){
  
-        $lessons = Lesson::where('course_id', 1);
-
-        $count_lesson = 0;
-        $total_lesson = $lessons->count();
-
-        $student_lesson = StudentLesson::where("user_id", 1)->get();
-
-        if($student_lesson->isEmpty()){
-            return 0;
-        }
-
-        foreach($student_lesson as $lesson){
-            if($lesson->lesson->id === 1){
-                $count_lesson += 1;
+        $lesson_amount = Lesson::where('course_id', $course_id)->count();
+        $counter = 0;
+        $lessons = Lesson::whereHas('StudentLesson', function ($query) {
+            $query->where('user_id', Auth::user()->id);
+        })->get();
+      
+        foreach($lessons as $lesson){
+            if($lesson->course->id === $course_id->id){
+                $counter += 1;
             }
         }
 
-        return ( $count_lesson / $total_lesson ) * 100;
+        return ( $counter / $lesson_amount ) * 100;
         
         
     }
@@ -126,5 +122,18 @@ class CourseController extends Controller
 
 
     }
+
+    public function courseMainPage($slug){
+
+        $course_id = Course::where("name", Str::title(str_replace('-', ' ', $slug)))->first(["id"]);
+
+        dd($course_id);
+        $finishedPercentage = $this->lessonFinishedPercentage($course_id);
+
+        return dd("URAA");
+        // return view('my-courses.' . $slug, ["percentage" => $finishedPercentage]);
+    }
+
+  
   
 }
