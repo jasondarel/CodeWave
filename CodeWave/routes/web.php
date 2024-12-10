@@ -483,6 +483,30 @@ Route::get('/my-courses/pfc/pfc05', function () {
     return view('my-courses.pfc.pfc05');
 })->name('my-courses.pfc.pfc05');
 
+
+
+
+//pfgd
+Route::get('/my-courses/pfgd/pfgd01', function () {
+    return view('my-courses.pfgd.pfgd01');
+})->name('my-courses.pfgd.pfgd01');
+
+Route::get('/my-courses/pfgd/pfgd02', function () {
+    return view('my-courses.pfgd.pfgd02');
+})->name('my-courses.pfgd.pfgd02');
+
+Route::get('/my-courses/pfgd/pfgd03', function () {
+    return view('my-courses.pfgd.pfgd03');
+})->name('my-courses.pfgd.pfgd03');
+
+Route::get('/my-courses/pfgd/pfgd04', function () {
+    return view('my-courses.pfgd.pfgd04');
+})->name('my-courses.pfgd.pfgd04');
+
+Route::get('/my-courses/pfgd/pfgd05', function () {
+    return view('my-courses.pfgd.pfgd05');
+})->name('my-courses.pfgd.pfgd05');
+
 //javascript
 
 Route::get('/courses/javascript', function () {
