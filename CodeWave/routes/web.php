@@ -677,3 +677,28 @@ Route::get('/my-courses/jfwd/jfwd04', function () {
 Route::get('/my-courses/jfwd/jfwd05', function () {
     return view('my-courses.jfwd.jfwd05');
 })->name('my-courses.jfwd.jfwd05');
+
+
+
+
+
+//nfbd
+Route::get('/my-courses/nfbd/nfbd01', function () {
+    return view('my-courses.nfbd.nfbd01');
+})->name('my-courses.nfbd.nfbd01');
+
+Route::get('/my-courses/nfbd/nfbd02', function () {
+    return view('my-courses.nfbd.nfbd02');
+})->name('my-courses.nfbd.nfbd02');
+
+Route::get('/my-courses/nfbd/nfbd03', function () {
+    return view('my-courses.nfbd.nfbd03');
+})->name('my-courses.nfbd.nfbd03');
+
+Route::get('/my-courses/nfbd/nfbd04', function () {
+    return view('my-courses.nfbd.nfbd04');
+})->name('my-courses.nfbd.nfbd04');
+
+Route::get('/my-courses/nfbd/nfbd05', function () {
+    return view('my-courses.nfbd.nfbd05');
+})->name('my-courses.nfbd.nfbd05');
