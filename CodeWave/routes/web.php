@@ -654,3 +654,26 @@ Route::get('/my-courses/je/je04', function () {
 Route::get('/my-courses/je/je05', function () {
     return view('my-courses.je.je05');
 })->name('my-courses.je.je05');
+
+
+
+//jfwd
+Route::get('/my-courses/jfwd/jfwd01', function () {
+    return view('my-courses.jfwd.jfwd01');
+})->name('my-courses.jfwd.jfwd01');
+
+Route::get('/my-courses/jfwd/jfwd02', function () {
+    return view('my-courses.jfwd.jfwd02');
+})->name('my-courses.jfwd.jfwd02');
+
+Route::get('/my-courses/jfwd/jfwd03', function () {
+    return view('my-courses.jfwd.jfwd03');
+})->name('my-courses.jfwd.jfwd03');
+
+Route::get('/my-courses/jfwd/jfwd04', function () {
+    return view('my-courses.jfwd.jfwd04');
+})->name('my-courses.jfwd.jfwd04');
+
+Route::get('/my-courses/jfwd/jfwd05', function () {
+    return view('my-courses.jfwd.jfwd05');
+})->name('my-courses.jfwd.jfwd05');
