@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/nfbd/nfbd01">Chapter 1: Getting started with Node.js and its core modules</a></li>
-                <li><a href="/my-courses/nfbd/nfbd02">Chapter 2: Working with Express.js for building RESTful APIs</a></li>
-                <li><a href="/my-courses/nfbd/nfbd03">Chapter 3: Connecting to databases (MongoDB, MySQL, etc.)</a></li>
-                <li class="active"><a href="/my-courses/nfbd/nfbd04">Chapter 4: Understanding asynchronous programming with callbacks, promises, and async/await</a></li>
-                <li><a href="/my-courses/nfbd/nfbd05">Chapter 5: Building secure and scalable backend applications</a></li>
+                <li><a href="/lessons/nfbd/nfbd01">Chapter 1: Getting started with Node.js and its core modules</a></li>
+                <li><a href="/lessons/nfbd/nfbd02">Chapter 2: Working with Express.js for building RESTful APIs</a></li>
+                <li><a href="/lessons/nfbd/nfbd03">Chapter 3: Connecting to databases (MongoDB, MySQL, etc.)</a></li>
+                <li class="active"><a href="/lessons/nfbd/nfbd04">Chapter 4: Understanding asynchronous programming with callbacks, promises, and async/await</a></li>
+                <li><a href="/lessons/nfbd/nfbd05">Chapter 5: Building secure and scalable backend applications</a></li>
             </ul>
         </div>
 

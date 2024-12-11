@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/jfwd/jfwd01">Chapter 1: Introduction to the DOM (Document Object Model)</a></li>
-                <li><a href="/my-courses/jfwd/jfwd02">Chapter 2: Working with JavaScript events and event listeners</a></li>
-                <li><a href="/my-courses/jfwd/jfwd03">Chapter 3: Manipulating HTML elements and CSS styles dynamically</a></li>
-                <li><a href="/my-courses/jfwd/jfwd04">Chapter 4: Asynchronous JavaScript: Working with AJAX</a></li>
-                <li class="active"><a href="/my-courses/jfwd/jfwd05">Chapter 5: Integrating JavaScript with third-party libraries and APIs</a></li>
+                <li><a href="/lessons/jfwd/jfwd01">Chapter 1: Introduction to the DOM (Document Object Model)</a></li>
+                <li><a href="/lessons/jfwd/jfwd02">Chapter 2: Working with JavaScript events and event listeners</a></li>
+                <li><a href="/lessons/jfwd/jfwd03">Chapter 3: Manipulating HTML elements and CSS styles dynamically</a></li>
+                <li><a href="/lessons/jfwd/jfwd04">Chapter 4: Asynchronous JavaScript: Working with AJAX</a></li>
+                <li class="active"><a href="/lessons/jfwd/jfwd05">Chapter 5: Integrating JavaScript with third-party libraries and APIs</a></li>
             </ul>
         </div>
 

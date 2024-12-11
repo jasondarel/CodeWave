@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/pfa/pfa01">Chapter 1: Automating File and Folder Management with Python</a></li>
-                <li><a href="/my-courses/pfa/pfa02">Chapter 2: Web Scraping using BeautifulSoup and Selenium</a></li>
-                <li class="active"><a href="/my-courses/pfa/pfa03">Chapter 3: Automating Emails and Other Web Tasks</a></li>
-                <li><a href="/my-courses/pfa/pfa04">Chapter 4: Working with APIs for Data Retrieval and Automation</a></li>
-                <li><a href="/my-courses/pfa/pfa05">Chapter 5: Scheduling and Running Automated Tasks with Python</a></li>
+                <li><a href="/lessons/pfa/pfa01">Chapter 1: Automating File and Folder Management with Python</a></li>
+                <li><a href="/lessons/pfa/pfa02">Chapter 2: Web Scraping using BeautifulSoup and Selenium</a></li>
+                <li class="active"><a href="/lessons/pfa/pfa03">Chapter 3: Automating Emails and Other Web Tasks</a></li>
+                <li><a href="/lessons/pfa/pfa04">Chapter 4: Working with APIs for Data Retrieval and Automation</a></li>
+                <li><a href="/lessons/pfa/pfa05">Chapter 5: Scheduling and Running Automated Tasks with Python</a></li>
             </ul>
         </div>
 
@@ -220,7 +220,7 @@ else:
             </pre>
 
             <div class="next-chapter">
-                <a href="/my-courses/pfa/pfa04" class="next-chapter-button">Next Chapter</a>
+                <a href="/lessons/pfa/pfa04" class="next-chapter-button">Next Chapter</a>
             </div>
         </div>
     </div>
