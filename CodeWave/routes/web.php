@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     //     ]);
     // })->name('inbox');
 
-    Route::get('/inbox',[InboxController::class, 'mainInboxView'])->name('inbox');
+    Route::get('/inbox', [InboxController::class, 'mainInboxView'])->name('inbox');
 
     // Halaman My Courses
     Route::get('/my-courses', [CourseController::class, 'myCoursesView'])->name('my-courses');
@@ -97,7 +97,6 @@ Route::middleware('auth')->group(function () {
     // })->name('inbox.detail');
 
     Route::get('/lessons/{course_group}/{lesson_id}', [LessonController::class, "LessonMainPage"]);
-
 });
 
 // Middleware untuk guest (belum login)
@@ -112,11 +111,6 @@ Route::middleware('guest')->group(function () {
 
 // Logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-// Halaman About Us
-Route::get('/aboutus', function () {
-    return view('aboutus');
-})->name('aboutus');
 
 // Halaman Dashboard
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
