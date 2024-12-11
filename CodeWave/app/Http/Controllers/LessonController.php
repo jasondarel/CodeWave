@@ -47,10 +47,9 @@ class LessonController extends Controller
 
     public function LessonMainPage($course_group, $lesson_id){
         $mark_chapter = function () use($lesson_id, $course_group) {
-            $lessons_amount = Lesson::where('id', 'LIKE', $lesson_id.'%')->count();
+            $lessons_amount = Lesson::where('id', 'LIKE', $course_group.'%')->count();
             $this->MarkChapter(strtoupper($lesson_id));
-
-            if($lesson_id[strlen($lesson_id) - 1] === $lessons_amount){
+            if((int)$lesson_id[strlen($lesson_id) - 1] === $lessons_amount){
                 return 'my-courses/';
             }
            
