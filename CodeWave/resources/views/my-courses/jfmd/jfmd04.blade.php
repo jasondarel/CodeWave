@@ -125,11 +125,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/jfmd/jfmd01">Chapter 1: Introduction to Android and Mobile App Development</a></li>
-                <li><a href="/my-courses/jfmd/jfmd02">Chapter 2: Setting up Android Studio and Creating Your First App</a></li>
-                <li><a href="/my-courses/jfmd/jfmd03">Chapter 3: Designing User Interfaces with XML and Java</a></li>
-                <li class="active"><a href="/my-courses/jfmd/jfmd04">Chapter 4: Handling User Input and Storing App Data</a></li>
-                <li><a href="/my-courses/jfmd/jfmd05">Chapter 5: Publishing Your Android App on the Google Play Store</a></li>
+                <li><a href="/lessons/jfmd/jfmd01">Chapter 1: Introduction to Android and Mobile App Development</a></li>
+                <li><a href="/lessons/jfmd/jfmd02">Chapter 2: Setting up Android Studio and Creating Your First App</a></li>
+                <li><a href="/lessons/jfmd/jfmd03">Chapter 3: Designing User Interfaces with XML and Java</a></li>
+                <li class="active"><a href="/lessons/jfmd/jfmd04">Chapter 4: Handling User Input and Storing App Data</a></li>
+                <li><a href="/lessons/jfmd/jfmd05">Chapter 5: Publishing Your Android App on the Google Play Store</a></li>
             </ul>
         </div>
 
