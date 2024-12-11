@@ -138,20 +138,9 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="pagination">
-                    <nav>
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
-                </div>
             </div>
 
-            <div class="announcements-section">
+            <div class="announcements-section mb-10">
                 <div class="titles font-bold mb-4 fs-3">
                     <h1>Announcements</h1>
                 </div>
@@ -170,18 +159,6 @@
                     <h3>Congratulations to Top Performers</h3>
                     <p>Congratulations to our top performers for the month of November! Keep up the great work.</p>
                     <small>Created on: November 15, 2024</small>
-                </div>
-
-                <!-- Pagination for announcements -->
-                <div class="pagination">
-                    <nav>
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
     </div>

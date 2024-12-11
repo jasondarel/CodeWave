@@ -53,7 +53,7 @@
                 <h5>Recent Notifications</h5>
             </div>
             <div class="card-body scrollable-list">
-             
+
 
                 @foreach ($notifications as $notification)
                 <a href="/inbox/{{ $notification->id }}" class="notification-item" id="notification-{{ $notification['id'] }}">
@@ -69,6 +69,17 @@
                 @endforeach
             </div>
         </div>
+    </div>
+
+    <div class="pagination mt-14 ml-6">
+        <nav>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
     </div>
 
     <script src="{{ mix('js/app.js') }}"></script>
