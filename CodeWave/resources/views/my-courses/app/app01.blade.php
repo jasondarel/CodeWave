@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li class="active"><a href="/my-courses/app/app01">Chapter 1: Advanced Object-Oriented Programming Techniques</a></li>
-                <li><a href="/my-courses/app/app02">Chapter 2: Functional Programming Concepts and Tools in Python</a></li>
-                <li><a href="/my-courses/app/app03">Chapter 3: Working with Decorators, Context Managers, and Generators</a></li>
-                <li><a href="/my-courses/app/app04">Chapter 4: Concurrency and Parallelism with Threading and Multiprocessing</a></li>
-                <li><a href="/my-courses/app/app05">Chapter 5: Optimizing Performance and Memory Management in Python</a></li>
+                <li class="active"><a href="/lessons/app/app01">Chapter 1: Advanced Object-Oriented Programming Techniques</a></li>
+                <li><a href="/lessons/app/app02">Chapter 2: Functional Programming Concepts and Tools in Python</a></li>
+                <li><a href="/lessons/app/app03">Chapter 3: Working with Decorators, Context Managers, and Generators</a></li>
+                <li><a href="/lessons/app/app04">Chapter 4: Concurrency and Parallelism with Threading and Multiprocessing</a></li>
+                <li><a href="/lessons/app/app05">Chapter 5: Optimizing Performance and Memory Management in Python</a></li>
             </ul>
         </div>
 

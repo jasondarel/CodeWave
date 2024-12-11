@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/dvwp/dvwp01">Chapter 1: Introduction to Data Visualization with Python</a></li>
-                <li class="active"><a href="/my-courses/dvwp/dvwp02">Chapter 2: Creating Static Plots with Matplotlib</a></li>
-                <li><a href="/my-courses/dvwp/dvwp03">Chapter 3: Building Advanced Visualizations using Seaborn</a></li>
-                <li><a href="/my-courses/dvwp/dvwp04">Chapter 4: Interactive Data Visualizations with Plotly</a></li>
-                <li><a href="/my-courses/dvwp/dvwp05">Chapter 5: Using Visualization for Data Analysis and Reporting</a></li>
+                <li><a href="/lessons/dvwp/dvwp01">Chapter 1: Introduction to Data Visualization with Python</a></li>
+                <li class="active"><a href="/lessons/dvwp/dvwp02">Chapter 2: Creating Static Plots with Matplotlib</a></li>
+                <li><a href="/lessons/dvwp/dvwp03">Chapter 3: Building Advanced Visualizations using Seaborn</a></li>
+                <li><a href="/lessons/dvwp/dvwp04">Chapter 4: Interactive Data Visualizations with Plotly</a></li>
+                <li><a href="/lessons/dvwp/dvwp05">Chapter 5: Using Visualization for Data Analysis and Reporting</a></li>
             </ul>
         </div>
 

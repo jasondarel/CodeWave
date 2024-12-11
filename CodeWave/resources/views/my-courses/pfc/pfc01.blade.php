@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li class="active"><a href="/my-courses/pfc/pfc01">Chapter 1: Introduction to Python for Security Tasks</a></li>
-                <li><a href="/my-courses/pfc/pfc02">Chapter 2: Network Scanning and Reconnaissance with Python</a></li>
-                <li><a href="/my-courses/pfc/pfc03">Chapter 3: Automating Penetration Testing Tasks</a></li>
-                <li><a href="/my-courses/pfc/pfc04">Chapter 4: Creating Security Tools and Scripts</a></li>
-                <li><a href="/my-courses/pfc/pfc05">Chapter 5: Building Python-Based Exploits and Payloads</a></li>
+                <li class="active"><a href="/lessons/pfc/pfc01">Chapter 1: Introduction to Python for Security Tasks</a></li>
+                <li><a href="/lessons/pfc/pfc02">Chapter 2: Network Scanning and Reconnaissance with Python</a></li>
+                <li><a href="/lessons/pfc/pfc03">Chapter 3: Automating Penetration Testing Tasks</a></li>
+                <li><a href="/lessons/pfc/pfc04">Chapter 4: Creating Security Tools and Scripts</a></li>
+                <li><a href="/lessons/pfc/pfc05">Chapter 5: Building Python-Based Exploits and Payloads</a></li>
             </ul>
         </div>
 

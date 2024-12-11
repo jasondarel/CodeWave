@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/itf/itf01">Chapter 1: Introduction to Flask and Setting up a Flask Environment</a></li>
-                <li><a href="/my-courses/itf/itf02">Chapter 2: Building Your First Flask App</a></li>
-                <li class="active"><a href="/my-courses/itf/itf03">Chapter 3: Understanding Flask Routing and HTTP Methods</a></li>
-                <li><a href="/my-courses/itf/itf04">Chapter 4: Handling Form Data and Requests in Flask</a></li>
-                <li><a href="/my-courses/itf/itf05">Chapter 5: Creating Templates and Rendering HTML with Jinja2</a></li>
+                <li><a href="/lessons/itf/itf01">Chapter 1: Introduction to Flask and Setting up a Flask Environment</a></li>
+                <li><a href="/lessons/itf/itf02">Chapter 2: Building Your First Flask App</a></li>
+                <li class="active"><a href="/lessons/itf/itf03">Chapter 3: Understanding Flask Routing and HTTP Methods</a></li>
+                <li><a href="/lessons/itf/itf04">Chapter 4: Handling Form Data and Requests in Flask</a></li>
+                <li><a href="/lessons/itf/itf05">Chapter 5: Creating Templates and Rendering HTML with Jinja2</a></li>
             </ul>
         </div>
 

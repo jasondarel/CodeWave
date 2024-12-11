@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/pfgd/pfgd01">Chapter 1: Introduction to Game Development with Python</a></li>
-                <li><a href="/my-courses/pfgd/pfgd02">Chapter 2: Setting Up the Pygame Library and Game Loop</a></li>
-                <li><a href="/my-courses/pfgd/pfgd03">Chapter 3: Creating 2D Game Graphics and Animations</a></li>
-                <li class="active"><a href="/my-courses/pfgd/pfgd04">Chapter 4: Implementing Game Logic, Physics, and Collision Detection</a></li>
-                <li><a href="/my-courses/pfgd/pfgd05">Chapter 5: Building a Final Game Project</a></li>
+                <li><a href="/lessons/pfgd/pfgd01">Chapter 1: Introduction to Game Development with Python</a></li>
+                <li><a href="/lessons/pfgd/pfgd02">Chapter 2: Setting Up the Pygame Library and Game Loop</a></li>
+                <li><a href="/lessons/pfgd/pfgd03">Chapter 3: Creating 2D Game Graphics and Animations</a></li>
+                <li class="active"><a href="/lessons/pfgd/pfgd04">Chapter 4: Implementing Game Logic, Physics, and Collision Detection</a></li>
+                <li><a href="/lessons/pfgd/pfgd05">Chapter 5: Building a Final Game Project</a></li>
             </ul>
         </div>
 

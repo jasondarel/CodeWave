@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li class="active"><a href="/my-courses/fdwr/fdwr01">Chapter 1: Understanding React components and JSX</a></li>
-                <li><a href="/my-courses/fdwr/fdwr02">Chapter 2: Managing state and props in React</a></li>
-                <li><a href="/my-courses/fdwr/fdwr03">Chapter 3: Using React hooks (useState, useEffect, etc.)</a></li>
-                <li><a href="/my-courses/fdwr/fdwr04">Chapter 4: React Router for building multi-page applications</a></li>
-                <li><a href="/my-courses/fdwr/fdwr05">Chapter 5: Optimizing React apps for performance</a></li>
+                <li class="active"><a href="/lessons/fdwr/fdwr01">Chapter 1: Understanding React components and JSX</a></li>
+                <li><a href="/lessons/fdwr/fdwr02">Chapter 2: Managing state and props in React</a></li>
+                <li><a href="/lessons/fdwr/fdwr03">Chapter 3: Using React hooks (useState, useEffect, etc.)</a></li>
+                <li><a href="/lessons/fdwr/fdwr04">Chapter 4: React Router for building multi-page applications</a></li>
+                <li><a href="/lessons/fdwr/fdwr05">Chapter 5: Optimizing React apps for performance</a></li>
             </ul>
         </div>
 
