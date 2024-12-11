@@ -216,7 +216,7 @@ REACT_APP_API_URL=https://your-api-url.com
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/fsdwn" class="next-chapter-button">Back to Course Overview</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Back to Course Overview</a>
             </div>
         </div>
     </div>

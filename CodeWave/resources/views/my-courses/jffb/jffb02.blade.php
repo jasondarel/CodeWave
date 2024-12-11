@@ -208,7 +208,7 @@
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/java-for-beginners/chapter-3" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
             <script>
                 document.querySelector('.next-chapter-button').addEventListener('click', function(event) {
