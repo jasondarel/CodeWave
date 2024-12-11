@@ -153,7 +153,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/10">Enroll Now</a>
+        <a href="/enroll/15">Enroll Now</a>
     </div>
 
     @endsection

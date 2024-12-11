@@ -252,27 +252,27 @@ class DatabaseSeeder extends Seeder
                 'course_id' => 6
             ],
             [
-                'id' => 'PGFA01',
+                'id' => 'PFGD01',
                 'name' => 'pgfa',
                 'course_id' => 7
             ],
             [
-                'id' => 'PGFA02',
+                'id' => 'PFGD02',
                 'name' => 'pgfa',
                 'course_id' => 7
             ],
             [
-                'id' => 'PGFA03',
+                'id' => 'PFGD03',
                 'name' => 'pgfa',
                 'course_id' => 7
             ],
             [
-                'id' => 'PGFA04',
+                'id' => 'PFGD04',
                 'name' => 'pgfa',
                 'course_id' => 7
             ],
             [
-                'id' => 'PGFA05',
+                'id' => 'PFGD05',
                 'name' => 'pgfa',
                 'course_id' => 7
             ],
@@ -377,27 +377,27 @@ class DatabaseSeeder extends Seeder
                 'course_id' => 11
             ],
             [
-                'id' => 'OOPIJ01',
+                'id' => 'OPIJ01',
                 'name' => 'oopij',
                 'course_id' => 12
             ],
             [
-                'id' => 'OOPIJ02',
+                'id' => 'OPIJ02',
                 'name' => 'oopij',
                 'course_id' => 12
             ],
             [
-                'id' => 'OOPIJ03',
+                'id' => 'OPIJ03',
                 'name' => 'oopij',
                 'course_id' => 12
             ],
             [
-                'id' => 'OOPIJ04',
+                'id' => 'OPIJ04',
                 'name' => 'oopij',
                 'course_id' => 12
             ],
             [
-                'id' => 'OOPIJ05',
+                'id' => 'OPIJ05',
                 'name' => 'oopij',
                 'course_id' => 12
             ]

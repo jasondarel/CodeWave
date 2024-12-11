@@ -206,6 +206,9 @@ class CourseController extends Controller
         return view('my-courses', ["userCourses" => $userCourses, "percentage" => $getPercentages, "redirectTo" => $redirectThrough]);
     }
 
+
+    
+
   
   
 }

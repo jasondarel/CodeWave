@@ -238,7 +238,7 @@
             </p>
 
             <div class="next-chapter">
-                <a href="/lessons/oopij" class="next-chapter-button">Return to Course Overview</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Return to Course Overview</a>
             </div>
         </div>
     </div>

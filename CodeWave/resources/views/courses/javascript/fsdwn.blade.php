@@ -155,7 +155,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/15" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/20" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection
