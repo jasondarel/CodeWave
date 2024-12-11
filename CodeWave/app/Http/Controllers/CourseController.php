@@ -16,9 +16,9 @@ class CourseController extends Controller
     //
 
     private $course_group = [
-        "python" => [1, 5],
-        "java" => [6, 10],
-        "javascript" => [11, 14]
+        "python" => [1, 10],
+        "java" => [11, 16],
+        "javascript" => [17, 20]
     ];
 
     private $inboxController;
@@ -48,6 +48,20 @@ class CourseController extends Controller
         }
      
         return ("/courses/{$course_group}/" . $this->getCourseAcronym($selected_course->name));
+    }
+
+    public function pythonListPage(){
+        $enroll_list = $this->getUserEnrollment();
+      
+        $isEnrollmentExists = function($id) use ($enroll_list) {
+            return $this->isEnrollmentExists($enroll_list, $id);
+        };
+
+        $redirectThrough = function($id, $done) {
+            return $this->redirectThroughCourse($id, $done);
+        };
+
+        return view('courses.python', ["isAuthenticated" => true, "isEnrollmentExists" => $isEnrollmentExists, "enroll_list" => $enroll_list, 'redirectThrough' => $redirectThrough]);
     }
     public function courseListPage(){
 

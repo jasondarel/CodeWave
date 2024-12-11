@@ -39,7 +39,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile/{locale?}', [UserController::class, 'profile'])->name('profile');
     Route::put('/profile/update/{id}', [UserController::class, 'updateProfile'])->name('updateProfile');
 
-    Route::get('/courses', [CourseController::class, 'courseListPage'])->name('courses');
 
     Route::get('api/courses', [CourseController::class, 'enrollCourse']);
 
@@ -129,14 +128,13 @@ Route::get('/', [DashboardController::class, 'dashboard'])->name('index');
 
 Route::get('/api/testt', [CourseController::class, "testAPI"]);
 
+Route::get('/courses', [CourseController::class, 'courseListPage'])->name('courses');
 
 
 Route::get('/courses/{course_group}/{slug}', [LessonController::class, 'LessonPage']);
 //python
 
-Route::get('/courses/python', function () {
-    return view('courses.python');
-})->name('courses.python');
+Route::get('/courses/python', [CourseController::class, 'pythonListPage'])->name('courses.python');
 
 Route::get('/courses/python/python-for-beginners', function () {
     return view('courses.python.python-for-beginners');

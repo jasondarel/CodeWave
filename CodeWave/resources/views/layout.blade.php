@@ -906,7 +906,7 @@
     @endif
 </head>
 
-<body class="flex">
+<body class="flex h-100">
     <div class="sticky top-0 left-0 w-80 p-4 flex flex-col gap-12 z-10 border-end border-black text-[#F5F7F8]" style="height:100vh; background-color:#10375C;">
 
         <div class="flex flex-col items-center gap-2">

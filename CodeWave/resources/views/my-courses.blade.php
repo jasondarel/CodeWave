@@ -157,10 +157,10 @@
             </div>
             <div class="courses align-content-start flex-wrap gap-3.5 w-[1500px] ">
                 @foreach ($userCourses as $course)
-                @if ($percentage($course->id) !== 100)
+                @if ((int)$percentage($course->id) !== 100)
 
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
+                <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
                     <div class="card-body d-flex flex-column justify-content-between gap-3">
                         <h5 class="card-title">{{ $course->name }}</h5>
                         <p class="card-text">{{ $course->description }}</p>
@@ -185,14 +185,15 @@
             </div>
             <div class="completed-courses d-flex align-content-start flex-wrap gap-3.5 w-[1500px]">
                 @foreach ($userCourses as $course)
-                @if ($percentage($course->id) === 100)
-
+                @if ((int)$percentage($course->id) === 100)
 
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ $course['image'] }}" class="card-img-top" alt="{{ $course['title'] }}">
+                <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
                     <div class="card-body d-flex flex-column justify-content-between gap-3">
                         <h5 class="card-title">{{ $course->name }}</h5>
                         <p class="card-text">{{ $course->description }}</p>
+                       
+                        <a href="/{{$redirectTo($course->id)}}" class="btn btn-primary">View</a>
                     </div>
                 </div>
                 @endif
