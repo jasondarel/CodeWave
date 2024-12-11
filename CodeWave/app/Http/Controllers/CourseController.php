@@ -65,6 +65,34 @@ class CourseController extends Controller
 
         return view('courses.python', ["isAuthenticated" => true, "isEnrollmentExists" => $isEnrollmentExists, "enroll_list" => $enroll_list, 'redirectThrough' => $redirectThrough]);
     }
+
+    public function javaListPage(){
+        $enroll_list = $this->getUserEnrollment();
+      
+        $isEnrollmentExists = function($id) use ($enroll_list) {
+            return $this->isEnrollmentExists($enroll_list, $id);
+        };
+
+        $redirectThrough = function($id, $done) {
+            return $this->redirectThroughCourse($id, $done);
+        };
+
+        return view('courses.java', ["isAuthenticated" => true, "isEnrollmentExists" => $isEnrollmentExists, "enroll_list" => $enroll_list, 'redirectThrough' => $redirectThrough]);
+    }
+
+    public function javascriptListPage(){
+        $enroll_list = $this->getUserEnrollment();
+      
+        $isEnrollmentExists = function($id) use ($enroll_list) {
+            return $this->isEnrollmentExists($enroll_list, $id);
+        };
+
+        $redirectThrough = function($id, $done) {
+            return $this->redirectThroughCourse($id, $done);
+        };
+
+        return view('courses.javascript', ["isAuthenticated" => true, "isEnrollmentExists" => $isEnrollmentExists, "enroll_list" => $enroll_list, 'redirectThrough' => $redirectThrough]);
+    }
     public function courseListPage(){
 
         // if(!Auth::user()){
@@ -178,15 +206,6 @@ class CourseController extends Controller
 
     }
 
-    // public function courseMainPage($slug){
-
-    //     $course_id = Course::where("name", Str::title(str_replace('-', ' ', $slug)))->first(["id"])->id;
-
-    
-    //     $finishedPercentage = $this->lessonFinishedPercentage($course_id);
-
-    //     return view('my-courses.' . $slug, ["percentage" => $finishedPercentage]);
-    // }
 
     public function myCoursesView(){
 

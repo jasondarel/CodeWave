@@ -135,6 +135,11 @@ Route::get('/courses/{course_group}/{slug}', [LessonController::class, 'LessonPa
 //python
 
 Route::get('/courses/python', [CourseController::class, 'pythonListPage'])->name('courses.python');
+Route::get('/courses/java', [CourseController::class, 'javaListPage'])->name('courses.java');
+Route::get('/courses/javascript', [CourseController::class, 'javascriptListPage'])->name('courses.javascript');
+
+
+
 
 Route::get('/courses/python/python-for-beginners', function () {
     return view('courses.python.python-for-beginners');
@@ -206,9 +211,6 @@ Route::get('/courses/python/dvwp', function () {
 
 //java
 
-Route::get('/courses/java', function () {
-    return view('courses.java');
-})->name('courses.java');
 
 Route::get('/courses/java/jffb', function () {
     return view('courses.java.jffb');
@@ -551,9 +553,9 @@ Route::get('/my-courses/wdwd/wdwd05', function () {
 
 //javascript
 
-Route::get('/courses/javascript', function () {
-    return view('courses.javascript');
-})->name('courses.javascript');
+// Route::get('/courses/javascript', function () {
+//     return view('courses.javascript');
+// })->name('courses.javascript');
 
 Route::get('/courses/javascript/je', function () {
     return view('courses.javascript.je');

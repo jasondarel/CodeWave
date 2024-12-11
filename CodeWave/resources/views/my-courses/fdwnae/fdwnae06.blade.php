@@ -124,12 +124,12 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/lessons/fsdwn/fsdwn01">Chapter 1: Setting up a Node.js server with Express</a></li>
-                <li><a href="/lessons/fsdwn/fsdwn02">Chapter 2: Building RESTful APIs with Express</a></li>
-                <li><a href="/lessons/fsdwn/fsdwn03">Chapter 3: Handling user authentication and authorization</a></li>
-                <li><a href="/lessons/fsdwn/fsdwn04">Chapter 4: Working with MongoDB and other databases</a></li>
-                <li><a href="/lessons/fsdwn/fsdwn05">Chapter 5: Integrating frontend with backend using React or any other JS framework</a></li>
-                <li class="active"><a href="/lessons/fsdwn/fsdwn06">Chapter 6: Deploying full-stack applications to production</a></li>
+                <li><a href="/lessons/fdwnae/fdwnae01">Chapter 1: Setting up a Node.js server with Express</a></li>
+                <li><a href="/lessons/fdwnae/fdwnae02">Chapter 2: Building RESTful APIs with Express</a></li>
+                <li><a href="/lessons/fdwnae/fdwnae03">Chapter 3: Handling user authentication and authorization</a></li>
+                <li><a href="/lessons/fdwnae/fdwnae04">Chapter 4: Working with MongoDB and other databases</a></li>
+                <li><a href="/lessons/fdwnae/fdwnae05">Chapter 5: Integrating frontend with backend using React or any other JS framework</a></li>
+                <li class="active"><a href="/lessons/fdwnae/fdwnae06">Chapter 6: Deploying full-stack applications to production</a></li>
             </ul>
         </div>
 

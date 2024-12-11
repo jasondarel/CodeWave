@@ -159,13 +159,16 @@
 
                     @else
        
-                    <a href="/<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
                         @if ($isEnrollmentExists($course['id']))
+                        <a href="/<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
                         View
+                        </a>
                         @else
-                        Enroll  
+                        <a href="<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
+                        Enroll
+                        </a>
                         @endif 
-                    </a>
+                    
                    
                     @endif
                 </div>
@@ -190,7 +193,7 @@
 
                     @else
        
-                    <a href="/<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
+                    <a href="<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
                         @if ($isEnrollmentExists($course['id']))
                         View
                         @else

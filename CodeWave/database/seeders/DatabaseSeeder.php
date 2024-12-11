@@ -581,27 +581,32 @@ class DatabaseSeeder extends Seeder
                 'course_id' => 19
             ],
             [
-                'id' => 'FSDWN01',
+                'id' => 'FDWNAE01',
                 'name' => 'fsdwn',
                 'course_id' => 20
             ],
             [
-                'id' => 'FSDWN02',
+                'id' => 'FDWNAE02',
                 'name' => 'fsdwn',
                 'course_id' => 20
             ],
             [
-                'id' => 'FSDWN03',
+                'id' => 'FDWNAE03',
                 'name' => 'fsdwn',
                 'course_id' => 20
             ],
             [
-                'id' => 'FSDWN04',
+                'id' => 'FDWNAE04',
                 'name' => 'fsdwn',
                 'course_id' => 20
             ],
             [
-                'id' => 'FSDWN05',
+                'id' => 'FDWNAE05',
+                'name' => 'fsdwn',
+                'course_id' => 20
+            ],
+            [
+                'id' => 'FDWNAE06',
                 'name' => 'fsdwn',
                 'course_id' => 20
             ]

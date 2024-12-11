@@ -153,7 +153,22 @@
                 <div class="card-body d-flex flex-column justify-content-between gap-3">
                     <h5 class="card-title">{{ $course['title'] }}</h5>
                     <p class="card-text">{{ $course['description'] }}</p>
+                    @if (!$isAuthenticated)
                     <a href="#" class="btn btn-primary">Enroll</a>
+
+                    @else
+       
+                    @if ($isEnrollmentExists($course['id']))
+                        <a href="/<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
+                        View
+                        </a>
+                        @else
+                        <a href="<?php echo $redirectThrough($course['id'], $isEnrollmentExists($course['id']) )?>" class="btn btn-primary">
+                        Enroll
+                        </a>
+                        @endif 
+                   
+                    @endif
                 </div>
             </div>
             @endforeach
