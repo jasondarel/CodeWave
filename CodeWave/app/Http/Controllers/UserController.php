@@ -26,7 +26,8 @@ class UserController extends Controller
             'name' => 'required|max:200',
             'email' => 'required|email|unique:users,email,' . $id, // Mengabaikan email user saat ini
             'DOB' => 'nullable|date', // Validasi untuk DOB
-            'role' => 'required|in:Admin,User', // Validasi untuk role
+            // 'role' => 'required|in:Admin,User', 
+            // Validasi untuk role
         ]);
         
         $user = User::findOrFail($id);
