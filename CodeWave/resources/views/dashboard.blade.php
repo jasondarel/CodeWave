@@ -117,7 +117,7 @@
         </div>
         @endauth
 
-        <div class="news-section no-margin">
+        <div class="news-section mt-28">
             <div class="titles font-bold mb-4 fs-3">
                 <h1>Latest News</h1>
                 <hr class="section-divider">
