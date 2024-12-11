@@ -139,11 +139,6 @@
         <h1>Java Courses</h1>
     </div>
 
-    <div class="search-container mt-28">
-        <input type="text" id="search" class="search-input" placeholder="Search..." />
-        <button class="search-button" onclick="searchFunction()">Search</button>
-    </div>
-
     <div class="allcontent mt-10">
         <div class="courses d-flex align-content-start flex-wrap gap-4 mb-10">
             @foreach ([
