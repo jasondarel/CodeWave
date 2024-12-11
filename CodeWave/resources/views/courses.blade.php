@@ -70,7 +70,7 @@
             background-color: #0056b3;
         }
 
-        .search-container {
+        /* .search-container {
             display: flex;
             align-items: center;
             margin: 20px 0;
@@ -98,7 +98,7 @@
 
         .search-button:hover {
             background-color: #0056b3;
-        }
+        } */
 
 
         @media (max-width: 1200px) {
@@ -134,10 +134,10 @@
         <h1>Courses List</h1>
     </div>
 
-    <div class="search-container mt-28">
+    <!-- <div class="search-container mt-28">
         <input type="text" id="search" class="search-input" placeholder="Search..." />
         <button class="search-button" onclick="searchFunction()">Search</button>
-    </div>
+    </div> -->
 
     <div class="allcontent">
         <div class="header-section">

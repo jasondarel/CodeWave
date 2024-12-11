@@ -155,7 +155,7 @@
 
 
 
-        <a href="/enroll/python-for-beginners" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/2" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection
