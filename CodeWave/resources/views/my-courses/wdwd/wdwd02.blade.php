@@ -205,7 +205,7 @@ book = Book.objects.get(id=1)
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/wdwd/wdwd03" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
         </div>
     </div>

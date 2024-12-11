@@ -240,7 +240,7 @@ print("Best parameters:", grid_search.best_params_)
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/pfml/pfml04" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
         </div>
     </div>

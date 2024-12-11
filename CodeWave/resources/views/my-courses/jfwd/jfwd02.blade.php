@@ -186,7 +186,7 @@ document.querySelector('ul').addEventListener('click', function(event) {
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/jfwd/jfwd03" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
         </div>
     </div>

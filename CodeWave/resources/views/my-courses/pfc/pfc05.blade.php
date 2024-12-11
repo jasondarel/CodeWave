@@ -236,7 +236,7 @@ automated_exploit_execution(["192.168.1.1", "192.168.1.2"])
             </pre>
 
             <div class="next-chapter">
-                <a href="/my-courses/pfc" class="next-chapter-button">Return to Course Overview</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Return to Course Overview</a>
             </div>
         </div>
     </div>

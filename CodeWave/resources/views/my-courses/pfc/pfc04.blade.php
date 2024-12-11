@@ -237,7 +237,7 @@ automated_security_workflow("192.168.1.1", "http://example.com/login", "admin", 
             </pre>
 
             <div class="next-chapter">
-                <a href="/my-courses/pfc/pfc05" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
         </div>
     </div>

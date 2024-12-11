@@ -214,7 +214,7 @@ fs.readFile('example.txt', 'utf8', (err, data) => {
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/nfbd/nfbd02" class="next-chapter-button">Next Chapter</a>
+                <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
         </div>
     </div>
