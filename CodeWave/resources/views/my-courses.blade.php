@@ -146,10 +146,14 @@
             <h1>My Courses</h1>
         </div>
 
-        <div class="search-container mt-10">
-            <input type="text" id="search" class="search-input" placeholder="Search..." />
-            <button class="search-button" onclick="searchFunction()">Search</button>
-        </div>
+       
+            <!-- <input type="text" id="search" class="search-input" placeholder="Search..." />
+            <button  onclick="searchFunction()">Search</button> -->
+            <form method="GET" action="/my-courses" class="search-container mt-10">
+                <input type="text" name="search" placeholder="Search..." class="search-input" value="{{ request('search') }}">
+                <button class="search-button" type="submit">Search</button>
+            </form>
+
 
         <div class="mt-10">
             <div class="header-section">

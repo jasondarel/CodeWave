@@ -114,15 +114,13 @@ class CourseController extends Controller
 
     public function enrollCourse($id){
         
-       
-    
+        
         // if(Enrollment::where(['user_id' => Auth::user()->id, 'course_id' => $id])->exists()){
         //     return;
         // }
         $selected_course = $this->getCourseWithId($id);
      
         $acronym = $this->getCourseAcronym($selected_course->name);
-
 
         if($selected_course === null){
             return response(["message" => "course not found"], 404);
@@ -205,18 +203,29 @@ class CourseController extends Controller
 
 
     }
+    public function myCoursesView(Request $request){
 
-
-    public function myCoursesView(){
-
+        
+        $query = $request->input('search');
         $getPercentages = function($id) {
             return $this->lessonFinishedPercentage($id);
         };
 
-        $userCourses = Course::whereHas('enrollments', function ($query) {
-            $query->where('user_id', Auth::user()->id);
-        })->get();
+        
 
+        if ($query) 
+        {
+            $userCourses = Course::whereHas('enrollments', function ($query) {
+                $query->where('user_id', Auth::user()->id);
+            })->where('name', 'LIKE', '%' . $query. '%')->get();
+        }
+
+        else{
+            $userCourses = Course::whereHas('enrollments', function ($query) {
+                $query->where('user_id', Auth::user()->id);
+            })->get();
+        }
+        
         $redirectThrough = function($id) {
             return $this->redirectThroughCourse($id, true);
         };
