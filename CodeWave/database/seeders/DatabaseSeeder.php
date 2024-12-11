@@ -38,6 +38,37 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Python for Machine Learning', 'description' => 'Master machine learning basics using Python and frameworks like TensorFlow or Scikit-learn.', 'lessonamount' => 5],
             ['name' => 'Advanced Python Programming', 'description' => 'Learn advanced Python concepts like decorators, generators, and performance optimization, along with the standard library.', 'lessonamount' => 5],
             ['name' => 'Web Development with Django', 'description' => 'Build robust web applications using Python and the Django framework.', 'lessonamount' => 5],
+            [
+                'name' => 'Python for Automation', 
+                'description' => 'Automate repetitive tasks like file management and web scraping with Python.', 
+                'lessonamount' => 5
+            ],
+            [
+                'name' => 'Python for Game Development', 
+                'description' => 'Create games with Python using PyGame and learn core game mechanics.', 
+                'lessonamount' => 5
+            ],
+            [
+                'name' => 'Introduction to Flask', 
+                'description' => 'Build lightweight web apps with Python and the Flask framework.', 
+                'lessonamount' => 5
+            ],
+            [
+                'name' => 'Python for Cybersecurity', 
+                'description' => 'Learn to write scripts for network scanning, penetration testing, and data encryption.', 
+                'lessonamount' => 5
+            ],
+            [
+                'name' => 'Data Visualization with Python', 
+                'description' => 'Master visualization tools like Matplotlib, Seaborn, and Plotly.', 
+                'lessonamount' => 5
+            ],
+            [
+                'name' => 'Full-Stack Development with Node.js and Express', 
+                'description' => 'Learn server-side JavaScript development using Node.js and build scalable applications.', 
+                'lessonamount' => 5
+            ],
+            
             
                 ['name' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'lessonamount' => 5],
                 ['name' => 'Object-Oriented Programming in Java', 'description' => 'Dive deep into OOP principles with Java, including classes, inheritance, and polymorphism.', 'lessonamount' => 5],
@@ -272,28 +303,311 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => 'PFC01',
                 'name' => 'pfc',
-                'course_id' => 8
+                'course_id' => 9
             ],
             [
                 'id' => 'PFC02',
                 'name' => 'pfc',
-                'course_id' => 8
+                'course_id' => 9
             ],
             [
                 'id' => 'PFC03',
                 'name' => 'pfc',
-                'course_id' => 8
+                'course_id' => 9
             ],
             [
                 'id' => 'PFC04',
                 'name' => 'pfc',
-                'course_id' => 8
+                'course_id' => 9
             ],
             [
                 'id' => 'PFC05',
                 'name' => 'pfc',
-                'course_id' => 8
+                'course_id' => 9
             ],
+            [
+                'id' => 'DVWP01',
+                'name' => 'dvwp',
+                'course_id' => 10
+            ],
+            [
+                'id' => 'DVWP02',
+                'name' => 'dvwp',
+                'course_id' => 10
+            ],
+            [
+                'id' => 'DVWP03',
+                'name' => 'dvwp',
+                'course_id' => 10
+            ],
+            [
+                'id' => 'DVWP04',
+                'name' => 'dvwp',
+                'course_id' => 10
+            ],
+            [
+                'id' => 'DVWP05',
+                'name' => 'dvwp',
+                'course_id' => 10
+            ],
+            [
+                'id' => 'JFFB01',
+                'name' => 'jffb',
+                'course_id' => 11
+            ],
+            [
+                'id' => 'JFFB02',
+                'name' => 'jffb',
+                'course_id' => 11
+            ],
+            [
+                'id' => 'JFFB03',
+                'name' => 'jffb',
+                'course_id' => 11
+            ],
+            [
+                'id' => 'JFFB04',
+                'name' => 'jffb',
+                'course_id' => 11
+            ],
+            [
+                'id' => 'JFFB05',
+                'name' => 'jffb',
+                'course_id' => 11
+            ],
+            [
+                'id' => 'OOPIJ01',
+                'name' => 'oopij',
+                'course_id' => 12
+            ],
+            [
+                'id' => 'OOPIJ02',
+                'name' => 'oopij',
+                'course_id' => 12
+            ],
+            [
+                'id' => 'OOPIJ03',
+                'name' => 'oopij',
+                'course_id' => 12
+            ],
+            [
+                'id' => 'OOPIJ04',
+                'name' => 'oopij',
+                'course_id' => 12
+            ],
+            [
+                'id' => 'OOPIJ05',
+                'name' => 'oopij',
+                'course_id' => 12
+            ]
+            ,
+            [
+                'id' => 'JFMD01',
+                'name' => 'jfmd',
+                'course_id' => 13
+            ],
+            [
+                'id' => 'JFMD02',
+                'name' => 'jfmd',
+                'course_id' => 13
+            ],
+            [
+                'id' => 'JFMD03',
+                'name' => 'jfmd',
+                'course_id' => 13
+            ],
+            [
+                'id' => 'JFMD04',
+                'name' => 'jfmd',
+                'course_id' => 13
+            ],
+            [
+                'id' => 'JFMD05',
+                'name' => 'jfmd',
+                'course_id' => 13
+            ]
+            ,
+            [
+                'id' => 'SFB01',
+                'name' => 'sfb',
+                'course_id' => 14
+            ],
+            [
+                'id' => 'SFB02',
+                'name' => 'sfb',
+                'course_id' => 14
+            ],
+            [
+                'id' => 'SFB03',
+                'name' => 'sfb',
+                'course_id' => 14
+            ],
+            [
+                'id' => 'SFB04',
+                'name' => 'sfb',
+                'course_id' => 14
+            ],
+            [
+                'id' => 'SFB05',
+                'name' => 'sfb',
+                'course_id' => 14
+            ]
+            ,    [
+                'id' => 'JWDWSB01',
+                'name' => 'jwdwsb',
+                'course_id' => 15
+            ],
+            [
+                'id' => 'JWDWSB02',
+                'name' => 'jwdwsb',
+                'course_id' => 15
+            ],
+            [
+                'id' => 'JWDWSB03',
+                'name' => 'jwdwsb',
+                'course_id' => 15
+            ],
+            [
+                'id' => 'JWDWSB04',
+                'name' => 'jwdwsb',
+                'course_id' => 15
+            ],
+            [
+                'id' => 'JWDWSB05',
+                'name' => 'jwdwsb',
+                'course_id' => 15
+            ]
+            ,
+            [
+                'id' => 'JE01',
+                'name' => 'je',
+                'course_id' => 16
+            ],
+            [
+                'id' => 'JE02',
+                'name' => 'je',
+                'course_id' => 16
+            ],
+            [
+                'id' => 'JE03',
+                'name' => 'je',
+                'course_id' => 16
+            ],
+            [
+                'id' => 'JE04',
+                'name' => 'je',
+                'course_id' => 16
+            ],
+            [
+                'id' => 'JE05',
+                'name' => 'je',
+                'course_id' => 16
+            ]
+            ,[
+                'id' => 'JFWD01',
+                'name' => 'jfwd',
+                'course_id' => 17
+            ],
+            [
+                'id' => 'JFWD02',
+                'name' => 'jfwd',
+                'course_id' => 17
+            ],
+            [
+                'id' => 'JFWD03',
+                'name' => 'jfwd',
+                'course_id' => 17
+            ],
+            [
+                'id' => 'JFWD04',
+                'name' => 'jfwd',
+                'course_id' => 17
+            ],
+            [
+                'id' => 'JFWD05',
+                'name' => 'jfwd',
+                'course_id' => 17
+            ],
+            [
+                'id' => 'FDWR01',
+                'name' => 'fdwr',
+                'course_id' => 18
+            ],
+            [
+                'id' => 'FDWR02',
+                'name' => 'fdwr',
+                'course_id' => 18
+            ],
+            [
+                'id' => 'FDWR03',
+                'name' => 'fdwr',
+                'course_id' => 18
+            ],
+            [
+                'id' => 'FDWR04',
+                'name' => 'fdwr',
+                'course_id' => 18
+            ],
+            [
+                'id' => 'FDWR05',
+                'name' => 'fdwr',
+                'course_id' => 18
+            ]
+            ,
+            [
+                'id' => 'NFBD01',
+                'name' => 'nfbd',
+                'course_id' => 19
+            ],
+            [
+                'id' => 'NFBD02',
+                'name' => 'nfbd',
+                'course_id' => 19
+            ],
+            [
+                'id' => 'NFBD03',
+                'name' => 'nfbd',
+                'course_id' => 19
+            ],
+            [
+                'id' => 'NFBD04',
+                'name' => 'nfbd',
+                'course_id' => 19
+            ],
+            [
+                'id' => 'NFBD05',
+                'name' => 'nfbd',
+                'course_id' => 19
+            ],
+            [
+                'id' => 'FSDWN01',
+                'name' => 'fsdwn',
+                'course_id' => 20
+            ],
+            [
+                'id' => 'FSDWN02',
+                'name' => 'fsdwn',
+                'course_id' => 20
+            ],
+            [
+                'id' => 'FSDWN03',
+                'name' => 'fsdwn',
+                'course_id' => 20
+            ],
+            [
+                'id' => 'FSDWN04',
+                'name' => 'fsdwn',
+                'course_id' => 20
+            ],
+            [
+                'id' => 'FSDWN05',
+                'name' => 'fsdwn',
+                'course_id' => 20
+            ]
+
+
+                        
+        
             
         
         
