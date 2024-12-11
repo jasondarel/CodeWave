@@ -33,7 +33,7 @@
     <div class="d-flex flex-column mb-4">
         <div class="w-75 mx-auto mt-4 contents d-flex gap-5 align-items-center">
             <img src="{{ asset('img/profilepic.png') }}" class="rounded-circle" style="height:20vh;" alt="Profile Picture">
-            <div class="fs-2">Hi! {{ $user->name ?? 'Guest' }}</div>
+            <div class="fs-2">Hello, <strong style="color: #10375c;">{{ $user->name ?? 'Guest' }}</strong>!</div>
         </div>
 
         <form id="profileForm" class="w-75 mx-auto mt-4 d-flex flex-column" action="{{ route('updateProfile', $user->id) }}" method="post">
