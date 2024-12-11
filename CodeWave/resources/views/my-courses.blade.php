@@ -146,7 +146,7 @@
             <h1>My Courses</h1>
         </div>
 
-        <div class="search-container mt-28">
+        <div class="search-container mt-10">
             <input type="text" id="search" class="search-input" placeholder="Search..." />
             <button class="search-button" onclick="searchFunction()">Search</button>
         </div>
@@ -160,7 +160,7 @@
                 @if ((int)$percentage($course->id) !== 100)
 
                 <div class="card" style="width: 18rem;">
-                <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
+                    <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
                     <div class="card-body d-flex flex-column justify-content-between gap-3">
                         <h5 class="card-title">{{ $course->name }}</h5>
                         <p class="card-text">{{ $course->description }}</p>
@@ -188,11 +188,11 @@
                 @if ((int)$percentage($course->id) === 100)
 
                 <div class="card" style="width: 18rem;">
-                <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
+                    <img src="{{ $course_data_info[1]["image"] }}" class="card-img-top" alt="{{ $course->name }}">
                     <div class="card-body d-flex flex-column justify-content-between gap-3">
                         <h5 class="card-title">{{ $course->name }}</h5>
                         <p class="card-text">{{ $course->description }}</p>
-                       
+
                         <a href="/{{$redirectTo($course->id)}}" class="btn btn-primary">View</a>
                     </div>
                 </div>
