@@ -22,8 +22,8 @@ class DashboardController extends Controller
         $lessonsCompleted = StudentLesson::where('user_id', auth()->id())->count();
 
         // Fetch the user's rank
-        // $rank = UserPerk::where('user_id', Auth::user()->id)->get()->rank->name;
-        $rank = null;
+        $rank = UserPerk::where('user_id', Auth::user()->id)->first()->rank->name;
+       
         // Paginate announcements
         $announcements = Announcement::latest()->paginate(5); // Change pagination number if needed
 

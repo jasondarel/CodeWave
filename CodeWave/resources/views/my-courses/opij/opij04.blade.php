@@ -125,11 +125,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/lessons/oopij/oopij01">Chapter 1: Introduction to Object-Oriented Programming in Java</a></li>
-                <li><a href="/lessons/oopij/oopij02">Chapter 2: Creating and Using Classes and Objects</a></li>
-                <li><a href="/lessons/oopij/oopij03">Chapter 3: Implementing Inheritance and Polymorphism</a></li>
-                <li class="active"><a href="/lessons/oopij/oopij04">Chapter 4: Using Encapsulation and Access Modifiers</a></li>
-                <li><a href="/lessons/oopij/oopij05">Chapter 5: Achieving Abstraction through Abstract Classes and Interfaces</a></li>
+                <li><a href="/lessons/opij/opij01">Chapter 1: Introduction to Object-Oriented Programming in Java</a></li>
+                <li><a href="/lessons/opij/opij02">Chapter 2: Creating and Using Classes and Objects</a></li>
+                <li><a href="/lessons/opij/opij03">Chapter 3: Implementing Inheritance and Polymorphism</a></li>
+                <li class="active"><a href="/lessons/opij/opij04">Chapter 4: Using Encapsulation and Access Modifiers</a></li>
+                <li><a href="/lessons/opij/opij05">Chapter 5: Achieving Abstraction through Abstract Classes and Interfaces</a></li>
             </ul>
         </div>
 
