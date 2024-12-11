@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/dawp/dawp01">Chapter 1: Data Manipulation with Pandas and NumPy</a></li>
-                <li><a href="/my-courses/dawp/dawp02">Chapter 2: Data Cleaning and Preprocessing Techniques</a></li>
-                <li><a href="/my-courses/dawp/dawp03">Chapter 3: Statistical Analysis and Hypothesis Testing</a></li>
-                <li><a href="/my-courses/dawp/dawp04">Chapter 4: Data Visualization using Matplotlib and Seaborn</a></li>
-                <li class="active"><a href="/my-courses/dawp/dawp05">Chapter 5: Building Data Analysis Projects and Reports</a></li>
+                <li><a href="/lessons/dawp/dawp01">Chapter 1: Data Manipulation with Pandas and NumPy</a></li>
+                <li><a href="/lessons/dawp/dawp02">Chapter 2: Data Cleaning and Preprocessing Techniques</a></li>
+                <li><a href="/lessons/dawp/dawp03">Chapter 3: Statistical Analysis and Hypothesis Testing</a></li>
+                <li><a href="/lessons/dawp/dawp04">Chapter 4: Data Visualization using Matplotlib and Seaborn</a></li>
+                <li class="active"><a href="/lessons/dawp/dawp05">Chapter 5: Building Data Analysis Projects and Reports</a></li>
             </ul>
         </div>
 
@@ -200,7 +200,7 @@
             </p>
 
             <div class="next-chapter">
-                <a href="/my-courses/dawp/dawp06" class="next-chapter-button">Return to Course Overview</a>
+                <a href="/lessons/dawp/dawp06" class="next-chapter-button">Return to Course Overview</a>
             </div>
         </div>
     </div>

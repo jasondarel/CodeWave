@@ -94,6 +94,213 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Building a final project',
                 'course_id' => 1
             ],
+            [
+                'id' => 'DAWP01',
+                'name' => 'dawp',
+                'course_id' => 2
+            ],
+            [
+                'id' => 'DAWP02',
+                'name' => 'dawp',
+                'course_id' => 2
+            ],
+            [
+                'id' => 'DAWP03',
+                'name' => 'dawp',
+                'course_id' => 2
+            ],
+            [
+                'id' => 'DAWP04',
+                'name' => 'dawp',
+                'course_id' => 2
+            ],
+            [
+                'id' => 'DAWP05',
+                'name' => 'dawp',
+                'course_id' => 2
+            ],
+            [
+                'id' => 'PFML01',
+                'name' => 'pfml',
+                'course_id' => 3
+            ],
+            [
+                'id' => 'PFML02',
+                'name' => 'pfml',
+                'course_id' => 3
+            ],
+            [
+                'id' => 'PFML03',
+                'name' => 'pfml',
+                'course_id' => 3
+            ],
+            [
+                'id' => 'PFML04',
+                'name' => 'pfml',
+                'course_id' => 3
+            ],
+            [
+                'id' => 'PFML05',
+                'name' => 'pfml',
+                'course_id' => 3
+            ],
+            [
+                'id' => 'APP01',
+                'name' => 'app',
+                'course_id' => 4
+            ],
+            [
+                'id' => 'APP02',
+                'name' => 'app',
+                'course_id' => 4
+            ],
+            [
+                'id' => 'APP03',
+                'name' => 'app',
+                'course_id' => 4
+            ],
+            [
+                'id' => 'APP04',
+                'name' => 'app',
+                'course_id' => 4
+            ],
+            [
+                'id' => 'APP05',
+                'name' => 'app',
+                'course_id' => 4
+            ],
+            [
+                'id' => 'WDWD01',
+                'name' => 'wdwd',
+                'course_id' => 5
+            ],
+            [
+                'id' => 'WDWD02',
+                'name' => 'wdwd',
+                'course_id' => 5
+            ],
+            [
+                'id' => 'WDWD03',
+                'name' => 'wdwd',
+                'course_id' => 5
+            ],
+            [
+                'id' => 'WDWD04',
+                'name' => 'wdwd',
+                'course_id' => 5
+            ],
+            [
+                'id' => 'WDWD05',
+                'name' => 'wdwd',
+                'course_id' => 5
+            ],
+            [
+                'id' => 'PFA01',
+                'name' => 'pfa',
+                'course_id' => 6
+            ],
+            [
+                'id' => 'PFA02',
+                'name' => 'pfa',
+                'course_id' => 6
+            ],
+            [
+                'id' => 'PFA03',
+                'name' => 'pfa',
+                'course_id' => 6
+            ],
+            [
+                'id' => 'PFA04',
+                'name' => 'pfa',
+                'course_id' => 6
+            ],
+            [
+                'id' => 'PFA05',
+                'name' => 'pfa',
+                'course_id' => 6
+            ],
+            [
+                'id' => 'PGFA01',
+                'name' => 'pgfa',
+                'course_id' => 7
+            ],
+            [
+                'id' => 'PGFA02',
+                'name' => 'pgfa',
+                'course_id' => 7
+            ],
+            [
+                'id' => 'PGFA03',
+                'name' => 'pgfa',
+                'course_id' => 7
+            ],
+            [
+                'id' => 'PGFA04',
+                'name' => 'pgfa',
+                'course_id' => 7
+            ],
+            [
+                'id' => 'PGFA05',
+                'name' => 'pgfa',
+                'course_id' => 7
+            ],
+            [
+                'id' => 'ITF01',
+                'name' => 'itf',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'ITF02',
+                'name' => 'itf',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'ITF03',
+                'name' => 'itf',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'ITF04',
+                'name' => 'itf',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'ITF05',
+                'name' => 'itf',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'PFC01',
+                'name' => 'pfc',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'PFC02',
+                'name' => 'pfc',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'PFC03',
+                'name' => 'pfc',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'PFC04',
+                'name' => 'pfc',
+                'course_id' => 8
+            ],
+            [
+                'id' => 'PFC05',
+                'name' => 'pfc',
+                'course_id' => 8
+            ],
+            
+        
+        
+        
+        
+
+
         ];
 
         DB::table('lessons')->insert($lessons);
