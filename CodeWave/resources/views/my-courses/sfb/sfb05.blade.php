@@ -171,7 +171,7 @@
                 To test RESTful APIs, you can use Spring's <code>MockMvc</code> utility:
             </p>
             <pre>
-                @WebMvcTest(ProductController.class)
+                WebMvcTest(ProductController.class)
                 public class ProductControllerTest {
 
                     @Autowired

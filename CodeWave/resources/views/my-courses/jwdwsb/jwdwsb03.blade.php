@@ -192,13 +192,13 @@
 
             <pre>
                 @Entity
-                @Table(name = "products")
+                <p>"@"Table(name = "products")</p>
                 public class Product {
                     @Id
-                    @GeneratedValue(strategy = GenerationType.IDENTITY)
+                    GeneratedValue(strategy = GenerationType.IDENTITY)
                     private Long id;
 
-                    @Column(nullable = false)
+                    Column(nullable = false)
                     private String name;
 
                     private double price;
@@ -209,9 +209,9 @@
 
             <p>
                 - <code>@Entity</code>: Marks the class as a JPA entity.
-                - <code>@Table(name = "products")</code>: Specifies the table name in the database.
+                - <code>Table(name = "products")</code>: Specifies the table name in the database.
                 - <code>@Id</code>: Denotes the primary key field.
-                - <code>@GeneratedValue(strategy = GenerationType.IDENTITY)</code>: Specifies how the primary key is generated.
+                - <code>GeneratedValue(strategy = GenerationType.IDENTITY)</code>: Specifies how the primary key is generated.
             </p>
 
             <h2>5. Creating a Repository</h2>

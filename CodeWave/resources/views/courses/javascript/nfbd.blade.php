@@ -153,7 +153,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/nodejs-for-backend-development" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/14" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection

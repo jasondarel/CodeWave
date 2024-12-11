@@ -153,7 +153,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/frontend-development-with-react" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/13">Enroll Now</a>
     </div>
 
     @endsection

@@ -152,7 +152,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/python-for-machine-learning" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/3" class="cta-button mt-20">Enroll Now</a>
     </div>
 
 

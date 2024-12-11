@@ -155,7 +155,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/full-stack-development-with-nodejs-and-express" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/15">Enroll Now</a>
     </div>
 
     @endsection

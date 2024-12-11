@@ -153,7 +153,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/object-oriented-programming-in-java" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/7" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection

@@ -151,7 +151,7 @@
             <p>Here is an example of a simple unit test for a service class:</p>
             <pre>
                 <code>
-                    @ExtendWith(SpringExtension.class)
+                    <a>ExtendWith(SpringExtension.class)</a>
                     @SpringBootTest
                     public class UserServiceTest {
 

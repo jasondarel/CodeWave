@@ -153,7 +153,7 @@
             </ul>
         </div>
 
-        <a href="/enroll/spring-framework-basics" class="cta-button mt-20">Enroll Now</a>
+        <a href="/enroll/9" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection
