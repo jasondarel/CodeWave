@@ -40,9 +40,13 @@ class InboxController extends Controller
         return;
     }
 
-    public function mainInboxView(){
-        $notifications = Notification::where("user_id", Auth::user()->id)->get();
-
+    public function mainInboxView()
+    {
+        // Ambil notifikasi dengan paginasi 5 item per halaman
+        $notifications = Notification::where("user_id", Auth::user()->id)
+            ->orderBy('created_at', 'desc')
+            ->paginate(5);
+    
         return view('inbox', ["notifications" => $notifications]);
     }
 

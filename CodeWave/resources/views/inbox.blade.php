@@ -53,10 +53,8 @@
                 <h5>Recent Notifications</h5>
             </div>
             <div class="card-body scrollable-list">
-
-
                 @foreach ($notifications as $notification)
-                <a href="/inbox/{{ $notification->id }}" class="notification-item" id="notification-{{ $notification['id'] }}">
+                <a href="/inbox/{{ $notification->id }}" class="notification-item" id="notification-{{ $notification->id }}">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <strong>{{ $notification->title }}</strong>
@@ -70,7 +68,12 @@
         </div>
     </div>
 
-    <div class="pagination mt-14 ml-6">
+    <!-- Tampilkan pagination -->
+    <div class="pagination mt-4">
+        {{ $notifications->links('pagination::bootstrap-5') }}
+    </div>
+
+    {{-- <div class="pagination mt-14 ml-6">
         <nav>
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -79,7 +82,7 @@
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
         </nav>
-    </div>
+    </div> --}}
 
     <script src="{{ mix('js/app.js') }}"></script>
     @endsection
