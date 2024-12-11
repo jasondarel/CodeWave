@@ -12,15 +12,15 @@
             const profileFieldset = document.getElementById("profileFieldset");
 
             editButton.addEventListener("click", function(event) {
-                // Cegah pengiriman form
+
                 event.preventDefault();
 
-                // Toggle antara edit dan save
+
                 if (profileFieldset.disabled) {
-                    profileFieldset.disabled = false; // Aktifkan fieldset
-                    editButton.textContent = "Save"; // Ubah tombol ke Save
+                    profileFieldset.disabled = false;
+                    editButton.textContent = "Save";
                 } else {
-                    document.getElementById("profileForm").submit(); // Kirim form secara manual
+                    document.getElementById("profileForm").submit();
                 }
             });
         });
@@ -32,7 +32,7 @@
     @section('content')
     <div class="d-flex flex-column mb-4">
         <div class="w-75 mx-auto mt-4 contents d-flex gap-5 align-items-center">
-            <img src="{{ asset('img/profilepic.png') }}" class="rounded" style="height:20vh;" alt="Profile Picture">
+            <img src="{{ asset('img/profilepic.png') }}" class="rounded-circle" style="height:20vh;" alt="Profile Picture">
             <div class="fs-2">Hi! {{ $user->name ?? 'Guest' }}</div>
         </div>
 
