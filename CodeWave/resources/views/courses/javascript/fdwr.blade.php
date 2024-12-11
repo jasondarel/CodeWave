@@ -152,8 +152,8 @@
                 <li>Optimizing React apps for performance</li>
             </ul>
         </div>
-
-        <a href="/enroll/13">Enroll Now</a>
+     
+        <a href="/enroll/13" class="cta-button mt-20">Enroll Now</a>
     </div>
 
     @endsection

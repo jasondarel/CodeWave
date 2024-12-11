@@ -17,8 +17,8 @@ class CourseController extends Controller
 
     private $course_group = [
         "python" => [1, 10],
-        "java" => [11, 16],
-        "javascript" => [17, 20]
+        "java" => [11, 15],
+        "javascript" => [16, 20]
     ];
 
     private $inboxController;
@@ -40,10 +40,12 @@ class CourseController extends Controller
             return ('lessons/' .  $acronym . "/" . $acronym . "01");
         }
 
+        $course_group = "";
+
         foreach ($this->course_group as $key => $range) {
             if ($selected_course->id >= $range[0] && $selected_course->id <= $range[1]) {
                 $course_group = $key;
-                break;
+
             }
         }
      
@@ -84,12 +86,13 @@ class CourseController extends Controller
 
     public function enrollCourse($id){
         
+       
     
-        if(Enrollment::where(['user_id' => Auth::user()->id, 'course_id' => $id])->exists()){
-            return;
-        }
+        // if(Enrollment::where(['user_id' => Auth::user()->id, 'course_id' => $id])->exists()){
+        //     return;
+        // }
         $selected_course = $this->getCourseWithId($id);
-        
+     
         $acronym = $this->getCourseAcronym($selected_course->name);
 
 

@@ -63,11 +63,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Master visualization tools like Matplotlib, Seaborn, and Plotly.', 
                 'lessonamount' => 5
             ],
-            [
-                'name' => 'Full-Stack Development with Node.js and Express', 
-                'description' => 'Learn server-side JavaScript development using Node.js and build scalable applications.', 
-                'lessonamount' => 5
-            ],
+           
             
             
                 ['name' => 'Java Fundamentals for Beginners', 'description' => 'Learn the basics of Java programming, including syntax, variables, and loops.', 'lessonamount' => 5],
@@ -79,6 +75,11 @@ class DatabaseSeeder extends Seeder
                 ['name' => 'JavaScript for Web Development', 'description' => 'Master JavaScript for creating modern, interactive web applications.', 'lessonamount' => 12],
                 ['name' => 'Frontend Development with React', 'description' => 'Build interactive UIs using React, one of the most popular JavaScript libraries.', 'lessonamount' => 13],
                 ['name' => 'Node.js for Backend Development', 'description' => 'Learn server-side JavaScript development using Node.js and build scalable applications.', 'lessonamount' => 14],
+                [
+                    'name' => 'Full-Stack Development with Node.js and Express', 
+                    'description' => 'Learn server-side JavaScript development using Node.js and build scalable applications.', 
+                    'lessonamount' => 5
+                ],
             
             
         ];

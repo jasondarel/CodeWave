@@ -152,7 +152,6 @@
                 <li>Integrating JavaScript with third-party libraries and APIs</li>
             </ul>
         </div>
-
         <a href="/enroll/12" class="cta-button mt-20">Enroll Now</a>
     </div>
 

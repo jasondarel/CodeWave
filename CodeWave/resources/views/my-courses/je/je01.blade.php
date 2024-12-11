@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li class="active"><a href="/my-courses/je/je01">Chapter 1: Understanding JavaScript syntax and data types</a></li>
-                <li><a href="/my-courses/je/je02">Chapter 2: Writing functions and using variables</a></li>
-                <li><a href="/my-courses/je/je03">Chapter 3: Control flow and loops in JavaScript</a></li>
-                <li><a href="/my-courses/je/je04">Chapter 4: Handling events and user interactions</a></li>
-                <li><a href="/my-courses/je/je05">Chapter 5: Working with arrays and objects in JavaScript</a></li>
+                <li class="active"><a href="/lessons/je/je01">Chapter 1: Understanding JavaScript syntax and data types</a></li>
+                <li><a href="/lessons/je/je02">Chapter 2: Writing functions and using variables</a></li>
+                <li><a href="/lessons/je/je03">Chapter 3: Control flow and loops in JavaScript</a></li>
+                <li><a href="/lessons/je/je04">Chapter 4: Handling events and user interactions</a></li>
+                <li><a href="/lessons/je/je05">Chapter 5: Working with arrays and objects in JavaScript</a></li>
             </ul>
         </div>
 

@@ -125,11 +125,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li class="active"><a href="/my-courses/jffb/jffb01">Chapter 1: Understanding Java Syntax and Data Types</a></li>
-                <li><a href="/my-courses/jffb/jffb02">Chapter 2: Writing Basic Java Programs and Functions</a></li>
-                <li><a href="/my-courses/jffb/jffb03">Chapter 3: Control Flow and Decision-Making in Java</a></li>
-                <li><a href="/my-courses/jffb/jffb04">Chapter 4: Introduction to Object-Oriented Programming Concepts</a></li>
-                <li><a href="/my-courses/jffb/jffb05">Chapter 5: Working with Arrays, Lists, and Other Data Structures in Java</a></li>
+                <li class="active"><a href="/lessons/jffb/jffb01">Chapter 1: Understanding Java Syntax and Data Types</a></li>
+                <li><a href="/lessons/jffb/jffb02">Chapter 2: Writing Basic Java Programs and Functions</a></li>
+                <li><a href="/lessons/jffb/jffb03">Chapter 3: Control Flow and Decision-Making in Java</a></li>
+                <li><a href="/lessons/jffb/jffb04">Chapter 4: Introduction to Object-Oriented Programming Concepts</a></li>
+                <li><a href="/lessons/jffb/jffb05">Chapter 5: Working with Arrays, Lists, and Other Data Structures in Java</a></li>
             </ul>
         </div>
 

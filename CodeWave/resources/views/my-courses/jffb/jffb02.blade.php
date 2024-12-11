@@ -125,11 +125,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/jffb/jffb01">Chapter 1: Understanding Java Syntax and Data Types</a></li>
-                <li class="active"><a href="/my-courses/jffb/jffb02">Chapter 2: Writing Basic Java Programs and Functions</a></li>
-                <li><a href="/my-courses/jffb/jffb03">Chapter 3: Control Flow and Decision-Making in Java</a></li>
-                <li><a href="/my-courses/jffb/jffb04">Chapter 4: Introduction to Object-Oriented Programming Concepts</a></li>
-                <li><a href="/my-courses/jffb/jffb05">Chapter 5: Working with Arrays, Lists, and Other Data Structures in Java</a></li>
+                <li><a href="/lessons/jffb/jffb01">Chapter 1: Understanding Java Syntax and Data Types</a></li>
+                <li class="active"><a href="/lessons/jffb/jffb02">Chapter 2: Writing Basic Java Programs and Functions</a></li>
+                <li><a href="/lessons/jffb/jffb03">Chapter 3: Control Flow and Decision-Making in Java</a></li>
+                <li><a href="/lessons/jffb/jffb04">Chapter 4: Introduction to Object-Oriented Programming Concepts</a></li>
+                <li><a href="/lessons/jffb/jffb05">Chapter 5: Working with Arrays, Lists, and Other Data Structures in Java</a></li>
             </ul>
         </div>
 
@@ -210,32 +210,7 @@
             <div class="next-chapter">
                 <a href="/{{$mark_chapter()}}" class="next-chapter-button">Next Chapter</a>
             </div>
-            <script>
-                document.querySelector('.next-chapter-button').addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const apiUrl = '/api/lesson/finish?id=JFB02';
-
-                    fetch(apiUrl, {
-                            method: 'GET',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                        })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok ' + response.statusText);
-                            }
-                            return response.json();
-                        })
-                        .then(data => {
-                            console.log('API response:', data);
-                            window.location.href = event.target.href;
-                        })
-                        .catch(error => {
-                            console.error('There was a problem with the fetch operation:', error);
-                        });
-                });
-            </script>
+           
         </div>
     </div>
     @endsection
