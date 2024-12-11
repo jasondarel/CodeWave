@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/wdwd/wdwd01">Chapter 1: Setting Up a Django Project and Understanding Its Structure</a></li>
-                <li><a href="/my-courses/wdwd/wdwd02">Chapter 2: Designing and Managing Databases with Django Models</a></li>
-                <li><a href="/my-courses/wdwd/wdwd03">Chapter 3: Creating Dynamic Views Using Django Views and Templates</a></li>
-                <li class="active"><a href="/my-courses/wdwd/wdwd04">Chapter 4: Implementing User Authentication and Authorization</a></li>
-                <li><a href="/my-courses/wdwd/wdwd05">Chapter 5: Deploying Django Applications to Production Servers</a></li>
+                <li><a href="/lessons/wdwd/wdwd01">Chapter 1: Setting Up a Django Project and Understanding Its Structure</a></li>
+                <li><a href="/lessons/wdwd/wdwd02">Chapter 2: Designing and Managing Databases with Django Models</a></li>
+                <li><a href="/lessons/wdwd/wdwd03">Chapter 3: Creating Dynamic Views Using Django Views and Templates</a></li>
+                <li class="active"><a href="/lessons/wdwd/wdwd04">Chapter 4: Implementing User Authentication and Authorization</a></li>
+                <li><a href="/lessons/wdwd/wdwd05">Chapter 5: Deploying Django Applications to Production Servers</a></li>
             </ul>
         </div>
 

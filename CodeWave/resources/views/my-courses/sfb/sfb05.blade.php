@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/sfb/sfb01">Chapter 1: Introduction to the Spring Framework and its features</a></li>
-                <li><a href="/my-courses/sfb/sfb02">Chapter 2: Setting up a Spring Boot application</a></li>
-                <li><a href="/my-courses/sfb/sfb03">Chapter 3: Working with Spring Dependency Injection (DI)</a></li>
-                <li><a href="/my-courses/sfb/sfb04">Chapter 4: Creating RESTful APIs with Spring Web</a></li>
-                <li class="active"><a href="/my-courses/sfb/sfb05">Chapter 5: Testing and deploying Spring applications</a></li>
+                <li><a href="/lessons/sfb/sfb01">Chapter 1: Introduction to the Spring Framework and its features</a></li>
+                <li><a href="/lessons/sfb/sfb02">Chapter 2: Setting up a Spring Boot application</a></li>
+                <li><a href="/lessons/sfb/sfb03">Chapter 3: Working with Spring Dependency Injection (DI)</a></li>
+                <li><a href="/lessons/sfb/sfb04">Chapter 4: Creating RESTful APIs with Spring Web</a></li>
+                <li class="active"><a href="/lessons/sfb/sfb05">Chapter 5: Testing and deploying Spring applications</a></li>
             </ul>
         </div>
 

@@ -124,11 +124,11 @@
         <div class="chapter-list">
             <h3>CHAPTERS</h3>
             <ul>
-                <li><a href="/my-courses/pfml/pfml01">Chapter 1: Introduction to Machine Learning and Its Applications</a></li>
-                <li><a href="/my-courses/pfml/pfml02">Chapter 2: Understanding Supervised and Unsupervised Learning Algorithms</a></li>
-                <li><a href="/my-courses/pfml/pfml03">Chapter 3: Working with Scikit-Learn for Model Building and Evaluation</a></li>
-                <li><a href="/my-courses/pfml/pfml04">Chapter 4: Introduction to Neural Networks with TensorFlow</a></li>
-                <li class="active"><a href="/my-courses/pfml/pfml05">Chapter 5: Building and Deploying Machine Learning Models</a></li>
+                <li><a href="/lessons/pfml/pfml01">Chapter 1: Introduction to Machine Learning and Its Applications</a></li>
+                <li><a href="/lessons/pfml/pfml02">Chapter 2: Understanding Supervised and Unsupervised Learning Algorithms</a></li>
+                <li><a href="/lessons/pfml/pfml03">Chapter 3: Working with Scikit-Learn for Model Building and Evaluation</a></li>
+                <li><a href="/lessons/pfml/pfml04">Chapter 4: Introduction to Neural Networks with TensorFlow</a></li>
+                <li class="active"><a href="/lessons/pfml/pfml05">Chapter 5: Building and Deploying Machine Learning Models</a></li>
             </ul>
         </div>
 
