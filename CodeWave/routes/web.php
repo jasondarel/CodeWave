@@ -3,32 +3,35 @@
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\InboxController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
-    Route::get('/inbox', function () {
-        return response()->view('inbox', [
-            'notifications' => [
-                [
-                    'title' => 'Successfully Enrolled',
-                    'message' => 'You have successfully enrolled in the "Intro to JavaScript" course.',
-                    'date' => 'December 4, 2024, 10:30 AM',
-                ],
-                [
-                    'title' => 'Course Completed',
-                    'message' => 'You have completed the "Advanced Python Programming" course.',
-                    'date' => 'December 3, 2024, 2:15 PM',
-                ],
-                [
-                    'title' => 'New Lesson Available',
-                    'message' => 'A new lesson on "React State Management" is available in your course.',
-                    'date' => 'December 2, 2024, 8:00 PM',
-                ],
-            ]
-        ]);
-    })->name('inbox');
+    // Route::get('/inbox', function () {
+    //     return response()->view('inbox', [
+    //         'notifications' => [
+    //             [
+    //                 'title' => 'Successfully Enrolled',
+    //                 'message' => 'You have successfully enrolled in the "Intro to JavaScript" course.',
+    //                 'date' => 'December 4, 2024, 10:30 AM',
+    //             ],
+    //             [
+    //                 'title' => 'Course Completed',
+    //                 'message' => 'You have completed the "Advanced Python Programming" course.',
+    //                 'date' => 'December 3, 2024, 2:15 PM',
+    //             ],
+    //             [
+    //                 'title' => 'New Lesson Available',
+    //                 'message' => 'A new lesson on "React State Management" is available in your course.',
+    //                 'date' => 'December 2, 2024, 8:00 PM',
+    //             ],
+    //         ]
+    //     ]);
+    // })->name('inbox');
+
+    Route::get('/inbox',[InboxController::class, 'mainInboxView'])->name('inbox');
 
     // Halaman My Courses
     Route::get('/my-courses', [CourseController::class, 'myCoursesView'])->name('my-courses');
@@ -41,6 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::get('api/courses', [CourseController::class, 'enrollCourse']);
 
 
+    Route::get('api/mark_as_read/{id}', [InboxController::class, 'markAsRead']);
     Route::get('api/lesson/percentage', [CourseController::class, "lessonFinishedPercentage"]);
 
     // News
@@ -64,33 +68,34 @@ Route::middleware('auth')->group(function () {
         return view('announcement.announcement1');
     })->name('announcement1');
 
-    Route::get('/inbox/{id}', function ($id) {
-        $notifications = [
-            1 => [
-                'title' => 'Successfully Enrolled',
-                'message' => 'You have successfully enrolled in the "Intro to JavaScript" course.',
-                'date' => 'December 4, 2024, 10:30 AM',
-            ],
-            2 => [
-                'title' => 'Course Completed',
-                'message' => 'You have completed the "Advanced Python Programming" course.',
-                'date' => 'December 3, 2024, 2:15 PM',
-            ],
-            3 => [
-                'title' => 'New Lesson Available',
-                'message' => 'A new lesson on "React State Management" is available in your course.',
-                'date' => 'December 2, 2024, 8:00 PM',
-            ],
-        ];
+    Route::get('/inbox/{id}', [InboxController::class, 'notificationView']);
+    // Route::get('/inbox/{id}', function ($id) {
+    //     $notifications = [
+    //         1 => [
+    //             'title' => 'Successfully Enrolled',
+    //             'message' => 'You have successfully enrolled in the "Intro to JavaScript" course.',
+    //             'date' => 'December 4, 2024, 10:30 AM',
+    //         ],
+    //         2 => [
+    //             'title' => 'Course Completed',
+    //             'message' => 'You have completed the "Advanced Python Programming" course.',
+    //             'date' => 'December 3, 2024, 2:15 PM',
+    //         ],
+    //         3 => [
+    //             'title' => 'New Lesson Available',
+    //             'message' => 'A new lesson on "React State Management" is available in your course.',
+    //             'date' => 'December 2, 2024, 8:00 PM',
+    //         ],
+    //     ];
 
-        if (!array_key_exists($id, $notifications)) {
-            abort(404); // Notifikasi tidak ditemukan
-        }
+    //     if (!array_key_exists($id, $notifications)) {
+    //         abort(404); // Notifikasi tidak ditemukan
+    //     }
 
-        return response()->view('inbox.inboxmessage', [
-            'notification' => $notifications[$id]
-        ]);
-    })->name('inbox.detail');
+    //     return response()->view('inbox.inboxmessage', [
+    //         'notification' => $notifications[$id]
+    //     ]);
+    // })->name('inbox.detail');
 
     Route::get('/lessons/{course_group}/{lesson_id}', [LessonController::class, "LessonMainPage"]);
 

@@ -22,6 +22,7 @@ class LessonController extends Controller
     }
 
     public function MarkChapter($lesson_id){
+
         if(StudentLesson::where(["lesson_id" => strtoupper($lesson_id), "user_id" => Auth::user()->id])->exists()){
             return;
         }

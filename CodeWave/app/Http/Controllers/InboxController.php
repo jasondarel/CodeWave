@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Notification;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class InboxController extends Controller
 {
     public function index()
@@ -26,6 +26,32 @@ class InboxController extends Controller
         $notification->update(['is_read' => true]);
 
         // Redirect back to inbox with success message
-        return redirect()->route('inbox.index')->with('success', 'Notification marked as read.');
+        return redirect()->route('inbox')->with('success', 'Notification marked as read.');
+    }
+
+    public function createNewNotification($message, $title){
+
+        Notification::create([
+            'user_id' => Auth::user()->id,
+            'title' => $title,
+            'content' => $message,
+        ]);
+
+        return;
+    }
+
+    public function mainInboxView(){
+        $notifications = Notification::where("user_id", Auth::user()->id)->get();
+
+        return view('inbox', ["notifications" => $notifications]);
+    }
+
+    public function notificationView($id){
+        
+
+        $notifications = Notification::where(['id' => $id, 'user_id' => Auth::user()->id])->first();
+        return response()->view('inbox.inboxmessage', [
+            'notification' => $notifications,
+        ]);
     }
 }

@@ -21,6 +21,13 @@ class CourseController extends Controller
         "javascript" => [11, 14]
     ];
 
+    private $inboxController;
+
+    function __construct(){
+        $this->inboxController = new InboxController();
+    }
+
+
     public function isEnrollmentExists($enroll_list, $id){
         return $enroll_list->contains("course_id", $id);
     }
@@ -64,6 +71,9 @@ class CourseController extends Controller
     public function enrollCourse($id){
         
     
+        if(Enrollment::where(['user_id' => Auth::user()->id, 'course_id' => $id])->exists()){
+            return;
+        }
         $selected_course = $this->getCourseWithId($id);
         
         $acronym = $this->getCourseAcronym($selected_course->name);
@@ -73,13 +83,13 @@ class CourseController extends Controller
             return response(["message" => "course not found"], 404);
         }
 
-      
-
         Enrollment::create([
-            "user_id" => 1,
+            "user_id" => Auth::user()->id,
             "course_id" => $id,
             "enrollmentdate" =>  now()->setTimezone('GMT')->toDateString()
         ]);
+
+        $this->inboxController->createNewNotification("Congratulations! You have successfully enrolled in course = " . Course::where("id", $id)->first()->name , "You Have Enrolled a Course");
 
         return redirect('lessons/' .  $acronym . "/" . $acronym . "01");
 
@@ -110,6 +120,8 @@ class CourseController extends Controller
     public function lessonFinishedPercentage($course_id){
  
         $lesson_amount = Lesson::where('course_id', $course_id)->count();
+
+    
         $counter = 0;
         $lessons = Lesson::whereHas('student_lessons', function ($query) {
             $query->where('user_id', Auth::user()->id);
@@ -117,6 +129,7 @@ class CourseController extends Controller
       
         foreach($lessons as $lesson){
             if($lesson->course->id === $course_id){
+           
                 $counter += 1;
             }
         }

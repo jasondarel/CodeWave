@@ -53,20 +53,15 @@
                 <h5>Recent Notifications</h5>
             </div>
             <div class="card-body scrollable-list">
-                @php
-                $notifications = [
-                ['id' => 1, 'title' => 'Course Enrollment Successful', 'message' => 'You have successfully enrolled in the "Python for Beginners" course. Happy learning!', 'date' => '2024-12-04'],
-                ['id' => 2, 'title' => 'Course Completion', 'message' => 'Congratulations! You have completed the "Java Fundamentals for Beginners" course. Keep up the great work!', 'date' => '2024-12-04'],
-                ];
-                @endphp
+             
 
                 @foreach ($notifications as $notification)
-                <a href="/inbox/{{ $notification['id'] }}" class="notification-item" id="notification-{{ $notification['id'] }}">
+                <a href="/inbox/{{ $notification->id }}" class="notification-item" id="notification-{{ $notification['id'] }}">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <strong>{{ $notification['title'] }}</strong>
-                            <p class="mb-0">{{ $notification['message'] }}</p>
-                            <small class="text-muted">Received on {{ $notification['date'] }}</small>
+                            <strong>{{ $notification->title }}</strong>
+                            <p class="mb-0">{{ $notification->content }}</p>
+                            <small class="text-muted">Received on {{ $notification->created_at }}</small>
                         </div>
                         <button class="btn btn-sm btn-outline-primary btn-read">Mark as Read</button>
                     </div>
