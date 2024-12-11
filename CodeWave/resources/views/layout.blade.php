@@ -899,8 +899,8 @@
 
         /* tombol logout */
         form button {
-            width: 100%; 
-            text-align: left; 
+            width: 100%;
+            text-align: left;
         }
     </style>
     @endif
@@ -909,7 +909,12 @@
 <body class="flex">
     <div class="sticky top-0 left-0 w-80 p-4 flex flex-col gap-12 z-10 border-end border-black text-[#F5F7F8]" style="height:100vh; background-color:#10375C;">
 
-        <div>LOGO CODEWAVE DISINI</div>
+        <div class="flex flex-col items-center gap-2">
+            <img src="{{ asset('img/logo_codewave.png') }}" alt="CodeWave Logo" class="w-auto h-16">
+
+            <div class="text-white font-bold text-lg">CODEWAVE</div>
+        </div>
+
         <div class="flex flex-col  gap-2">
 
             <div class="font-lexend font-light text-slate-500 text-[12px]  text-white">OVERVIEW</div>
@@ -1003,7 +1008,7 @@
                     </svg>
                 </div>
                 <button type="submit" class="text-[16px] flex-grow text-left w-full">Logout</button>
-            </form>            
+            </form>
         </div>
     </div>
 
