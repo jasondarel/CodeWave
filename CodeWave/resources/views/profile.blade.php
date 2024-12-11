@@ -55,13 +55,7 @@
                     <input type="date" id="dobInput" name="DOB" class="form-control" value="{{ $user->DOB ? $user->DOB->format('Y-m-d') : '2000-01-01' }}">
 
                 </div>
-                <div class="mb-3">
-                    <label for="roleSelect" class="form-label">Role</label>
-                    <select id="roleSelect" name="role" class="form-select">
-                        <option value="Admin" {{ $user->role == 'Admin' ? 'selected' : '' }}>Admin</option>
-                        <option value="User" {{ $user->role == 'User' ? 'selected' : '' }}>User</option>
-                    </select>
-                </div>
+
             </fieldset>
             <button type="button" id="editButton" class="btn btn-primary align-self-end">Edit</button>
         </form>
