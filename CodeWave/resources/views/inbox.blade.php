@@ -63,7 +63,6 @@
                             <p class="mb-0">{{ $notification->content }}</p>
                             <small class="text-muted">Received on {{ $notification->created_at }}</small>
                         </div>
-                        <button class="btn btn-sm btn-outline-primary btn-read">Mark as Read</button>
                     </div>
                 </a>
                 @endforeach

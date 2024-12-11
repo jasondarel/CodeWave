@@ -26,14 +26,10 @@
                 <a href="/inbox" class="btn btn-outline-secondary">
                     <i class="bi bi-arrow-left"></i> Back to Inbox
                 </a>
-                <button class="btn btn-success" >
-                    <a href="/api/mark_as_read/{{$notification->id}}"class="bi bi-check-circle">Mark as Read</a>
-                </button>
             </div>
         </div>
     </div>
     @endsection
-
 </body>
 
 </html>
