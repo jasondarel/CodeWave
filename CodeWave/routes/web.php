@@ -60,6 +60,7 @@ Route::middleware('auth')->group(function () {
         return view('news.news3');
     })->name('news3');
 
+    Route::get('/', [DashboardController::class, 'dashboard'])->name('index');
     // 
     Route::get('/enroll/{id}', [CourseController::class, 'enrollCourse']);
 
@@ -116,7 +117,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
 // Halaman Index (default dashboard)
-Route::get('/', [DashboardController::class, 'dashboard'])->name('index');
+
 
 
 
